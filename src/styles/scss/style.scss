@@ -1,0 +1,173 @@
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+@mixin headings {
+    h1, h2, h3,
+    h4, h5, h6 {
+        @content;
+    }
+}
+
+body {
+  background: #000 url('../../images/background.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Roboto";
+}
+
+// TYPOGRAPHY
+// HEADINGS
+@include headings {
+  a:link, a:visited {
+    color: #FFF;
+  }
+}
+// END TYPOGRAPHY
+
+// BACKGROUND COLOR FOR PANELS
+.panel-color {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+// SKILLS LIST
+.skills-list {
+  .card-block {
+    padding: 0.75rem 2rem;
+  }
+}
+
+// PANEL
+.panel {
+  @extend .panel-color;
+
+  border: 1px solid rbg(0, 0, 0, 0);
+  border-radius: 10px;
+  color: #FFF;
+  padding: 0;
+
+  hr {
+    border: 1px solid #333;
+    margin: 0;
+    padding: 0;
+  }
+
+  .content {
+    padding: 4% 5%;
+  }
+
+  .content.bordered {
+    border-bottom: 1px solid #333;
+  }
+
+  .card {
+    background: none;
+  }
+}
+
+// FORMS
+.col-form-label-lg {
+  margin: 0;
+  padding: 4px 0;
+}
+
+// MAIN PAGE HEADER
+.layout > header {
+  margin-bottom: 40px;
+  padding: 30px 0;
+}
+
+// PILLS IN HEADER
+.nav-pills {
+  float: right;
+
+  li a, li a.active {
+    background: none;
+    border: 1px solid #FFF;
+    color: #FFF;
+    margin-right: 1em;
+  }
+
+  li a:hover {
+    background: #EFEFEF;
+    color: #000;
+  }
+}
+
+// DASHED LIST
+ul.dashed li {
+  list-style-type: none;
+
+  &:before {
+    content: "--";
+    margin-right: 20px;
+  }
+}
+
+/*
+$primary-color: #FFF;
+
+body {
+  background: $primary-color;
+  font-family: "Roboto";
+  font-size: 100%;
+}
+
+a, a:visited, a:link {
+  color: #ba2c54;
+}
+
+.layout > header {
+  background: #ba2c54;
+  * { color: #FFF; }
+  margin-bottom: 0;
+  padding: 20px 0 4px 0;
+}
+
+.skills-list .accordion {
+  .card {
+    border-radius: 0;
+    margin-bottom: 20px;
+  }
+  .card-block {
+    padding: 1.5% 3% 0% 3%;
+
+    &:nth-child(even) {
+      border-top: 1px solid #E0E0E0;
+    }
+  }
+
+  .card-header {
+    background: #FFF;
+  }
+}
+
+ul.dashed li {
+  list-style-type: none;
+
+  &:before {
+    content: "-";
+    margin-right: 20px;
+  }
+}
+
+.content {
+  padding: 20px 0;
+}
+
+.page-title {
+  margin: 1rem 0 2rem 0;
+
+  h2, h3, a:link, a:visited {
+    color: #FFF;
+  }
+}
+
+.accordion {
+  background: #FFF;
+}
+
+.content-section {
+  background: #FFF;
+  padding: 40px 0;
+}
+*/
