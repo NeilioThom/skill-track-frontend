@@ -24,7 +24,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <div>
+        <div class="app">
           <Layout>
             <Routing />
           </Layout>

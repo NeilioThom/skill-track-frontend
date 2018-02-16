@@ -15,20 +15,14 @@ class Layout extends Component {
   render() {
     return(
       <HashRouter>
-        <div className="layout">
-          <header className="container">
-            <div class="row">
-              <div class="col-lg col-md col-sm-12">
-                <h1>
-                  <NavLink to="/">Skill Tracker</NavLink>
-                </h1>
-              </div>
-              <div class="col-lg col-md-12 col-sm-12 align-self-center">
-                <NavPills />
-              </div>
-            </div>
+        <div id="layout-root">
+          <header>
+            <h1>
+              <NavLink to="/">10,000 Hours</NavLink>
+            </h1>
+            <NavPills />
           </header>
-          <div className="content">
+          <div className="main-content">
             { this.props.children }
           </div>
         </div>

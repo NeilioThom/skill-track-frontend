@@ -4,20 +4,12 @@ import CreateSkillForm from '../components/create-skill-form';
 class CreateSkillPage extends Component {
   render() {
     return(
-      <section class="create-skill-page">
-        <div class="container">
-          <div class="page-title container mb-0">
-            <h2 className="page-title col align-self-center">Create a Skill</h2>
-          </div>
+      <div class="create-skill-page">
+        <div class="col-md-6 offset-md-3 panel coloured">
+          <h1 className="page-title text-center">Create a Skill</h1>
+          <CreateSkillForm />
         </div>
-        <section class="content-section">
-          <div class="container">
-            <div class="col-md-6 offset-md-3">
-              <CreateSkillForm />
-            </div>
-          </div>
-        </section>
-      </section>
+      </div>
     )
   }
 }

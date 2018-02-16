@@ -48,7 +48,7 @@ class CreateSkillForm extends Component {
             <label class="col-form-label col-form-label-lg" for="add-skill-name">Skill Name:</label>
             <input class="form-control form-control-lg" type="text" name="name" onChange={this.onChange} />
           </div>
-          <input type="submit" class="form-control" value="Submit" />
+          <input type="submit" class="form-control btn-lg btn btn-success" value="Submit" />
         </form>
       </div>
     );
