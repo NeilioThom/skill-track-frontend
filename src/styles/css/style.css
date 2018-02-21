@@ -4,7 +4,7 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,600");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -371,9 +371,9 @@ mark,
   padding-left: 0;
   list-style: none; }
 
-.list-inline-item {
+.list-inline-item, ul.list-inline li {
   display: inline-block; }
-  .list-inline-item:not(:last-child) {
+  .list-inline-item:not(:last-child), ul.list-inline li:not(:last-child) {
     margin-right: 0.5rem; }
 
 .initialism {
@@ -451,23 +451,23 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.container, .container-row, .page-home {
+.container, .container-row, .page {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto; }
   @media (min-width: 576px) {
-    .container, .container-row, .page-home {
+    .container, .container-row, .page {
       max-width: 540px; } }
   @media (min-width: 768px) {
-    .container, .container-row, .page-home {
+    .container, .container-row, .page {
       max-width: 720px; } }
   @media (min-width: 992px) {
-    .container, .container-row, .page-home {
+    .container, .container-row, .page {
       max-width: 960px; } }
   @media (min-width: 1200px) {
-    .container, .container-row, .page-home {
+    .container, .container-row, .page {
       max-width: 1140px; } }
 
 .container-fluid {
@@ -477,7 +477,7 @@ pre {
   margin-right: auto;
   margin-left: auto; }
 
-.row, .container-row, .page-home, .skills-list header {
+.row, .container-row, .page, .skills-list header {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
@@ -486,14 +486,14 @@ pre {
 .no-gutters {
   margin-right: 0;
   margin-left: 0; }
-  .no-gutters > .col, #layout-root > header .no-gutters > h1, #layout-root > header .no-gutters > ul,
+  .no-gutters > .col, .no-gutters > .panel.main, #layout-root > header .no-gutters > h1, #layout-root > header .no-gutters > ul,
   .no-gutters > [class*="col-"] {
     padding-right: 0;
     padding-left: 0; }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .skills-list article, .col, #layout-root > header h1, #layout-root > header ul,
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .skills-list article, .col, .panel.main, #layout-root > header h1, #layout-root > header ul,
 .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
-.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
+.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .page.skill-details .main.panel > header .badges, .col-md,
 .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
 .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
 .col-xl-auto {
@@ -503,7 +503,7 @@ pre {
   padding-right: 15px;
   padding-left: 15px; }
 
-.col, #layout-root > header h1, #layout-root > header ul {
+.col, .panel.main, #layout-root > header h1, #layout-root > header ul {
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%; }
@@ -781,7 +781,7 @@ pre {
   .col-md-11 {
     flex: 0 0 91.66667%;
     max-width: 91.66667%; }
-  .col-md-12 {
+  .col-md-12, .page.skill-details .main.panel > header .badges {
     flex: 0 0 100%;
     max-width: 100%; }
   .order-md-first {
@@ -857,7 +857,7 @@ pre {
   .col-lg-3 {
     flex: 0 0 25%;
     max-width: 25%; }
-  .col-lg-4 {
+  .col-lg-4, .page.skill-details .main.panel > header .badges {
     flex: 0 0 33.33333%;
     max-width: 33.33333%; }
   .col-lg-5 {
@@ -1039,26 +1039,26 @@ pre {
   .offset-xl-11 {
     margin-left: 91.66667%; } }
 
-.table {
+.table, table.skill-details {
   width: 100%;
   max-width: 100%;
   margin-bottom: 1rem;
   background-color: transparent; }
-  .table th,
-  .table td {
+  .table th, table.skill-details th,
+  .table td, table.skill-details td {
     padding: 0.75rem;
     vertical-align: top;
     border-top: 1px solid #dee2e6; }
-  .table thead th {
+  .table thead th, table.skill-details thead th {
     vertical-align: bottom;
     border-bottom: 2px solid #dee2e6; }
-  .table tbody + tbody {
+  .table tbody + tbody, table.skill-details tbody + tbody {
     border-top: 2px solid #dee2e6; }
-  .table .table {
+  .table .table, table.skill-details .table, .table table.skill-details, table.skill-details table.skill-details {
     background-color: #fff; }
 
-.table-sm th,
-.table-sm td {
+.table-sm th, table.skill-details th,
+.table-sm td, table.skill-details td {
   padding: 0.3rem; }
 
 .table-bordered {
@@ -1073,7 +1073,7 @@ pre {
 .table-striped tbody tr:nth-of-type(odd) {
   background-color: rgba(0, 0, 0, 0.05); }
 
-.table-hover tbody tr:hover {
+.table-hover tbody tr:hover, table.skill-details tbody tr:hover {
   background-color: rgba(0, 0, 0, 0.075); }
 
 .table-primary,
@@ -1081,10 +1081,10 @@ pre {
 .table-primary > td {
   background-color: #b8daff; }
 
-.table-hover .table-primary:hover {
+.table-hover .table-primary:hover, table.skill-details .table-primary:hover {
   background-color: #9fcdff; }
-  .table-hover .table-primary:hover > td,
-  .table-hover .table-primary:hover > th {
+  .table-hover .table-primary:hover > td, table.skill-details .table-primary:hover > td,
+  .table-hover .table-primary:hover > th, table.skill-details .table-primary:hover > th {
     background-color: #9fcdff; }
 
 .table-secondary,
@@ -1092,10 +1092,10 @@ pre {
 .table-secondary > td {
   background-color: #d6d8db; }
 
-.table-hover .table-secondary:hover {
+.table-hover .table-secondary:hover, table.skill-details .table-secondary:hover {
   background-color: #c8cbcf; }
-  .table-hover .table-secondary:hover > td,
-  .table-hover .table-secondary:hover > th {
+  .table-hover .table-secondary:hover > td, table.skill-details .table-secondary:hover > td,
+  .table-hover .table-secondary:hover > th, table.skill-details .table-secondary:hover > th {
     background-color: #c8cbcf; }
 
 .table-success,
@@ -1103,10 +1103,10 @@ pre {
 .table-success > td {
   background-color: #c3e6cb; }
 
-.table-hover .table-success:hover {
+.table-hover .table-success:hover, table.skill-details .table-success:hover {
   background-color: #b1dfbb; }
-  .table-hover .table-success:hover > td,
-  .table-hover .table-success:hover > th {
+  .table-hover .table-success:hover > td, table.skill-details .table-success:hover > td,
+  .table-hover .table-success:hover > th, table.skill-details .table-success:hover > th {
     background-color: #b1dfbb; }
 
 .table-info,
@@ -1114,10 +1114,10 @@ pre {
 .table-info > td {
   background-color: #bee5eb; }
 
-.table-hover .table-info:hover {
+.table-hover .table-info:hover, table.skill-details .table-info:hover {
   background-color: #abdde5; }
-  .table-hover .table-info:hover > td,
-  .table-hover .table-info:hover > th {
+  .table-hover .table-info:hover > td, table.skill-details .table-info:hover > td,
+  .table-hover .table-info:hover > th, table.skill-details .table-info:hover > th {
     background-color: #abdde5; }
 
 .table-warning,
@@ -1125,10 +1125,10 @@ pre {
 .table-warning > td {
   background-color: #ffeeba; }
 
-.table-hover .table-warning:hover {
+.table-hover .table-warning:hover, table.skill-details .table-warning:hover {
   background-color: #ffe8a1; }
-  .table-hover .table-warning:hover > td,
-  .table-hover .table-warning:hover > th {
+  .table-hover .table-warning:hover > td, table.skill-details .table-warning:hover > td,
+  .table-hover .table-warning:hover > th, table.skill-details .table-warning:hover > th {
     background-color: #ffe8a1; }
 
 .table-danger,
@@ -1136,10 +1136,10 @@ pre {
 .table-danger > td {
   background-color: #f5c6cb; }
 
-.table-hover .table-danger:hover {
+.table-hover .table-danger:hover, table.skill-details .table-danger:hover {
   background-color: #f1b0b7; }
-  .table-hover .table-danger:hover > td,
-  .table-hover .table-danger:hover > th {
+  .table-hover .table-danger:hover > td, table.skill-details .table-danger:hover > td,
+  .table-hover .table-danger:hover > th, table.skill-details .table-danger:hover > th {
     background-color: #f1b0b7; }
 
 .table-light,
@@ -1147,10 +1147,10 @@ pre {
 .table-light > td {
   background-color: #fdfdfe; }
 
-.table-hover .table-light:hover {
+.table-hover .table-light:hover, table.skill-details .table-light:hover {
   background-color: #ececf6; }
-  .table-hover .table-light:hover > td,
-  .table-hover .table-light:hover > th {
+  .table-hover .table-light:hover > td, table.skill-details .table-light:hover > td,
+  .table-hover .table-light:hover > th, table.skill-details .table-light:hover > th {
     background-color: #ececf6; }
 
 .table-dark,
@@ -1158,10 +1158,10 @@ pre {
 .table-dark > td {
   background-color: #c6c8ca; }
 
-.table-hover .table-dark:hover {
+.table-hover .table-dark:hover, table.skill-details .table-dark:hover {
   background-color: #b9bbbe; }
-  .table-hover .table-dark:hover > td,
-  .table-hover .table-dark:hover > th {
+  .table-hover .table-dark:hover > td, table.skill-details .table-dark:hover > td,
+  .table-hover .table-dark:hover > th, table.skill-details .table-dark:hover > th {
     background-color: #b9bbbe; }
 
 .table-active,
@@ -1169,18 +1169,18 @@ pre {
 .table-active > td {
   background-color: rgba(0, 0, 0, 0.075); }
 
-.table-hover .table-active:hover {
+.table-hover .table-active:hover, table.skill-details .table-active:hover {
   background-color: rgba(0, 0, 0, 0.075); }
-  .table-hover .table-active:hover > td,
-  .table-hover .table-active:hover > th {
+  .table-hover .table-active:hover > td, table.skill-details .table-active:hover > td,
+  .table-hover .table-active:hover > th, table.skill-details .table-active:hover > th {
     background-color: rgba(0, 0, 0, 0.075); }
 
-.table .thead-dark th {
+.table .thead-dark th, table.skill-details .thead-dark th {
   color: #fff;
   background-color: #212529;
   border-color: #32383e; }
 
-.table .thead-light th {
+.table .thead-light th, table.skill-details .thead-light th {
   color: #495057;
   background-color: #e9ecef;
   border-color: #dee2e6; }
@@ -1196,7 +1196,7 @@ pre {
     border: 0; }
   .table-dark.table-striped tbody tr:nth-of-type(odd) {
     background-color: rgba(255, 255, 255, 0.05); }
-  .table-dark.table-hover tbody tr:hover {
+  .table-dark.table-hover tbody tr:hover, table.table-dark.skill-details tbody tr:hover {
     background-color: rgba(255, 255, 255, 0.075); }
 
 @media (max-width: 575.98px) {
@@ -1248,7 +1248,7 @@ pre {
   .table-responsive > .table-bordered {
     border: 0; }
 
-.form-control {
+.form-control, form input, form textarea {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
@@ -1260,19 +1260,19 @@ pre {
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
-  .form-control::-ms-expand {
+  .form-control::-ms-expand, form input::-ms-expand, form textarea::-ms-expand {
     background-color: transparent;
     border: 0; }
-  .form-control:focus {
+  .form-control:focus, form input:focus, form textarea:focus {
     color: #495057;
     background-color: #fff;
     border-color: #80bdff;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-  .form-control::placeholder {
+  .form-control::placeholder, form input::placeholder, form textarea::placeholder {
     color: #6c757d;
     opacity: 1; }
-  .form-control:disabled, .form-control[readonly] {
+  .form-control:disabled, form input:disabled, form textarea:disabled, .form-control[readonly], form input[readonly], form textarea[readonly] {
     background-color: #e9ecef;
     opacity: 1; }
 
@@ -1288,7 +1288,7 @@ select.form-control:focus::-ms-value {
   display: block;
   width: 100%; }
 
-.col-form-label {
+.col-form-label, form label {
   padding-top: calc(0.375rem + 1px);
   padding-bottom: calc(0.375rem + 1px);
   margin-bottom: 0;
@@ -1317,23 +1317,41 @@ select.form-control:focus::-ms-value {
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0; }
-  .form-control-plaintext.form-control-sm, .input-group-sm > .form-control-plaintext.form-control,
+  .form-control-plaintext.form-control-sm, .input-group-sm > .form-control-plaintext.form-control, form .input-group-sm > input.form-control-plaintext, form .input-group-sm > textarea.form-control-plaintext,
   .input-group-sm > .input-group-prepend > .form-control-plaintext.input-group-text,
   .input-group-sm > .input-group-append > .form-control-plaintext.input-group-text,
   .input-group-sm > .input-group-prepend > .form-control-plaintext.btn,
-  .input-group-sm > .input-group-append > .form-control-plaintext.btn, .form-control-plaintext.form-control-lg, .input-group-lg > .form-control-plaintext.form-control,
+  .input-group-sm > .input-group-prepend > .form-control-plaintext.dropdown-toggle, form
+  .input-group-sm > .input-group-prepend > input.form-control-plaintext[type=submit], form
+  .input-group-sm > .input-group-prepend > button.form-control-plaintext,
+  .input-group-sm > .input-group-append > .form-control-plaintext.btn,
+  .input-group-sm > .input-group-append > .form-control-plaintext.dropdown-toggle, form
+  .input-group-sm > .input-group-append > input.form-control-plaintext[type=submit], form
+  .input-group-sm > .input-group-append > button.form-control-plaintext, .form-control-plaintext.form-control-lg, .input-group-lg > .form-control-plaintext.form-control, form .input-group-lg > input.form-control-plaintext, form .input-group-lg > textarea.form-control-plaintext,
   .input-group-lg > .input-group-prepend > .form-control-plaintext.input-group-text,
   .input-group-lg > .input-group-append > .form-control-plaintext.input-group-text,
   .input-group-lg > .input-group-prepend > .form-control-plaintext.btn,
-  .input-group-lg > .input-group-append > .form-control-plaintext.btn {
+  .input-group-lg > .input-group-prepend > .form-control-plaintext.dropdown-toggle, form
+  .input-group-lg > .input-group-prepend > input.form-control-plaintext[type=submit], form
+  .input-group-lg > .input-group-prepend > button.form-control-plaintext,
+  .input-group-lg > .input-group-append > .form-control-plaintext.btn,
+  .input-group-lg > .input-group-append > .form-control-plaintext.dropdown-toggle, form
+  .input-group-lg > .input-group-append > input.form-control-plaintext[type=submit], form
+  .input-group-lg > .input-group-append > button.form-control-plaintext {
     padding-right: 0;
     padding-left: 0; }
 
-.form-control-sm, .input-group-sm > .form-control,
+.form-control-sm, .input-group-sm > .form-control, form .input-group-sm > input, form .input-group-sm > textarea,
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
-.input-group-sm > .input-group-append > .btn {
+.input-group-sm > .input-group-prepend > .dropdown-toggle, form
+.input-group-sm > .input-group-prepend > input[type=submit], form
+.input-group-sm > .input-group-prepend > button,
+.input-group-sm > .input-group-append > .btn,
+.input-group-sm > .input-group-append > .dropdown-toggle, form
+.input-group-sm > .input-group-append > input[type=submit], form
+.input-group-sm > .input-group-append > button {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -1343,14 +1361,22 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .input-group-sm > .input-group-prepend > select.input-group-text:not([size]):not([multiple]),
 .input-group-sm > .input-group-append > select.input-group-text:not([size]):not([multiple]),
 .input-group-sm > .input-group-prepend > select.btn:not([size]):not([multiple]),
-.input-group-sm > .input-group-append > select.btn:not([size]):not([multiple]) {
+.input-group-sm > .input-group-prepend > select.dropdown-toggle:not([size]):not([multiple]),
+.input-group-sm > .input-group-append > select.btn:not([size]):not([multiple]),
+.input-group-sm > .input-group-append > select.dropdown-toggle:not([size]):not([multiple]) {
   height: calc(1.8125rem + 2px); }
 
-.form-control-lg, .input-group-lg > .form-control,
+.form-control-lg, .input-group-lg > .form-control, form .input-group-lg > input, form .input-group-lg > textarea,
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
-.input-group-lg > .input-group-append > .btn {
+.input-group-lg > .input-group-prepend > .dropdown-toggle, form
+.input-group-lg > .input-group-prepend > input[type=submit], form
+.input-group-lg > .input-group-prepend > button,
+.input-group-lg > .input-group-append > .btn,
+.input-group-lg > .input-group-append > .dropdown-toggle, form
+.input-group-lg > .input-group-append > input[type=submit], form
+.input-group-lg > .input-group-append > button {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -1360,7 +1386,9 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .input-group-lg > .input-group-prepend > select.input-group-text:not([size]):not([multiple]),
 .input-group-lg > .input-group-append > select.input-group-text:not([size]):not([multiple]),
 .input-group-lg > .input-group-prepend > select.btn:not([size]):not([multiple]),
-.input-group-lg > .input-group-append > select.btn:not([size]):not([multiple]) {
+.input-group-lg > .input-group-prepend > select.dropdown-toggle:not([size]):not([multiple]),
+.input-group-lg > .input-group-append > select.btn:not([size]):not([multiple]),
+.input-group-lg > .input-group-append > select.dropdown-toggle:not([size]):not([multiple]) {
   height: calc(2.875rem + 2px); }
 
 .form-group {
@@ -1375,7 +1403,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   flex-wrap: wrap;
   margin-right: -5px;
   margin-left: -5px; }
-  .form-row > .col, #layout-root > header .form-row > h1, #layout-root > header .form-row > ul,
+  .form-row > .col, .form-row > .panel.main, #layout-root > header .form-row > h1, #layout-root > header .form-row > ul,
   .form-row > [class*="col-"] {
     padding-right: 5px;
     padding-left: 5px; }
@@ -1427,18 +1455,22 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   background-color: rgba(40, 167, 69, 0.8);
   border-radius: .2rem; }
 
-.was-validated .form-control:valid, .form-control.is-valid, .was-validated
+.was-validated .form-control:valid, .was-validated form input:valid, form .was-validated input:valid, .was-validated form textarea:valid, form .was-validated textarea:valid, .form-control.is-valid, form input.is-valid, form textarea.is-valid, .was-validated
 .custom-select:valid,
 .custom-select.is-valid {
   border-color: #28a745; }
-  .was-validated .form-control:valid:focus, .form-control.is-valid:focus, .was-validated
+  .was-validated .form-control:valid:focus, .was-validated form input:valid:focus, form .was-validated input:valid:focus, .was-validated form textarea:valid:focus, form .was-validated textarea:valid:focus, .form-control.is-valid:focus, form input.is-valid:focus, form textarea.is-valid:focus, .was-validated
   .custom-select:valid:focus,
   .custom-select.is-valid:focus {
     border-color: #28a745;
     box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25); }
-  .was-validated .form-control:valid ~ .valid-feedback,
-  .was-validated .form-control:valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback,
-  .form-control.is-valid ~ .valid-tooltip, .was-validated
+  .was-validated .form-control:valid ~ .valid-feedback, .was-validated form input:valid ~ .valid-feedback, form .was-validated input:valid ~ .valid-feedback, .was-validated form textarea:valid ~ .valid-feedback, form .was-validated textarea:valid ~ .valid-feedback,
+  .was-validated .form-control:valid ~ .valid-tooltip,
+  .was-validated form input:valid ~ .valid-tooltip, form
+  .was-validated input:valid ~ .valid-tooltip,
+  .was-validated form textarea:valid ~ .valid-tooltip, form
+  .was-validated textarea:valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback, form input.is-valid ~ .valid-feedback, form textarea.is-valid ~ .valid-feedback,
+  .form-control.is-valid ~ .valid-tooltip, form input.is-valid ~ .valid-tooltip, form textarea.is-valid ~ .valid-tooltip, .was-validated
   .custom-select:valid ~ .valid-feedback,
   .was-validated
   .custom-select:valid ~ .valid-tooltip,
@@ -1504,18 +1536,22 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   background-color: rgba(220, 53, 69, 0.8);
   border-radius: .2rem; }
 
-.was-validated .form-control:invalid, .form-control.is-invalid, .was-validated
+.was-validated .form-control:invalid, .was-validated form input:invalid, form .was-validated input:invalid, .was-validated form textarea:invalid, form .was-validated textarea:invalid, .form-control.is-invalid, form input.is-invalid, form textarea.is-invalid, .was-validated
 .custom-select:invalid,
 .custom-select.is-invalid {
   border-color: #dc3545; }
-  .was-validated .form-control:invalid:focus, .form-control.is-invalid:focus, .was-validated
+  .was-validated .form-control:invalid:focus, .was-validated form input:invalid:focus, form .was-validated input:invalid:focus, .was-validated form textarea:invalid:focus, form .was-validated textarea:invalid:focus, .form-control.is-invalid:focus, form input.is-invalid:focus, form textarea.is-invalid:focus, .was-validated
   .custom-select:invalid:focus,
   .custom-select.is-invalid:focus {
     border-color: #dc3545;
     box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); }
-  .was-validated .form-control:invalid ~ .invalid-feedback,
-  .was-validated .form-control:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback,
-  .form-control.is-invalid ~ .invalid-tooltip, .was-validated
+  .was-validated .form-control:invalid ~ .invalid-feedback, .was-validated form input:invalid ~ .invalid-feedback, form .was-validated input:invalid ~ .invalid-feedback, .was-validated form textarea:invalid ~ .invalid-feedback, form .was-validated textarea:invalid ~ .invalid-feedback,
+  .was-validated .form-control:invalid ~ .invalid-tooltip,
+  .was-validated form input:invalid ~ .invalid-tooltip, form
+  .was-validated input:invalid ~ .invalid-tooltip,
+  .was-validated form textarea:invalid ~ .invalid-tooltip, form
+  .was-validated textarea:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback, form input.is-invalid ~ .invalid-feedback, form textarea.is-invalid ~ .invalid-feedback,
+  .form-control.is-invalid ~ .invalid-tooltip, form input.is-invalid ~ .invalid-tooltip, form textarea.is-invalid ~ .invalid-tooltip, .was-validated
   .custom-select:invalid ~ .invalid-feedback,
   .was-validated
   .custom-select:invalid ~ .invalid-tooltip,
@@ -1578,7 +1614,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
       flex-flow: row wrap;
       align-items: center;
       margin-bottom: 0; }
-    .form-inline .form-control {
+    .form-inline .form-control, .form-inline form input, form .form-inline input, .form-inline form textarea, form .form-inline textarea {
       display: inline-block;
       width: auto;
       vertical-align: middle; }
@@ -1603,7 +1639,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     .form-inline .custom-control-label {
       margin-bottom: 0; } }
 
-.btn {
+.btn, .dropdown-toggle, form input[type=submit], form button {
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -1616,20 +1652,21 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   line-height: 1.5;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
-  .btn:hover, .btn:focus {
+  .btn:hover, .dropdown-toggle:hover, form input[type=submit]:hover, form button:hover, .btn:focus, .dropdown-toggle:focus, form input[type=submit]:focus, form button:focus {
     text-decoration: none; }
-  .btn:focus, .btn.focus {
+  .btn:focus, .dropdown-toggle:focus, form input[type=submit]:focus, form button:focus, .btn.focus, .focus.dropdown-toggle, form input.focus[type=submit], form button.focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-  .btn.disabled, .btn:disabled {
+  .btn.disabled, .disabled.dropdown-toggle, form input.disabled[type=submit], form button.disabled, .btn:disabled, .dropdown-toggle:disabled, form input[type=submit]:disabled, form button:disabled {
     opacity: 0.65; }
-  .btn:not(:disabled):not(.disabled) {
+  .btn:not(:disabled):not(.disabled), .dropdown-toggle:not(:disabled):not(.disabled), form input[type=submit]:not(:disabled):not(.disabled), form button:not(:disabled):not(.disabled) {
     cursor: pointer; }
-  .btn:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active {
+  .btn:not(:disabled):not(.disabled):active, .dropdown-toggle:not(:disabled):not(.disabled):active, form input[type=submit]:not(:disabled):not(.disabled):active, form button:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active, .dropdown-toggle:not(:disabled):not(.disabled).active, form input[type=submit]:not(:disabled):not(.disabled).active, form button:not(:disabled):not(.disabled).active {
     background-image: none; }
 
-a.btn.disabled,
-fieldset:disabled a.btn {
+a.btn.disabled, a.disabled.dropdown-toggle,
+fieldset:disabled a.btn,
+fieldset:disabled a.dropdown-toggle {
   pointer-events: none; }
 
 .btn-primary {
@@ -1678,27 +1715,31 @@ fieldset:disabled a.btn {
     .show > .btn-secondary.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5); }
 
-.btn-success {
+.btn-success, form input[type=submit], form button {
   color: #fff;
   background-color: #28a745;
   border-color: #28a745; }
-  .btn-success:hover {
+  .btn-success:hover, form input[type=submit]:hover, form button:hover {
     color: #fff;
     background-color: #218838;
     border-color: #1e7e34; }
-  .btn-success:focus, .btn-success.focus {
+  .btn-success:focus, form input[type=submit]:focus, form button:focus, .btn-success.focus, form input.focus[type=submit], form button.focus {
     box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5); }
-  .btn-success.disabled, .btn-success:disabled {
+  .btn-success.disabled, form input.disabled[type=submit], form button.disabled, .btn-success:disabled, form input[type=submit]:disabled, form button:disabled {
     color: #fff;
     background-color: #28a745;
     border-color: #28a745; }
-  .btn-success:not(:disabled):not(.disabled):active, .btn-success:not(:disabled):not(.disabled).active,
-  .show > .btn-success.dropdown-toggle {
+  .btn-success:not(:disabled):not(.disabled):active, form input[type=submit]:not(:disabled):not(.disabled):active, form button:not(:disabled):not(.disabled):active, .btn-success:not(:disabled):not(.disabled).active, form input[type=submit]:not(:disabled):not(.disabled).active, form button:not(:disabled):not(.disabled).active,
+  .show > .btn-success.dropdown-toggle, form
+  .show > input.dropdown-toggle[type=submit], form
+  .show > button.dropdown-toggle {
     color: #fff;
     background-color: #1e7e34;
     border-color: #1c7430; }
-    .btn-success:not(:disabled):not(.disabled):active:focus, .btn-success:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-success.dropdown-toggle:focus {
+    .btn-success:not(:disabled):not(.disabled):active:focus, form input[type=submit]:not(:disabled):not(.disabled):active:focus, form button:not(:disabled):not(.disabled):active:focus, .btn-success:not(:disabled):not(.disabled).active:focus, form input[type=submit]:not(:disabled):not(.disabled).active:focus, form button:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-success.dropdown-toggle:focus, form
+    .show > input.dropdown-toggle[type=submit]:focus, form
+    .show > button.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5); }
 
 .btn-info {
@@ -1770,27 +1811,29 @@ fieldset:disabled a.btn {
     .show > .btn-danger.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5); }
 
-.btn-light {
+.btn-light, .dropdown-toggle {
   color: #212529;
   background-color: #f8f9fa;
   border-color: #f8f9fa; }
-  .btn-light:hover {
+  .btn-light:hover, .dropdown-toggle:hover {
     color: #212529;
     background-color: #e2e6ea;
     border-color: #dae0e5; }
-  .btn-light:focus, .btn-light.focus {
+  .btn-light:focus, .dropdown-toggle:focus, .btn-light.focus, .focus.dropdown-toggle {
     box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5); }
-  .btn-light.disabled, .btn-light:disabled {
+  .btn-light.disabled, .disabled.dropdown-toggle, .btn-light:disabled, .dropdown-toggle:disabled {
     color: #212529;
     background-color: #f8f9fa;
     border-color: #f8f9fa; }
-  .btn-light:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active,
-  .show > .btn-light.dropdown-toggle {
+  .btn-light:not(:disabled):not(.disabled):active, .dropdown-toggle:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active, .dropdown-toggle:not(:disabled):not(.disabled).active,
+  .show > .btn-light.dropdown-toggle,
+  .show > .dropdown-toggle {
     color: #212529;
     background-color: #dae0e5;
     border-color: #d3d9df; }
-    .btn-light:not(:disabled):not(.disabled):active:focus, .btn-light:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-light.dropdown-toggle:focus {
+    .btn-light:not(:disabled):not(.disabled):active:focus, .dropdown-toggle:not(:disabled):not(.disabled):active:focus, .btn-light:not(:disabled):not(.disabled).active:focus, .dropdown-toggle:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-light.dropdown-toggle:focus,
+    .show > .dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5); }
 
 .btn-dark {
@@ -2016,13 +2059,13 @@ fieldset:disabled a.btn {
   .btn-link:disabled, .btn-link.disabled {
     color: #6c757d; }
 
-.btn-lg, .btn-group-lg > .btn {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .dropdown-toggle, form .btn-group-lg > input[type=submit], form .btn-group-lg > button {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn {
+.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .dropdown-toggle, form .btn-group-sm > input[type=submit], form .btn-group-sm > button {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2178,7 +2221,7 @@ tbody.collapse.show {
   overflow: hidden;
   border-top: 1px solid #e9ecef; }
 
-.dropdown-item {
+.dropdown-item, .dropdown-menu a {
   display: block;
   width: 100%;
   padding: 0.25rem 1.5rem;
@@ -2189,15 +2232,15 @@ tbody.collapse.show {
   white-space: nowrap;
   background-color: transparent;
   border: 0; }
-  .dropdown-item:hover, .dropdown-item:focus {
+  .dropdown-item:hover, .dropdown-menu a:hover, .dropdown-item:focus, .dropdown-menu a:focus {
     color: #16181b;
     text-decoration: none;
     background-color: #f8f9fa; }
-  .dropdown-item.active, .dropdown-item:active {
+  .dropdown-item.active, .dropdown-menu a.active, .dropdown-item:active, .dropdown-menu a:active {
     color: #fff;
     text-decoration: none;
     background-color: #007bff; }
-  .dropdown-item.disabled, .dropdown-item:disabled {
+  .dropdown-item.disabled, .dropdown-menu a.disabled, .dropdown-item:disabled, .dropdown-menu a:disabled {
     color: #6c757d;
     background-color: transparent; }
 
@@ -2217,25 +2260,87 @@ tbody.collapse.show {
   position: relative;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn,
-  .btn-group-vertical > .btn {
+  .btn-group > .btn, .btn-group > .dropdown-toggle, form .btn-group > input[type=submit], form .btn-group > button,
+  .btn-group-vertical > .btn,
+  .btn-group-vertical > .dropdown-toggle, form
+  .btn-group-vertical > input[type=submit], form
+  .btn-group-vertical > button {
     position: relative;
     flex: 0 1 auto; }
-    .btn-group > .btn:hover,
-    .btn-group-vertical > .btn:hover {
+    .btn-group > .btn:hover, .btn-group > .dropdown-toggle:hover, form .btn-group > input[type=submit]:hover, form .btn-group > button:hover,
+    .btn-group-vertical > .btn:hover,
+    .btn-group-vertical > .dropdown-toggle:hover, form
+    .btn-group-vertical > input[type=submit]:hover, form
+    .btn-group-vertical > button:hover {
       z-index: 1; }
-    .btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
+    .btn-group > .btn:focus, .btn-group > .dropdown-toggle:focus, form .btn-group > input[type=submit]:focus, form .btn-group > button:focus, .btn-group > .btn:active, .btn-group > .dropdown-toggle:active, form .btn-group > input[type=submit]:active, form .btn-group > button:active, .btn-group > .btn.active, .btn-group > .active.dropdown-toggle, form .btn-group > input.active[type=submit], form .btn-group > button.active,
     .btn-group-vertical > .btn:focus,
+    .btn-group-vertical > .dropdown-toggle:focus, form
+    .btn-group-vertical > input[type=submit]:focus, form
+    .btn-group-vertical > button:focus,
     .btn-group-vertical > .btn:active,
-    .btn-group-vertical > .btn.active {
+    .btn-group-vertical > .dropdown-toggle:active, form
+    .btn-group-vertical > input[type=submit]:active, form
+    .btn-group-vertical > button:active,
+    .btn-group-vertical > .btn.active,
+    .btn-group-vertical > .active.dropdown-toggle, form
+    .btn-group-vertical > input.active[type=submit], form
+    .btn-group-vertical > button.active {
       z-index: 1; }
-  .btn-group .btn + .btn,
+  .btn-group .btn + .btn, .btn-group .dropdown-toggle + .btn, .btn-group form input[type=submit] + .btn, form .btn-group input[type=submit] + .btn, .btn-group form button + .btn, form .btn-group button + .btn, .btn-group .btn + .dropdown-toggle, .btn-group .dropdown-toggle + .dropdown-toggle, .btn-group form input[type=submit] + .dropdown-toggle, form .btn-group input[type=submit] + .dropdown-toggle, .btn-group form button + .dropdown-toggle, form .btn-group button + .dropdown-toggle, .btn-group form .btn + input[type=submit], form .btn-group .btn + input[type=submit], .btn-group form .dropdown-toggle + input[type=submit], form .btn-group .dropdown-toggle + input[type=submit], .btn-group form input[type=submit] + input[type=submit], form .btn-group input[type=submit] + input[type=submit], .btn-group form button + input[type=submit], form .btn-group button + input[type=submit], .btn-group form .btn + button, form .btn-group .btn + button, .btn-group form .dropdown-toggle + button, form .btn-group .dropdown-toggle + button, .btn-group form input[type=submit] + button, form .btn-group input[type=submit] + button, .btn-group form button + button, form .btn-group button + button,
   .btn-group .btn + .btn-group,
+  .btn-group .dropdown-toggle + .btn-group,
+  .btn-group form input[type=submit] + .btn-group, form
+  .btn-group input[type=submit] + .btn-group,
+  .btn-group form button + .btn-group, form
+  .btn-group button + .btn-group,
   .btn-group .btn-group + .btn,
+  .btn-group .btn-group + .dropdown-toggle,
+  .btn-group form .btn-group + input[type=submit], form
+  .btn-group .btn-group + input[type=submit],
+  .btn-group form .btn-group + button, form
+  .btn-group .btn-group + button,
   .btn-group .btn-group + .btn-group,
   .btn-group-vertical .btn + .btn,
+  .btn-group-vertical .dropdown-toggle + .btn,
+  .btn-group-vertical form input[type=submit] + .btn, form
+  .btn-group-vertical input[type=submit] + .btn,
+  .btn-group-vertical form button + .btn, form
+  .btn-group-vertical button + .btn,
+  .btn-group-vertical .btn + .dropdown-toggle,
+  .btn-group-vertical .dropdown-toggle + .dropdown-toggle,
+  .btn-group-vertical form input[type=submit] + .dropdown-toggle, form
+  .btn-group-vertical input[type=submit] + .dropdown-toggle,
+  .btn-group-vertical form button + .dropdown-toggle, form
+  .btn-group-vertical button + .dropdown-toggle,
+  .btn-group-vertical form .btn + input[type=submit], form
+  .btn-group-vertical .btn + input[type=submit],
+  .btn-group-vertical form .dropdown-toggle + input[type=submit], form
+  .btn-group-vertical .dropdown-toggle + input[type=submit],
+  .btn-group-vertical form input[type=submit] + input[type=submit], form
+  .btn-group-vertical input[type=submit] + input[type=submit],
+  .btn-group-vertical form button + input[type=submit], form
+  .btn-group-vertical button + input[type=submit],
+  .btn-group-vertical form .btn + button, form
+  .btn-group-vertical .btn + button,
+  .btn-group-vertical form .dropdown-toggle + button, form
+  .btn-group-vertical .dropdown-toggle + button,
+  .btn-group-vertical form input[type=submit] + button, form
+  .btn-group-vertical input[type=submit] + button,
+  .btn-group-vertical form button + button, form
+  .btn-group-vertical button + button,
   .btn-group-vertical .btn + .btn-group,
+  .btn-group-vertical .dropdown-toggle + .btn-group,
+  .btn-group-vertical form input[type=submit] + .btn-group, form
+  .btn-group-vertical input[type=submit] + .btn-group,
+  .btn-group-vertical form button + .btn-group, form
+  .btn-group-vertical button + .btn-group,
   .btn-group-vertical .btn-group + .btn,
+  .btn-group-vertical .btn-group + .dropdown-toggle,
+  .btn-group-vertical form .btn-group + input[type=submit], form
+  .btn-group-vertical .btn-group + input[type=submit],
+  .btn-group-vertical form .btn-group + button, form
+  .btn-group-vertical .btn-group + button,
   .btn-group-vertical .btn-group + .btn-group {
     margin-left: -1px; }
 
@@ -2246,16 +2351,22 @@ tbody.collapse.show {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:first-child {
+.btn-group > .btn:first-child, .btn-group > .dropdown-toggle:first-child, form .btn-group > input[type=submit]:first-child, form .btn-group > button:first-child {
   margin-left: 0; }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group > .btn-group:not(:last-child) > .btn {
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .dropdown-toggle:not(:last-child):not(.dropdown-toggle), form .btn-group > input[type=submit]:not(:last-child):not(.dropdown-toggle), form .btn-group > button:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn,
+.btn-group > .btn-group:not(:last-child) > .dropdown-toggle, form
+.btn-group > .btn-group:not(:last-child) > input[type=submit], form
+.btn-group > .btn-group:not(:last-child) > button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn:not(:first-child),
-.btn-group > .btn-group:not(:first-child) > .btn {
+.btn-group > .btn:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child), form .btn-group > input[type=submit]:not(:first-child), form .btn-group > button:not(:first-child),
+.btn-group > .btn-group:not(:first-child) > .btn,
+.btn-group > .btn-group:not(:first-child) > .dropdown-toggle, form
+.btn-group > .btn-group:not(:first-child) > input[type=submit], form
+.btn-group > .btn-group:not(:first-child) > button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -2265,11 +2376,11 @@ tbody.collapse.show {
   .dropdown-toggle-split::after {
     margin-left: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .dropdown-toggle + .dropdown-toggle-split, form .btn-group-sm > input[type=submit] + .dropdown-toggle-split, form .btn-group-sm > button + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .dropdown-toggle + .dropdown-toggle-split, form .btn-group-lg > input[type=submit] + .dropdown-toggle-split, form .btn-group-lg > button + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -2277,31 +2388,55 @@ tbody.collapse.show {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center; }
-  .btn-group-vertical .btn,
+  .btn-group-vertical .btn, .btn-group-vertical .dropdown-toggle, .btn-group-vertical form input[type=submit], form .btn-group-vertical input[type=submit], .btn-group-vertical form button, form .btn-group-vertical button,
   .btn-group-vertical .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn + .btn,
+  .btn-group-vertical > .btn + .btn, .btn-group-vertical > .dropdown-toggle + .btn, form .btn-group-vertical > input[type=submit] + .btn, form .btn-group-vertical > button + .btn, .btn-group-vertical > .btn + .dropdown-toggle, .btn-group-vertical > .dropdown-toggle + .dropdown-toggle, form .btn-group-vertical > input[type=submit] + .dropdown-toggle, form .btn-group-vertical > button + .dropdown-toggle, form .btn-group-vertical > .btn + input[type=submit], form .btn-group-vertical > .dropdown-toggle + input[type=submit], form .btn-group-vertical > input[type=submit] + input[type=submit], form .btn-group-vertical > button + input[type=submit], form .btn-group-vertical > .btn + button, form .btn-group-vertical > .dropdown-toggle + button, form .btn-group-vertical > input[type=submit] + button, form .btn-group-vertical > button + button,
   .btn-group-vertical > .btn + .btn-group,
+  .btn-group-vertical > .dropdown-toggle + .btn-group, form
+  .btn-group-vertical > input[type=submit] + .btn-group, form
+  .btn-group-vertical > button + .btn-group,
   .btn-group-vertical > .btn-group + .btn,
+  .btn-group-vertical > .btn-group + .dropdown-toggle, form
+  .btn-group-vertical > .btn-group + input[type=submit], form
+  .btn-group-vertical > .btn-group + button,
   .btn-group-vertical > .btn-group + .btn-group {
     margin-top: -1px;
     margin-left: 0; }
-  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-  .btn-group-vertical > .btn-group:not(:last-child) > .btn {
+  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .dropdown-toggle:not(:last-child):not(.dropdown-toggle), form .btn-group-vertical > input[type=submit]:not(:last-child):not(.dropdown-toggle), form .btn-group-vertical > button:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .btn-group:not(:last-child) > .btn,
+  .btn-group-vertical > .btn-group:not(:last-child) > .dropdown-toggle, form
+  .btn-group-vertical > .btn-group:not(:last-child) > input[type=submit], form
+  .btn-group-vertical > .btn-group:not(:last-child) > button {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .btn-group-vertical > .btn:not(:first-child),
-  .btn-group-vertical > .btn-group:not(:first-child) > .btn {
+  .btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .dropdown-toggle:not(:first-child), form .btn-group-vertical > input[type=submit]:not(:first-child), form .btn-group-vertical > button:not(:first-child),
+  .btn-group-vertical > .btn-group:not(:first-child) > .btn,
+  .btn-group-vertical > .btn-group:not(:first-child) > .dropdown-toggle, form
+  .btn-group-vertical > .btn-group:not(:first-child) > input[type=submit], form
+  .btn-group-vertical > .btn-group:not(:first-child) > button {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group-toggle > .btn,
-.btn-group-toggle > .btn-group > .btn {
+.btn-group-toggle > .btn, .btn-group-toggle > .dropdown-toggle, form .btn-group-toggle > input[type=submit], form .btn-group-toggle > button,
+.btn-group-toggle > .btn-group > .btn,
+.btn-group-toggle > .btn-group > .dropdown-toggle, form
+.btn-group-toggle > .btn-group > input[type=submit], form
+.btn-group-toggle > .btn-group > button {
   margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"],
+  .btn-group-toggle > .btn input[type="radio"], .btn-group-toggle > .dropdown-toggle input[type="radio"], form .btn-group-toggle > input[type=submit] input[type="radio"], form .btn-group-toggle > button input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"],
+  .btn-group-toggle > .dropdown-toggle input[type="checkbox"], form
+  .btn-group-toggle > input[type=submit] input[type="checkbox"], form
+  .btn-group-toggle > button input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"],
-  .btn-group-toggle > .btn-group > .btn input[type="checkbox"] {
+  .btn-group-toggle > .btn-group > .dropdown-toggle input[type="radio"], form
+  .btn-group-toggle > .btn-group > input[type=submit] input[type="radio"], form
+  .btn-group-toggle > .btn-group > button input[type="radio"],
+  .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
+  .btn-group-toggle > .btn-group > .dropdown-toggle input[type="checkbox"], form
+  .btn-group-toggle > .btn-group > input[type=submit] input[type="checkbox"], form
+  .btn-group-toggle > .btn-group > button input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none; }
@@ -2312,32 +2447,40 @@ tbody.collapse.show {
   flex-wrap: wrap;
   align-items: stretch;
   width: 100%; }
-  .input-group > .form-control,
+  .input-group > .form-control, form .input-group > input, form .input-group > textarea,
   .input-group > .custom-select,
   .input-group > .custom-file {
     position: relative;
     flex: 1 1 auto;
     width: 1%;
     margin-bottom: 0; }
-    .input-group > .form-control:focus,
+    .input-group > .form-control:focus, form .input-group > input:focus, form .input-group > textarea:focus,
     .input-group > .custom-select:focus,
     .input-group > .custom-file:focus {
       z-index: 3; }
-    .input-group > .form-control + .form-control,
-    .input-group > .form-control + .custom-select,
-    .input-group > .form-control + .custom-file,
-    .input-group > .custom-select + .form-control,
+    .input-group > .form-control + .form-control, form .input-group > input + .form-control, form .input-group > textarea + .form-control, form .input-group > .form-control + input, form .input-group > input + input, form .input-group > textarea + input, form .input-group > .form-control + textarea, form .input-group > input + textarea, form .input-group > textarea + textarea,
+    .input-group > .form-control + .custom-select, form
+    .input-group > input + .custom-select, form
+    .input-group > textarea + .custom-select,
+    .input-group > .form-control + .custom-file, form
+    .input-group > input + .custom-file, form
+    .input-group > textarea + .custom-file,
+    .input-group > .custom-select + .form-control, form
+    .input-group > .custom-select + input, form
+    .input-group > .custom-select + textarea,
     .input-group > .custom-select + .custom-select,
     .input-group > .custom-select + .custom-file,
-    .input-group > .custom-file + .form-control,
+    .input-group > .custom-file + .form-control, form
+    .input-group > .custom-file + input, form
+    .input-group > .custom-file + textarea,
     .input-group > .custom-file + .custom-select,
     .input-group > .custom-file + .custom-file {
       margin-left: -1px; }
-  .input-group > .form-control:not(:last-child),
+  .input-group > .form-control:not(:last-child), form .input-group > input:not(:last-child), form .input-group > textarea:not(:last-child),
   .input-group > .custom-select:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0; }
-  .input-group > .form-control:not(:first-child),
+  .input-group > .form-control:not(:first-child), form .input-group > input:not(:first-child), form .input-group > textarea:not(:first-child),
   .input-group > .custom-select:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0; }
@@ -2356,18 +2499,70 @@ tbody.collapse.show {
 .input-group-prepend,
 .input-group-append {
   display: flex; }
-  .input-group-prepend .btn,
-  .input-group-append .btn {
+  .input-group-prepend .btn, .input-group-prepend .dropdown-toggle, .input-group-prepend form input[type=submit], form .input-group-prepend input[type=submit], .input-group-prepend form button, form .input-group-prepend button,
+  .input-group-append .btn,
+  .input-group-append .dropdown-toggle,
+  .input-group-append form input[type=submit], form
+  .input-group-append input[type=submit],
+  .input-group-append form button, form
+  .input-group-append button {
     position: relative;
     z-index: 2; }
-  .input-group-prepend .btn + .btn,
+  .input-group-prepend .btn + .btn, .input-group-prepend .dropdown-toggle + .btn, .input-group-prepend form input[type=submit] + .btn, form .input-group-prepend input[type=submit] + .btn, .input-group-prepend form button + .btn, form .input-group-prepend button + .btn, .input-group-prepend .btn + .dropdown-toggle, .input-group-prepend .dropdown-toggle + .dropdown-toggle, .input-group-prepend form input[type=submit] + .dropdown-toggle, form .input-group-prepend input[type=submit] + .dropdown-toggle, .input-group-prepend form button + .dropdown-toggle, form .input-group-prepend button + .dropdown-toggle, .input-group-prepend form .btn + input[type=submit], form .input-group-prepend .btn + input[type=submit], .input-group-prepend form .dropdown-toggle + input[type=submit], form .input-group-prepend .dropdown-toggle + input[type=submit], .input-group-prepend form input[type=submit] + input[type=submit], form .input-group-prepend input[type=submit] + input[type=submit], .input-group-prepend form button + input[type=submit], form .input-group-prepend button + input[type=submit], .input-group-prepend form .btn + button, form .input-group-prepend .btn + button, .input-group-prepend form .dropdown-toggle + button, form .input-group-prepend .dropdown-toggle + button, .input-group-prepend form input[type=submit] + button, form .input-group-prepend input[type=submit] + button, .input-group-prepend form button + button, form .input-group-prepend button + button,
   .input-group-prepend .btn + .input-group-text,
+  .input-group-prepend .dropdown-toggle + .input-group-text,
+  .input-group-prepend form input[type=submit] + .input-group-text, form
+  .input-group-prepend input[type=submit] + .input-group-text,
+  .input-group-prepend form button + .input-group-text, form
+  .input-group-prepend button + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
+  .input-group-prepend .input-group-text + .dropdown-toggle,
+  .input-group-prepend form .input-group-text + input[type=submit], form
+  .input-group-prepend .input-group-text + input[type=submit],
+  .input-group-prepend form .input-group-text + button, form
+  .input-group-prepend .input-group-text + button,
   .input-group-append .btn + .btn,
+  .input-group-append .dropdown-toggle + .btn,
+  .input-group-append form input[type=submit] + .btn, form
+  .input-group-append input[type=submit] + .btn,
+  .input-group-append form button + .btn, form
+  .input-group-append button + .btn,
+  .input-group-append .btn + .dropdown-toggle,
+  .input-group-append .dropdown-toggle + .dropdown-toggle,
+  .input-group-append form input[type=submit] + .dropdown-toggle, form
+  .input-group-append input[type=submit] + .dropdown-toggle,
+  .input-group-append form button + .dropdown-toggle, form
+  .input-group-append button + .dropdown-toggle,
+  .input-group-append form .btn + input[type=submit], form
+  .input-group-append .btn + input[type=submit],
+  .input-group-append form .dropdown-toggle + input[type=submit], form
+  .input-group-append .dropdown-toggle + input[type=submit],
+  .input-group-append form input[type=submit] + input[type=submit], form
+  .input-group-append input[type=submit] + input[type=submit],
+  .input-group-append form button + input[type=submit], form
+  .input-group-append button + input[type=submit],
+  .input-group-append form .btn + button, form
+  .input-group-append .btn + button,
+  .input-group-append form .dropdown-toggle + button, form
+  .input-group-append .dropdown-toggle + button,
+  .input-group-append form input[type=submit] + button, form
+  .input-group-append input[type=submit] + button,
+  .input-group-append form button + button, form
+  .input-group-append button + button,
   .input-group-append .btn + .input-group-text,
+  .input-group-append .dropdown-toggle + .input-group-text,
+  .input-group-append form input[type=submit] + .input-group-text, form
+  .input-group-append input[type=submit] + .input-group-text,
+  .input-group-append form button + .input-group-text, form
+  .input-group-append button + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
-  .input-group-append .input-group-text + .btn {
+  .input-group-append .input-group-text + .btn,
+  .input-group-append .input-group-text + .dropdown-toggle,
+  .input-group-append form .input-group-text + input[type=submit], form
+  .input-group-append .input-group-text + input[type=submit],
+  .input-group-append form .input-group-text + button, form
+  .input-group-append .input-group-text + button {
     margin-left: -1px; }
 
 .input-group-prepend {
@@ -2394,20 +2589,32 @@ tbody.collapse.show {
   .input-group-text input[type="checkbox"] {
     margin-top: 0; }
 
-.input-group > .input-group-prepend > .btn,
+.input-group > .input-group-prepend > .btn, .input-group > .input-group-prepend > .dropdown-toggle, form .input-group > .input-group-prepend > input[type=submit], form .input-group > .input-group-prepend > button,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
+.input-group > .input-group-append:not(:last-child) > .dropdown-toggle, form
+.input-group > .input-group-append:not(:last-child) > input[type=submit], form
+.input-group > .input-group-append:not(:last-child) > button,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.input-group > .input-group-append:last-child > .dropdown-toggle:not(:last-child):not(.dropdown-toggle), form
+.input-group > .input-group-append:last-child > input[type=submit]:not(:last-child):not(.dropdown-toggle), form
+.input-group > .input-group-append:last-child > button:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.input-group > .input-group-append > .btn,
+.input-group > .input-group-append > .btn, .input-group > .input-group-append > .dropdown-toggle, form .input-group > .input-group-append > input[type=submit], form .input-group > .input-group-append > button,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
+.input-group > .input-group-prepend:not(:first-child) > .dropdown-toggle, form
+.input-group > .input-group-prepend:not(:first-child) > input[type=submit], form
+.input-group > .input-group-prepend:not(:first-child) > button,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
+.input-group > .input-group-prepend:first-child > .dropdown-toggle:not(:first-child), form
+.input-group > .input-group-prepend:first-child > input[type=submit]:not(:first-child), form
+.input-group > .input-group-prepend:first-child > button:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -2590,7 +2797,7 @@ tbody.collapse.show {
     border-left: 1px solid #ced4da;
     border-radius: 0 0.25rem 0.25rem 0; }
 
-.nav, #layout-root > header ul {
+.nav, .nav-sidebar ul, #layout-root > header ul {
   display: flex;
   flex-wrap: wrap;
   padding-left: 0;
@@ -2607,7 +2814,7 @@ tbody.collapse.show {
 
 .nav-tabs {
   border-bottom: 1px solid #dee2e6; }
-  .nav-tabs .nav-item, .nav-tabs #layout-root > header ul li, #layout-root > header ul .nav-tabs li {
+  .nav-tabs .nav-item, .nav-tabs .nav-sidebar ul li, .nav-sidebar ul .nav-tabs li, .nav-tabs #layout-root > header ul li, #layout-root > header ul .nav-tabs li {
     margin-bottom: -1px; }
   .nav-tabs .nav-link {
     border: 1px solid transparent;
@@ -2621,6 +2828,8 @@ tbody.collapse.show {
       border-color: transparent; }
   .nav-tabs .nav-link.active,
   .nav-tabs .nav-item.show .nav-link,
+  .nav-tabs .nav-sidebar ul li.show .nav-link, .nav-sidebar ul
+  .nav-tabs li.show .nav-link,
   .nav-tabs #layout-root > header ul li.show .nav-link, #layout-root > header ul
   .nav-tabs li.show .nav-link {
     color: #495057;
@@ -2639,11 +2848,11 @@ tbody.collapse.show {
   color: #fff;
   background-color: #007bff; }
 
-.nav-fill .nav-item, .nav-fill #layout-root > header ul li, #layout-root > header ul .nav-fill li {
+.nav-fill .nav-item, .nav-fill .nav-sidebar ul li, .nav-sidebar ul .nav-fill li, .nav-fill #layout-root > header ul li, #layout-root > header ul .nav-fill li {
   flex: 1 1 auto;
   text-align: center; }
 
-.nav-justified .nav-item, .nav-justified #layout-root > header ul li, #layout-root > header ul .nav-justified li {
+.nav-justified .nav-item, .nav-justified .nav-sidebar ul li, .nav-sidebar ul .nav-justified li, .nav-justified #layout-root > header ul li, #layout-root > header ul .nav-justified li {
   flex-basis: 0;
   flex-grow: 1;
   text-align: center; }
@@ -2661,7 +2870,7 @@ tbody.collapse.show {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem; }
-  .navbar > .container, .navbar > .container-row, .navbar > .page-home,
+  .navbar > .container, .navbar > .container-row, .navbar > .page,
   .navbar > .container-fluid {
     display: flex;
     flex-wrap: wrap;
@@ -2724,7 +2933,7 @@ tbody.collapse.show {
   background-size: 100% 100%; }
 
 @media (max-width: 575.98px) {
-  .navbar-expand-sm > .container, .navbar-expand-sm > .container-row, .navbar-expand-sm > .page-home,
+  .navbar-expand-sm > .container, .navbar-expand-sm > .container-row, .navbar-expand-sm > .page,
   .navbar-expand-sm > .container-fluid {
     padding-right: 0;
     padding-left: 0; } }
@@ -2743,7 +2952,7 @@ tbody.collapse.show {
       .navbar-expand-sm .navbar-nav .nav-link {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
-    .navbar-expand-sm > .container, .navbar-expand-sm > .container-row, .navbar-expand-sm > .page-home,
+    .navbar-expand-sm > .container, .navbar-expand-sm > .container-row, .navbar-expand-sm > .page,
     .navbar-expand-sm > .container-fluid {
       flex-wrap: nowrap; }
     .navbar-expand-sm .navbar-collapse {
@@ -2756,7 +2965,7 @@ tbody.collapse.show {
       bottom: 100%; } }
 
 @media (max-width: 767.98px) {
-  .navbar-expand-md > .container, .navbar-expand-md > .container-row, .navbar-expand-md > .page-home,
+  .navbar-expand-md > .container, .navbar-expand-md > .container-row, .navbar-expand-md > .page,
   .navbar-expand-md > .container-fluid {
     padding-right: 0;
     padding-left: 0; } }
@@ -2775,7 +2984,7 @@ tbody.collapse.show {
       .navbar-expand-md .navbar-nav .nav-link {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
-    .navbar-expand-md > .container, .navbar-expand-md > .container-row, .navbar-expand-md > .page-home,
+    .navbar-expand-md > .container, .navbar-expand-md > .container-row, .navbar-expand-md > .page,
     .navbar-expand-md > .container-fluid {
       flex-wrap: nowrap; }
     .navbar-expand-md .navbar-collapse {
@@ -2788,7 +2997,7 @@ tbody.collapse.show {
       bottom: 100%; } }
 
 @media (max-width: 991.98px) {
-  .navbar-expand-lg > .container, .navbar-expand-lg > .container-row, .navbar-expand-lg > .page-home,
+  .navbar-expand-lg > .container, .navbar-expand-lg > .container-row, .navbar-expand-lg > .page,
   .navbar-expand-lg > .container-fluid {
     padding-right: 0;
     padding-left: 0; } }
@@ -2807,7 +3016,7 @@ tbody.collapse.show {
       .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
-    .navbar-expand-lg > .container, .navbar-expand-lg > .container-row, .navbar-expand-lg > .page-home,
+    .navbar-expand-lg > .container, .navbar-expand-lg > .container-row, .navbar-expand-lg > .page,
     .navbar-expand-lg > .container-fluid {
       flex-wrap: nowrap; }
     .navbar-expand-lg .navbar-collapse {
@@ -2820,7 +3029,7 @@ tbody.collapse.show {
       bottom: 100%; } }
 
 @media (max-width: 1199.98px) {
-  .navbar-expand-xl > .container, .navbar-expand-xl > .container-row, .navbar-expand-xl > .page-home,
+  .navbar-expand-xl > .container, .navbar-expand-xl > .container-row, .navbar-expand-xl > .page,
   .navbar-expand-xl > .container-fluid {
     padding-right: 0;
     padding-left: 0; } }
@@ -2839,7 +3048,7 @@ tbody.collapse.show {
       .navbar-expand-xl .navbar-nav .nav-link {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
-    .navbar-expand-xl > .container, .navbar-expand-xl > .container-row, .navbar-expand-xl > .page-home,
+    .navbar-expand-xl > .container, .navbar-expand-xl > .container-row, .navbar-expand-xl > .page,
     .navbar-expand-xl > .container-fluid {
       flex-wrap: nowrap; }
     .navbar-expand-xl .navbar-collapse {
@@ -2854,7 +3063,7 @@ tbody.collapse.show {
 .navbar-expand {
   flex-flow: row nowrap;
   justify-content: flex-start; }
-  .navbar-expand > .container, .navbar-expand > .container-row, .navbar-expand > .page-home,
+  .navbar-expand > .container, .navbar-expand > .container-row, .navbar-expand > .page,
   .navbar-expand > .container-fluid {
     padding-right: 0;
     padding-left: 0; }
@@ -2868,7 +3077,7 @@ tbody.collapse.show {
     .navbar-expand .navbar-nav .nav-link {
       padding-right: 0.5rem;
       padding-left: 0.5rem; }
-  .navbar-expand > .container, .navbar-expand > .container-row, .navbar-expand > .page-home,
+  .navbar-expand > .container, .navbar-expand > .container-row, .navbar-expand > .page,
   .navbar-expand > .container-fluid {
     flex-wrap: nowrap; }
   .navbar-expand .navbar-collapse {
@@ -3225,7 +3434,7 @@ tbody.collapse.show {
   .badge:empty {
     display: none; }
 
-.btn .badge {
+.btn .badge, .dropdown-toggle .badge, form input[type=submit] .badge, form button .badge {
   position: relative;
   top: -1px; }
 
@@ -4408,7 +4617,7 @@ button.bg-dark:focus {
 .flex-row {
   flex-direction: row !important; }
 
-.flex-column {
+.flex-column, .nav-sidebar ul {
   flex-direction: column !important; }
 
 .flex-row-reverse {
@@ -4489,7 +4698,7 @@ button.bg-dark:focus {
 .align-self-baseline {
   align-self: baseline !important; }
 
-.align-self-stretch {
+.align-self-stretch, .page .panel {
   align-self: stretch !important; }
 
 @media (min-width: 576px) {
@@ -5987,7 +6196,7 @@ a.text-dark:hover, a.text-dark:focus {
   *::after {
     text-shadow: none !important;
     box-shadow: none !important; }
-  a:not(.btn) {
+  a:not(.btn):not(.dropdown-toggle):not(form input[type=submit]):not(form button) {
     text-decoration: underline; }
   abbr[title]::after {
     content: " (" attr(title) ")"; }
@@ -6014,71 +6223,178 @@ a.text-dark:hover, a.text-dark:focus {
     size: a3; }
   body {
     min-width: 992px !important; }
-  .container, .container-row, .page-home {
+  .container, .container-row, .page {
     min-width: 992px !important; }
   .navbar {
     display: none; }
   .badge {
     border: 1px solid #000; }
-  .table {
+  .table, table.skill-details {
     border-collapse: collapse !important; }
-    .table td,
-    .table th {
+    .table td, table.skill-details td,
+    .table th, table.skill-details th {
       background-color: #fff !important; }
   .table-bordered th,
   .table-bordered td {
     border: 1px solid #ddd !important; } }
 
+html, body, #root, .app, #layout-root, .main-content, #routing {
+  height: 100%; }
+
+.page {
+  min-height: 100%; }
+
+.page {
+  margin-top: -50px;
+  padding-top: 50px; }
+
 body {
   background: #EFEFEF;
-  font-family: 'Roboto';
-  font-size: 0.90em; }
+  font-family: 'Open Sans'; }
 
-.container-row, .page-home {
+.container-row, .page {
   margin-left: auto;
   margin-right: auto; }
 
 .panel {
-  padding: 0.5em 2em; }
+  padding: 0 1em; }
+  .panel .panel-section {
+    margin: 0em 0 2.5em 0; }
   .panel.coloured {
     background: #FFF; }
+    .panel.coloured .standout {
+      background: #F9F9F9;
+      border: 1px solid #FFF;
+      border-radius: 4px;
+      padding: 0.8em; }
+  .panel.main {
+    min-height: 100%;
+    padding-left: 2em;
+    padding-right: 2em; }
+
+p.alert {
+  font-size: 0.9em;
+  margin: 1em 0;
+  padding: 0.5em; }
+
+header {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between; }
+
+.progress {
+  border-radius: 20px;
+  font-size: 0.9em;
+  height: 18px; }
+  .progress .progress-bar {
+    background: #41bab2; }
+
+.badge {
+  font-weight: 300; }
+
+.badge.badge-progress {
+  background: #41bab2;
+  color: #FFF; }
+
+.badge.lg {
+  font-size: 1em;
+  padding: 0.4em 0.6em; }
 
 hr {
-  background: url("../../images/divider.png");
-  height: 4px;
-  border: 0; }
+  border: 1px solid #EFEFEF;
+  height: 0;
+  margin-bottom: 1.5em; }
+
+body {
+  font-size: 1em; }
 
 h1 {
   font-size: 2em;
-  margin: 1.1em 0; }
+  margin: 1em 0 0.5em 0; }
 
 h2 {
-  font-size: 1.4em; }
+  font-size: 1.5em;
+  margin: 1em 0; }
 
 h3 {
-  font-size: 1.3em; }
+  font-size: 1.25em; }
 
 h4 {
   font-size: 1.2em;
   margin: 1.1em 0; }
 
-a {
-  color: #ff214f; }
-  a:visited {
-    color: #ff214f; }
-  a:hover {
-    color: #ff87a0; }
-  a:active, a:focus {
-    color: #ff214f; }
+p {
+  margin-bottom: 0.5em; }
 
-form .btn {
-  margin-bottom: 2em; }
+.subheading {
+  color: #BFBFBF;
+  font-size: 1.3em; }
+
+.pagination {
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center; }
+
+a {
+  color: #ff8300; }
+  a:visited {
+    color: #ff8300; }
+  a:hover {
+    color: #ffb566; }
+  a:active, a:focus {
+    color: #ff8300; }
+
+a.danger {
+  color: #FF0000; }
+
+.dropdown-menu {
+  margin: 0;
+  padding: 0 0 0.1em 0; }
+  .dropdown-menu a {
+    font-size: 0.95em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em; }
+
+form {
+  padding: 0 1.0em; }
+  form label {
+    font-size: 1.1em; }
+  form label + input {
+    margin-bottom: 1.3em; }
+  form input[type=submit], form button {
+    margin-bottom: 2em;
+    padding: 0.5em 2em;
+    width: auto; }
+
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .dropdown-toggle, form .btn-group-lg > input[type=submit], form .btn-group-lg > button {
+  font-size: 1.1em; }
+
+@media (min-width: 992px) {
+  .page.skill-details .main.panel > header .badges {
+    text-align: right; } }
+
+.page.skill-details .main.panel > header .badges span {
+  margin: 0.2em 0.3em; }
+
+table.skill-details {
+  font-size: 0.95em; }
+  table.skill-details th, table.skill-details td {
+    padding: 0.4em 0.8em; }
+  table.skill-details tr:nth-child(odd) {
+    background: #FAFAFA; }
+  table.skill-details td:nth-child(3) {
+    width: 55%; }
+
+.nav-sidebar ul li {
+  margin: 0.4em 0; }
+  .nav-sidebar ul li .fas {
+    margin-right: 1em; }
 
 .skills-list article {
   margin: 1em 0.5em; }
 
 #layout-root > header {
-  background: #ff214f;
+  background: #ff8300;
   padding: 0.1em 1em;
   width: 100%; }
   #layout-root > header h1 {
@@ -6102,3 +6418,25 @@ form .btn {
           color: #FFF; }
         #layout-root > header ul li a:active, #layout-root > header ul li a:focus, #layout-root > header ul li .active:active, #layout-root > header ul li .active:focus {
           color: #FFF; }
+
+@media (max-width: 800px) {
+  html {
+    font-size: 1em; }
+  .nav-sidebar {
+    display: none; }
+  .panel.main {
+    flex-direction: column;
+    background: #FFF;
+    margin: 0 !important; }
+    .panel.main header {
+      display: block; }
+  .actions-menu {
+    width: 100%; }
+    .actions-menu * {
+      position: static !important;
+      transform: none !important;
+      width: 100%; }
+    .actions-menu .dropdown-menu {
+      margin-bottom: 2em; }
+  #layout-root > header {
+    font-size: 0.8em; } }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import APIRequest from '../util/api';
+import APIRequest from '../api/api';
 
 class CreateSkillForm extends Component {
   constructor(props) {
@@ -11,7 +11,8 @@ class CreateSkillForm extends Component {
     this.onChange = this.onChange.bind(this);
 
     this.state = {
-      name: ''
+      name: '',
+      weekly_goal: 0
     }
   }
 
@@ -21,11 +22,11 @@ class CreateSkillForm extends Component {
     var request = this.state;
     var self = this;
 
-    new APIRequest({
-      url: 'http://localhost:8000/skills/',
+    APIRequest('skills/', {
       method: 'POST',
       data: {
-        name: this.state.name
+        name: this.state.name,
+        weekly_goal: this.state.weekly_goal
       }
     }).then(function(response) {
       if(response.status == 200) {
@@ -44,11 +45,13 @@ class CreateSkillForm extends Component {
     return(
       <div>
         <form onSubmit={this.onSubmit} id="add-skill">
-          <div class="form-group">
-            <label class="col-form-label col-form-label-lg" for="add-skill-name">Skill Name:</label>
-            <input class="form-control form-control-lg" type="text" name="name" onChange={this.onChange} />
+          <div className="form-group">
+            <label for="add-skill-name">Skill Name</label>
+            <input type="text" name="name" onChange={this.onChange} />
+            <label for="weekly-goal">Weekly Goal (Hours)</label>
+            <input type="text" name="weekly_goal" onChange={this.onChange} />
           </div>
-          <input type="submit" class="form-control btn-lg btn btn-success" value="Submit" />
+          <input type="submit" value="Submit" />
         </form>
       </div>
     );

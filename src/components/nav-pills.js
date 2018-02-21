@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import { logout } from '../actions/actions';
 
-const PillsBasedOnAuth = () => {
+const PillsBasedOnAuth = (props) => {
   if(!window.store.getState().userData.isAuthenticated) {
     return(
       <ul>

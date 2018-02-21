@@ -18,7 +18,7 @@ class Layout extends Component {
         <div id="layout-root">
           <header>
             <h1>
-              <NavLink to="/">10,000 Hours</NavLink>
+              <NavLink to="">10,000 Hours</NavLink>
             </h1>
             <NavPills />
           </header>

@@ -1,16 +1,43 @@
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
 @import 'mixins.scss';
-@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
 
 // VARIABLES
 $primary-color: #ff214f;
+$primary-color: #ff8300;
+$progress-color: #41bab2;
+
+// ------ 100% Height Fix
+html, body, #root, .app, #layout-root, .main-content, #routing {
+  height: 100%;
+}
+
+.page {
+  min-height: 100%;
+}
+
+.page {
+  margin-top: -50px;
+  padding-top: 50px;
+
+  .panel {
+    @extend .align-self-stretch;
+  }
+}
 
 
 // ------ BODY
 body {
   background: #EFEFEF;
-  font-family: 'Roboto';
-  font-size: 0.90em;
+  font-family: 'Open Sans';
+}
+
+
+// ------ LISTS
+ul.list-inline {
+  li {
+    @extend .list-inline-item;
+  }
 }
 
 
@@ -24,25 +51,104 @@ body {
 }
 
 .panel {
-  padding: 0.5em 2em;
+  padding: 0 1em;
+
+  .panel-section {
+    margin: 0em 0 2.5em 0;
+  }
 
   &.coloured {
     background: #FFF;
+
+    .standout {
+      background: #F9F9F9;
+      border: 1px solid #FFF;
+      border-radius: 4px;
+      padding: 0.8em;
+    }
+  }
+
+  &.main {
+    @extend .col;
+    min-height: 100%;
+    padding-left: 2em;
+    padding-right: 2em;
   }
 }
 
+
+// ------ ALERTS
+p.alert {
+  font-size: 0.9em;
+  margin: 1em 0;
+  padding: 0.5em;
+}
+
+// ----- HEADERS
+header {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+}
+
+// ------ PROGRESS
+.progress {
+  border-radius: 20px;
+  font-size: 0.9em;
+  height: 18px;
+
+  .progress-bar {
+    background: $progress-color;
+  }
+}
+
+
+// ------ BADGES
+.badge {
+    font-weight: 300;
+}
+
+.badge.badge-progress {
+  background: $progress-color;
+  color: #FFF;
+}
+
+.badge.lg {
+  font-size: 1em;
+  padding: 0.4em 0.6em;
+}
+
+// ------ DIVIDER
 hr {
-  background: url('../../images/divider.png');
-  height: 4px;
-  border: 0;
+  //background: url('../../images/divider.png');
+  border: 1px solid #EFEFEF;
+  height: 0;
+  margin-bottom: 1.5em;
 }
 
 
 // ------ TYPOGRAPHY
-h1 { font-size: 2em; margin: 1.1em 0; }
-h2 { font-size: 1.4em; }
-h3 { font-size: 1.3em; }
+body { font-size: 1em; }
+
+h1 { font-size: 2em; margin: 1em 0 0.5em 0; }
+h2 { font-size: 1.5em; margin: 1em 0; }
+h3 { font-size: 1.25em; }
 h4 { font-size: 1.2em; margin: 1.1em 0; }
+
+p { margin-bottom: 0.5em; }
+
+.subheading {
+  color: #BFBFBF;
+  font-size: 1.3em;
+}
+
+
+// ------ PAGINATION
+.pagination {
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
 
 
 // ------ LINKS
@@ -50,18 +156,123 @@ a {
   @include links($primary-color, $primary-color, lighten($primary-color, 20%), $primary-color);
 }
 
+a.danger {
+  color: #FF0000;
+}
+
+
+// ------ DROPDOWNS
+.dropdown-toggle {
+  @extend .btn;
+  @extend .btn-light;
+}
+
+.dropdown-menu {
+  margin: 0;
+  padding: 0 0 0.1em 0;
+
+  a {
+    @extend .dropdown-item;
+
+    font-size: 0.95em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+}
 
 // ------ FORMS
 form {
-  .btn {
+  padding: 0 1.0em;
+
+  input, textarea {
+    @extend .form-control;
+  }
+
+  label {
+    @extend .col-form-label;
+    font-size: 1.1em;
+  }
+
+  label + input {
+    margin-bottom: 1.3em;
+  }
+
+  input[type=submit], button {
+    @extend .btn;
+    @extend .btn-success;
+
     margin-bottom: 2em;
+    padding: 0.5em 2em;
+    width: auto;
   }
 }
 
 
+// ------ BUTTONS
+.btn-lg {
+  font-size: 1.1em;
+}
+
+
 // ------- PAGES
-.page-home {
+.page {
   @extend .container-row;
+}
+
+.page.skill-details {
+  .main.panel {
+    &> header {
+      .badges {
+        @extend .col-lg-4;
+        @extend .col-md-12;
+        @include media-breakpoint-up(lg) {
+          text-align: right;
+        }
+
+        span {
+          margin: 0.2em 0.3em;
+        }
+      }
+    }
+  }
+}
+
+// ------ SKILL DETAILS TABLE
+table.skill-details {
+  @extend .table;
+  @extend .table-hover;
+  @extend .table-sm;
+
+  font-size: 0.95em;
+
+  th, td {
+    padding: 0.4em 0.8em;
+  }
+
+  tr:nth-child(odd) {
+    background: #FAFAFA;
+  }
+
+  td:nth-child(3) {
+    width: 55%;
+  }
+}
+
+// ------ NAV SIDEBAR COMPONENT
+.nav-sidebar {
+  ul {
+      @extend .flex-column;
+      @extend .nav;
+
+      li {
+        @extend .nav-item;
+        margin: 0.4em 0;
+
+        .fas {
+          margin-right: 1em;
+        }
+      }
+  }
 }
 
 
@@ -112,5 +323,44 @@ form {
         text-transform: uppercase;
       }
     }
+  }
+}
+
+// ------ RESPONSIVENESS
+@media (max-width: 800px) {
+  html {
+    font-size: 1em;
+  }
+
+  .nav-sidebar {
+    display: none;
+  }
+
+  .panel.main {
+    flex-direction: column;
+    background: #FFF;
+    margin: 0 !important;
+
+    header {
+      display: block;
+    }
+  }
+
+  .actions-menu {
+    width: 100%;
+
+    & * {
+      position: static !important;
+      transform: none !important;
+      width: 100%;
+    }
+
+    .dropdown-menu {
+      margin-bottom: 2em;
+    }
+  }
+
+  #layout-root > header {
+    font-size: 0.8em;
   }
 }
