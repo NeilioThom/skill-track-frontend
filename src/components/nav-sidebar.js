@@ -6,11 +6,15 @@ const NavSidebar = (props) => {
   return(
     <section className="nav-sidebar panel col-3 col-md-0">
       <h1>{getUserData().username}</h1>
-      <h4>0 hours logged this week.</h4>
       <ul className="nav-sidebar">
         <li>
           <NavLink to="/skills/create/">
-            <i className="fas fa-plus"></i> New Skill
+            <i className="fas fa-paint-brush"></i> Add a Skill
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/skills/create/">
+            <i className="fas fa-calendar"></i> Add a Habit
           </NavLink>
         </li>
         <li>

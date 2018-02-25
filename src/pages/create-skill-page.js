@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-
 import NavSidebar from '../components/nav-sidebar';
-import CreateSkillForm from '../components/create-skill-form';
+import CreateSkillFormContainer from '../containers/create-skill-form';
 
 const CreateSkillPage = (props) => {
     return(
@@ -9,7 +8,7 @@ const CreateSkillPage = (props) => {
         <NavSidebar />
         <section className="main panel coloured">
           <h1>Create a Skill</h1>
-          <CreateSkillForm />
+          <CreateSkillFormContainer />
         </section>
       </div>
     )

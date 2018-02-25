@@ -13,9 +13,9 @@ export const durationToSeconds = (duration) => {
 }
 
 // Takes an item and calculates the percentage of completion this week
-export const getWeeklyPercentage = (skill) => {
-  return(skill.entries.length > 0
-    ? Math.round(clamp(skill.entries.reduce((total, current) => total + current.time_spent, 0) / skill.weekly_goal * 100, 0, 100))
+export const getWeeklyPercentage = (weekly_goal, entries) => {
+  return(entries.length > 0
+    ? Math.round(clamp(entries.reduce((total, current) => total + current.time_spent, 0) / weekly_goal * 100, 0, 100))
     : 0
   );
 }

@@ -17,4 +17,16 @@ const APIRequest = (endPoint, params) => {
   return axios(params);
 }
 
+export const getSkill = (skillID) => {
+  return APIRequest('skills/' + skillID, {
+    method: "GET"
+  });
+}
+
+export const getEntries = (skillID, pageNum) => {
+  return APIRequest('skills/' + skillID + '/entries/page/' + pageNum, {
+    method: "GET"
+  });
+}
+
 export default APIRequest;

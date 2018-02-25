@@ -1,11 +1,10 @@
 import React from 'react';
-
 import NavSidebar from '../components/nav-sidebar';
-import CreateSessionFormContainer from '../containers/create-session-form.container';
+import CreateSessionFormContainer from '../containers/create-session-form';
 
 
 const CreateSessionPage = (props) => {
-  return(
+  return (
     <div className="page skill-details">
       <NavSidebar />
 

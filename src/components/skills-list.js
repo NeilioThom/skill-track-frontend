@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import moment from 'moment';
 import APIRequest from '../api/api';
-import { durationToMoment } from '../util/formatting';
+import { getWeeklyPercentage, durationToMoment } from '../util/formatting';
 import { NavLink } from 'react-router-dom';
 import ProgressBar from './progress-bar';
 

@@ -22,18 +22,18 @@ class ReadMoreText extends Component {
     if(text.length > limit) {
       if(this.state.expanded) {
         return(
-          <p>
+          <span>
             { text }
             <a href="#" onClick={ this.toggleVisibility }> Less</a>
-          </p>
+          </span>
         )
       }
       else {
         return(
-          <p>
+          <span>
             { text.substr(0, limit) }
             <a href="#" onClick={ this.toggleVisibility }> ... More</a>
-          </p>
+          </span>
         )
       }
     }
@@ -43,7 +43,7 @@ class ReadMoreText extends Component {
 
   render() {
     return(
-      <div class="read-more-text">{ this.getText() }</div>
+      <span class="read-more-text">{ this.getText() }</span>
     )
   }
 }

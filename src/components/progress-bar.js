@@ -5,7 +5,7 @@ const ProgressBar = props => {
   return(
     <div class="progress lg text-center">
       <div class="progress-bar" role="progressbar" style={{width: props.percentage + "%"}}>
-        {props.text}
+        { (props.percentage > 0) ? props.text : '' }
       </div>
     </div>
   );

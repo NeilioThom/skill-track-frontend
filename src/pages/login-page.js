@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import LoginFormContainer from '../containers/login-form.container';
+import LoginFormContainer from '../containers/login-form';
 
 const LoginPage = (props) => {
   return(
-    <div class="login page col-6">
+    <div class="login page">
       <div class="main panel coloured">
         <h1>Log In</h1>
         <LoginFormContainer />

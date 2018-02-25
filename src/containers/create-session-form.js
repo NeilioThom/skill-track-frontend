@@ -29,20 +29,20 @@ class CreateSessionFormContainer extends Component {
     e.preventDefault();
     var self = this;
 
-    APIRequest('time-entries/', {
+    APIRequest('skills/' + this.state.skill + '/entries/', {
       method: 'POST',
       data: {
         'created_date': this.state.created_date,
         'time_spent': durationToSeconds(this.state.time_spent),
-        'comment': this.state.comment,
-        'skill': this.state.skill
-    }})
-    .then((response) => self.props.history.push('/skills/' + this.state.skill + '/'))
-    .catch((response) => console.log(response))
+        'comment': this.state.comment
+      }
+    })
+      .then((response) => self.props.history.push('/skills/' + this.state.skill + '/'))
+      .catch((response) => console.log(response))
   }
 
   render() {
-    return(<CreateSessionForm onChange={this.onChange} onSubmit={this.onSubmit} />)
+    return (<CreateSessionForm onChange={this.onChange} onSubmit={this.onSubmit} />)
   }
 }
 
