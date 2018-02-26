@@ -54,15 +54,15 @@ const SkillDetailsPage = (props) => {
             { (props.entries.length > 0)
               ? props.entries.map((entry) => {
                 return(
-                  <div className="entry">
+                  <article className="entry">
                     <div className="text">
-                      <h3>{ moment(entry.created_date).format('dddd, MMMM Do') }</h3>
+                      <h4>{ moment(entry.created_date).format('dddd, MMMM Do') }</h4>
                       <p>{ <ReadMoreText text={entry.comment} limit="200" /> }</p>
                     </div>
                     <div className="time">
-                      <h4>{ durationToMoment(entry.time_spent).format('HH[h] mm[m]', { trim: false }) }</h4>
+                      <h5>{ durationToMoment(entry.time_spent).format('HH[h] mm[m]', { trim: false }) }</h5>
                     </div>
-                  </div>
+                  </article>
                 )})
               : <p>No Entries</p>
             }

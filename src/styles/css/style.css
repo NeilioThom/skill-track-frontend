@@ -493,7 +493,7 @@ pre {
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .skills-list article, .col, .panel.main, #layout-root > header h1, #layout-root > header ul,
 .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
-.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .page.skill-details .main.panel > header .badges, .col-md,
+.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
 .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .page.login, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
 .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
 .col-xl-auto {
@@ -781,7 +781,7 @@ pre {
   .col-md-11 {
     flex: 0 0 91.66667%;
     max-width: 91.66667%; }
-  .col-md-12, .page.skill-details .main.panel > header .badges {
+  .col-md-12 {
     flex: 0 0 100%;
     max-width: 100%; }
   .order-md-first {
@@ -857,7 +857,7 @@ pre {
   .col-lg-3 {
     flex: 0 0 25%;
     max-width: 25%; }
-  .col-lg-4, .page.skill-details .main.panel > header .badges {
+  .col-lg-4 {
     flex: 0 0 33.33333%;
     max-width: 33.33333%; }
   .col-lg-5 {
@@ -3445,13 +3445,13 @@ tbody.collapse.show {
 .breadcrumb-item.active {
   color: #6c757d; }
 
-.pagination, .week-picker ul {
+.pagination {
   display: flex;
   padding-left: 0;
   list-style: none;
   border-radius: 0.25rem; }
 
-.page-link, .week-picker ul li a {
+.page-link {
   position: relative;
   display: block;
   padding: 0.5rem 0.75rem;
@@ -3460,63 +3460,63 @@ tbody.collapse.show {
   color: #007bff;
   background-color: #fff;
   border: 1px solid #dee2e6; }
-  .page-link:hover, .week-picker ul li a:hover {
+  .page-link:hover {
     color: #0056b3;
     text-decoration: none;
     background-color: #e9ecef;
     border-color: #dee2e6; }
-  .page-link:focus, .week-picker ul li a:focus {
+  .page-link:focus {
     z-index: 2;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-  .page-link:not(:disabled):not(.disabled), .week-picker ul li a:not(:disabled):not(.disabled) {
+  .page-link:not(:disabled):not(.disabled) {
     cursor: pointer; }
 
-.page-item:first-child .page-link, .week-picker ul li:first-child .page-link, .page-item:first-child .week-picker ul li a, .week-picker ul li .page-item:first-child a, .week-picker ul li:first-child a {
+.page-item:first-child .page-link {
   margin-left: 0;
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem; }
 
-.page-item:last-child .page-link, .week-picker ul li:last-child .page-link, .page-item:last-child .week-picker ul li a, .week-picker ul li .page-item:last-child a, .week-picker ul li:last-child a {
+.page-item:last-child .page-link {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem; }
 
-.page-item.active .page-link, .week-picker ul li.active .page-link, .page-item.active .week-picker ul li a, .week-picker ul li .page-item.active a, .week-picker ul li.active a {
+.page-item.active .page-link {
   z-index: 1;
   color: #fff;
   background-color: #007bff;
   border-color: #007bff; }
 
-.page-item.disabled .page-link, .week-picker ul li.disabled .page-link, .page-item.disabled .week-picker ul li a, .week-picker ul li .page-item.disabled a, .week-picker ul li.disabled a {
+.page-item.disabled .page-link {
   color: #6c757d;
   pointer-events: none;
   cursor: auto;
   background-color: #fff;
   border-color: #dee2e6; }
 
-.pagination-lg .page-link, .pagination-lg .week-picker ul li a, .week-picker ul li .pagination-lg a {
+.pagination-lg .page-link {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
   line-height: 1.5; }
 
-.pagination-lg .page-item:first-child .page-link, .pagination-lg .week-picker ul li:first-child .page-link, .week-picker ul .pagination-lg li:first-child .page-link, .pagination-lg .page-item:first-child .week-picker ul li a, .week-picker ul li .pagination-lg .page-item:first-child a, .pagination-lg .week-picker ul li:first-child a, .week-picker ul .pagination-lg li:first-child a {
+.pagination-lg .page-item:first-child .page-link {
   border-top-left-radius: 0.3rem;
   border-bottom-left-radius: 0.3rem; }
 
-.pagination-lg .page-item:last-child .page-link, .pagination-lg .week-picker ul li:last-child .page-link, .week-picker ul .pagination-lg li:last-child .page-link, .pagination-lg .page-item:last-child .week-picker ul li a, .week-picker ul li .pagination-lg .page-item:last-child a, .pagination-lg .week-picker ul li:last-child a, .week-picker ul .pagination-lg li:last-child a {
+.pagination-lg .page-item:last-child .page-link {
   border-top-right-radius: 0.3rem;
   border-bottom-right-radius: 0.3rem; }
 
-.pagination-sm .page-link, .pagination-sm .week-picker ul li a, .week-picker ul li .pagination-sm a {
+.pagination-sm .page-link {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5; }
 
-.pagination-sm .page-item:first-child .page-link, .pagination-sm .week-picker ul li:first-child .page-link, .week-picker ul .pagination-sm li:first-child .page-link, .pagination-sm .page-item:first-child .week-picker ul li a, .week-picker ul li .pagination-sm .page-item:first-child a, .pagination-sm .week-picker ul li:first-child a, .week-picker ul .pagination-sm li:first-child a {
+.pagination-sm .page-item:first-child .page-link {
   border-top-left-radius: 0.2rem;
   border-bottom-left-radius: 0.2rem; }
 
-.pagination-sm .page-item:last-child .page-link, .pagination-sm .week-picker ul li:last-child .page-link, .week-picker ul .pagination-sm li:last-child .page-link, .pagination-sm .page-item:last-child .week-picker ul li a, .week-picker ul li .pagination-sm .page-item:last-child a, .pagination-sm .week-picker ul li:last-child a, .week-picker ul .pagination-sm li:last-child a {
+.pagination-sm .page-item:last-child .page-link {
   border-top-right-radius: 0.2rem;
   border-bottom-right-radius: 0.2rem; }
 
@@ -6410,11 +6410,6 @@ hgroup.horizontal {
   font-size: 1em;
   padding: 0.4em 0.6em; }
 
-hr {
-  border: 1px solid #EFEFEF;
-  height: 0;
-  margin-bottom: 1.5em; }
-
 body {
   font-size: 1em; }
 
@@ -6449,15 +6444,15 @@ p {
   .entry h3 {
     color: #7e5f8e;
     font-size: 1.2em; }
-  .entry > div:first-child {
+  .entry .text {
     text-align: justify;
     padding-right: 2em;
     width: 80%; }
-  .entry > div:last-child {
+  .entry .time {
     border-left: 1px solid #F0F0F0;
     text-align: center;
     width: 20%; }
-    .entry > div:last-child h4 {
+    .entry .time h5 {
       color: #7e5f8e;
       font-size: 1.2em; }
 
@@ -6515,30 +6510,15 @@ hgroup.date-changer-group {
     background: #7e5f8e;
     border-color: #DDD; }
 
-@media (min-width: 992px) {
-  .page.skill-details .main.panel > header .badges {
-    text-align: right; } }
-
-.page.skill-details .main.panel > header .badges span {
-  margin: 0.2em 0.3em; }
-
 .nav-sidebar ul li {
   margin: 0.4em 0; }
   .nav-sidebar ul li .fas {
     margin-right: 1em; }
 
-.week-picker ul {
-  align-items: stretch; }
-  .week-picker ul li * {
-    height: 100%; }
-  .week-picker ul .lg {
-    flex-grow: 2; }
-
 #layout-root > header {
   background: #7e5f8e;
   padding: 0.1em 1em;
-  width: 100%;
-  z-index: 2; }
+  width: 100%; }
   #layout-root > header h1 {
     font-size: 1.8em;
     margin: 0.2em 0; }

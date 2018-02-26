@@ -1,6 +1,6 @@
-@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
-@import 'mixins.scss';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "mixins.scss";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,600");
 
 // VARIABLES
 $primary-color: #ff214f;
@@ -9,112 +9,111 @@ $progress-color: #41bab2;
 
 // ------ 100% Height Fix
 html, body, #root, .app, #layout-root, .main-content, #routing {
-  height: 100%;
+    height: 100%;
 }
 
 .page {
-  min-height: 100%;
+    min-height: 100%;
 }
 
 .page {
-  margin-top: -50px;
-  padding-top: 50px;
+    margin-top: -50px;
+    padding-top: 50px;
 
-  .panel {
-    @extend .align-self-stretch;
-  }
+    .panel {
+        @extend .align-self-stretch;
+    }
 }
-
 
 // ------ BODY
 body {
-  background: #EFEFEF;
-  font-family: 'Open Sans';
+    background: #EFEFEF;
+    font-family: 'Open Sans';
 }
-
 
 // ------ LISTS
 ul.list-inline {
-  li {
-    @extend .list-inline-item;
-  }
+    li {
+        @extend .list-inline-item;
+    }
 }
-
 
 // ------- LAYOUT
 .container-row {
-  @extend .container;
-  @extend .row;
+    @extend .container;
 
-  margin-left: auto;
-  margin-right: auto;
+    @extend .row;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .panel {
-  padding: 0 1em;
+    padding: 0 1em;
 
-  .panel-section {
-    margin: 0em 0 2em 0;
-  }
-
-  &.coloured {
-    background: #FFF;
-
-    .standout {
-      background: #F9F9F9;
-      border: 1px solid #FFF;
-      border-radius: 4px;
-      padding: 0.8em;
+    .panel-section {
+        margin: 0em 0 2em 0;
     }
-  }
 
-  &.main {
-    @extend .col;
-    min-height: 100%;
-    padding-left: 2em;
-    padding-right: 2em;
-  }
+    &.coloured {
+        background: #FFF;
+
+        .standout {
+            background: #F9F9F9;
+            border: 1px solid #FFF;
+            border-radius: 4px;
+            padding: 0.8em;
+        }
+    }
+
+    &.main {
+        @extend .col;
+
+        min-height: 100%;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
 }
 
 // ------ ALERTS
 p.alert {
-  font-size: 0.9em;
-  margin: 1em 0;
-  padding: 0.5em;
+    font-size: 0.9em;
+    margin: 1em 0;
+    padding: 0.5em;
 }
 
 // ----- HEADERS
 header {
-  align-items: baseline;
-  display: flex;
-  justify-content: space-between;
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
 }
 
 hgroup.horizontal {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
 
-  .subheading {
-    margin-left: 0.5em;
-    font-size: 1em;
+    .subheading {
+        margin-left: 0.5em;
+        font-size: 1em;
 
-    h1, h2, h3, h4, h5, h6 {
-      display: inline;
+        h1, h2, h3, h4, h5, h6 {
+            display: inline;
+        }
     }
-  }
 }
 
 // ------ PROGRESS
 .progress {
-  border-radius: 10px;
-  font-size: 0.9em;
-  height: 20px;
-  margin: 1.5em 0;
+    border-radius: 10px;
+    font-size: 0.9em;
+    height: 20px;
+    margin: 1.5em 0;
 
-  .progress-bar {
-    background: $progress-color;
-  }
+    .progress-bar {
+        background: $progress-color;
+    }
 }
 
 // ------ BADGES
@@ -123,345 +122,326 @@ hgroup.horizontal {
 }
 
 .badge.badge-progress {
-  background: $progress-color;
-  color: #FFF;
+    background: $progress-color;
+    color: #FFF;
 }
 
 .badge.lg {
-  font-size: 1em;
-  padding: 0.4em 0.6em;
+    font-size: 1em;
+    padding: 0.4em 0.6em;
 }
-
-// ------ DIVIDER
-hr {
-  //background: url('../../images/divider.png');
-  border: 1px solid #EFEFEF;
-  height: 0;
-  margin-bottom: 1.5em;
-}
-
 
 // ------ TYPOGRAPHY
-body { font-size: 1em; }
-
-h1 { font-size: 2em; margin: 1em 0 0.5em 0; }
-h2 { font-size: 1.6em; margin: 0.7em 0; }
-h3 { font-size: 1.35em; margin: 0.6em 0; }
-h4 { font-size: 1.2em; margin: 1.1em 0; }
-
-p { margin-bottom: 0.5em; }
-
-.subheading {
-  color: #AFAFAF;
-  font-size: 1.25em;
+body {
+    font-size: 1em;
 }
 
+h1 {
+    font-size: 2em;
+    margin: 1em 0 0.5em 0;
+}
+
+h2 {
+    font-size: 1.6em;
+    margin: 0.7em 0;
+}
+
+h3 {
+    font-size: 1.35em;
+    margin: 0.6em 0;
+}
+
+h4 {
+    font-size: 1.2em;
+    margin: 1.1em 0;
+}
+
+p {
+    margin-bottom: 0.5em;
+}
+
+.subheading {
+    color: #AFAFAF;
+    font-size: 1.25em;
+}
 
 // Entries list
 .entry {
-  align-items: stretch;
-  display: flex;
-  justify-content: space-between;
-  margin: 0.2em 0;
+    align-items: stretch;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.2em 0;
 
-  h3 {
-    color: $primary-color;
-    font-size: 1.2em;
-  }
-
-  &>div:first-child {
-    text-align: justify;
-    padding-right: 2em;
-    width: 80%;
-  }
-
-  &>div:last-child {
-    border-left: 1px solid #F0F0F0;
-    text-align: center;
-    width: 20%;
-
-    h4 {
-      color: $primary-color;
-      font-size: 1.2em;
+    h3 {
+        color: $primary-color;
+        font-size: 1.2em;
     }
-  }
-}
 
+    .text {
+        text-align: justify;
+        padding-right: 2em;
+        width: 80%;
+    }
+
+    .time {
+        border-left: 1px solid #F0F0F0;
+        text-align: center;
+        width: 20%;
+
+        h5 {
+            color: $primary-color;
+            font-size: 1.2em;
+        }
+    }
+}
 
 // ------ LINKS
 a {
-  @include links($primary-color, $primary-color, lighten($primary-color, 20%), $primary-color);
+    @include links($primary-color, $primary-color, lighten($primary-color, 20%), $primary-color);
 }
 
 a.danger {
-  color: #FF0000;
+    color: #FF0000;
 }
-
 
 // ------ DROPDOWNS
 .dropdown-toggle {
-  @extend .btn;
-  @extend .btn-light;
+    @extend .btn;
+
+    @extend .btn-light;
 }
 
 .dropdown-menu {
-  margin: 0;
-  padding: 0 0 0.1em 0;
+    margin: 0;
+    padding: 0 0 0.1em 0;
 
-  a {
-    @extend .dropdown-item;
+    a {
+        @extend .dropdown-item;
 
-    font-size: 0.95em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-  }
+        font-size: 0.95em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
 }
 
 // ------ FORMS
 form {
-  padding: 0 1.0em;
+    padding: 0 1.0em;
 
-  input, textarea {
-    @extend .form-control;
-  }
+    input, textarea {
+        @extend .form-control;
+    }
 
-  label {
-    @extend .col-form-label;
-    font-size: 1.1em;
-  }
+    label {
+        @extend .col-form-label;
 
-  label + input {
-    margin-bottom: 1.3em;
-  }
+        font-size: 1.1em;
+    }
 
-  input[type=submit], button {
-    @extend .btn;
-    @extend .btn-success;
+    label + input {
+        margin-bottom: 1.3em;
+    }
 
-    margin-bottom: 2em;
-    padding: 0.5em 2em;
-    width: auto;
-  }
+    input[type=submit], button {
+        @extend .btn;
+
+        @extend .btn-success;
+
+        margin-bottom: 2em;
+        padding: 0.5em 2em;
+        width: auto;
+    }
 }
-
 
 // ------ BUTTONS
 .btn-lg {
-  font-size: 1.1em;
+    font-size: 1.1em;
 }
 
 // ------ DATE CHANGER
 hgroup.date-changer-group {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-
-  .date-changer {
-    align-items: flex-end;
+    align-items: center;
     display: flex;
-    margin-left: 0.5em;
-  }
+    justify-content: space-between;
+    width: 100%;
 
-  button {
-    @extend .btn;
-    @extend .btn-link;
+    .date-changer {
+        align-items: flex-end;
+        display: flex;
+        margin-left: 0.5em;
+    }
 
-    color: $primary-color;
-    font-size: 1.5em;
-  }
+    button {
+        @extend .btn;
+
+        @extend .btn-link;
+
+        color: $primary-color;
+        font-size: 1.5em;
+    }
 }
 
 .btn-outline {
-  @extend .btn-outline-primary;
+    @extend .btn-outline-primary;
 
-  color: $primary-color;
-  border-color: $primary-color;
+    color: $primary-color;
+    border-color: $primary-color;
 
-  &:hover {
-    background: $primary-color;
-    border-color: #DDD;
-  }
+    &:hover {
+        background: $primary-color;
+        border-color: #DDD;
+    }
 }
-
 
 // ------- PAGES
 .page {
-  @extend .container-row;
+    @extend .container-row;
 }
 
 .page.login {
-  @extend .col-lg-6;
-}
-
-.page.skill-details {
-  .main.panel {
-    &> header {
-      .badges {
-        @extend .col-lg-4;
-        @extend .col-md-12;
-        @include media-breakpoint-up(lg) {
-          text-align: right;
-        }
-
-        span {
-          margin: 0.2em 0.3em;
-        }
-      }
-    }
-  }
+    @extend .col-lg-6;
 }
 
 // ------ NAV SIDEBAR COMPONENT
 .nav-sidebar {
-  ul {
-      @extend .flex-column;
-      @extend .nav;
+    ul {
+        @extend .flex-column;
 
-      li {
-        @extend .nav-item;
-        margin: 0.4em 0;
+        @extend .nav;
 
-        .fas {
-          margin-right: 1em;
+        li {
+            @extend .nav-item;
+
+            margin: 0.4em 0;
+
+            .fas {
+                margin-right: 1em;
+            }
         }
-      }
-  }
-}
-
-
-// ------ WEEK PICKER
-.week-picker {
-  ul {
-    @extend .pagination;
-    align-items: stretch;
-
-    li {
-      @extend .page-item;
-
-      * {
-        height: 100%;
-      }
-
-      a {
-        @extend .page-link;
-      }
     }
-
-    .lg {
-      flex-grow: 2;
-    }
-  }
 }
 
 // ------ SKILLS LIST COMPONENT
 .skills-list {
-  article {
-    @extend .col-12;
-  }
+    article {
+        @extend .col-12;
+    }
 
-  header {
-    @extend .row;
-  }
+    header {
+        @extend .row;
+    }
 }
 
 // ------ SITE HEADER
 #layout-root > header {
-  @extend .d-flex;
-  background: $primary-color;
-  padding: 0.1em 1em;
-  width: 100%;
-  z-index: 2;
+    @extend .d-flex;
 
-  h1 {
-    @extend .col;
-    @extend .align-self-center;
-    a { color: #FFF; }
-    font-size: 1.8em;
-    margin: 0.2em 0;
-  }
+    background: $primary-color;
+    padding: 0.1em 1em;
+    width: 100%;
 
-  ul {
-    @extend .nav;
-    @extend .nav-pills;
-    @extend .col;
-    @extend .justify-content-end;
-    @extend .align-self-center;
+    h1 {
+        @extend .col;
 
-    li {
-      @extend .nav-item;
-      float: right;
+        @extend .align-self-center;
 
-      a, .active {
-        @include links(#FFF,#FFF,#FFF,#FFF);
-        background: 0 !important;
-        font-size: 0.9em;
-        font-family: Helvetica;
-        margin-right: 0.9em;
-        text-transform: uppercase;
-      }
+        a {
+            color: #FFF;
+        }
+
+        font-size: 1.8em;
+        margin: 0.2em 0;
     }
-  }
+
+    ul {
+        @extend .nav;
+
+        @extend .nav-pills;
+
+        @extend .col;
+
+        @extend .justify-content-end;
+
+        @extend .align-self-center;
+
+        li {
+            @extend .nav-item;
+
+            float: right;
+
+            a, .active {
+                @include links(#FFF, #FFF, #FFF, #FFF);
+
+                background: 0 !important;
+                font-size: 0.9em;
+                font-family: Helvetica;
+                margin-right: 0.9em;
+                text-transform: uppercase;
+            }
+        }
+    }
 }
 
 // ------ RESPONSIVENESS
 @media (max-width: 800px) {
-  html {
-    font-size: 1em;
-  }
-
-  .nav-sidebar {
-    display: none;
-  }
-
-  #layout-root > header {
-    ul { display: none; }
-  }
-
-  .panel.main {
-    flex-direction: column;
-    background: #FFF;
-    margin: 0 !important;
-
-    header {
-      display: block;
-    }
-  }
-
-  .actions-menu {
-    width: 100%;
-
-    & * {
-      position: static !important;
-      transform: none !important;
-      width: 100%;
+    html {
+        font-size: 1em;
     }
 
-    .dropdown-menu {
-      margin-bottom: 2em;
-    }
-  }
-
-  .page {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
-  .entry {
-    display: block;
-
-    .text {
-      display: block;
-      min-width: 100%;
+    .nav-sidebar {
+        display: none;
     }
 
-    .time {
-      display: block;
-      min-width: 100%;
+    #layout-root > header {
+        ul {
+            display: none;
+        }
     }
-  }
 
-  #layout-root > header {
-    font-size: 0.8em;
-  }
+    .panel.main {
+        flex-direction: column;
+        background: #FFF;
+        margin: 0 !important;
+
+        header {
+            display: block;
+        }
+    }
+
+    .actions-menu {
+        width: 100%;
+
+        & * {
+            position: static !important;
+            transform: none !important;
+            width: 100%;
+        }
+
+        .dropdown-menu {
+            margin-bottom: 2em;
+        }
+    }
+
+    .page {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .entry {
+        display: block;
+
+        .text {
+            display: block;
+            min-width: 100%;
+        }
+
+        .time {
+            display: block;
+            min-width: 100%;
+        }
+    }
+
+    #layout-root > header {
+        font-size: 0.8em;
+    }
 }
