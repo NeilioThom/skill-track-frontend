@@ -24,7 +24,7 @@ class CreateSessionFormContainer extends Component {
     e.preventDefault();
     var self = this;
 
-    APIRequest('skills/' + this.state.skill + '/entries/', {
+    APIRequest('entries/?skill=' + this.state.skill, {
       method: 'POST',
       data: {
         'created_date': this.state.created_date,

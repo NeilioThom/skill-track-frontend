@@ -1,13 +1,15 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "mixins.scss";
+
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,600");
 
 // VARIABLES
-$primary-color: #ffa600;
+$primary-color: #d62e52;
 $secondary-color: #777;
+
 //$primary-color: #7e5f8e;
 $progress-color: #ffa600;
-$link-color: rgb(221, 112, 39);
+$link-color: rgb(204, 46, 125);
 
 // ------ 100% Height Fix
 html, body, #root, .app, #layout-root, .main-content, #routing {
@@ -77,6 +79,10 @@ ul.list-inline {
     }
 }
 
+.container-fluid {
+    max-width: 1280px;
+}
+
 // ------ ALERTS
 p.alert {
     font-size: 0.9em;
@@ -121,7 +127,7 @@ header {
 // ------ TYPOGRAPHY
 body {
     font-size: 1em;
-    line-height: 1.8;
+    line-height: 1.6;
 }
 
 .display-text {
@@ -132,7 +138,7 @@ body {
 
 .subheading {
     color: #AFAFAF;
-    font-size: 1.25em;
+    font-size: 1.2em;
 }
 
 h1 {
@@ -141,12 +147,12 @@ h1 {
 }
 
 h2 {
-    font-size: 1.6em;
+    font-size: 1.5em;
     margin: 0.7em 0;
 }
 
 h3 {
-    font-size: 1.35em;
+    font-size: 1.4em;
     margin: 0.6em 0;
 }
 
@@ -155,12 +161,9 @@ h4 {
     margin: 0.8em 0;
 }
 
-
 p {
     margin-bottom: 0.5em;
 }
-
-
 
 // Entries list
 .entry {
@@ -255,6 +258,10 @@ form {
     font-size: 1.1em;
 }
 
+.btn-link {
+    padding: 0 0.5em;
+}
+
 // ------ DATE CHANGER
 hgroup.date-changer-group {
     align-items: center;
@@ -263,7 +270,7 @@ hgroup.date-changer-group {
     width: 100%;
 
     .date-changer {
-        align-items: flex-end;
+        align-items: center;
         display: flex;
         margin-left: 0.5em;
     }
@@ -292,7 +299,12 @@ hgroup.date-changer-group {
 
 // ------- PAGES
 .page {
-    @extend .container-row;
+    @extend .container-fluid;
+
+    @extend .row;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .page.login {
@@ -301,6 +313,8 @@ hgroup.date-changer-group {
 
 // ------ NAV SIDEBAR COMPONENT
 .nav-sidebar {
+    flex-basis: 18%;
+
     ul {
         @extend .flex-column;
 

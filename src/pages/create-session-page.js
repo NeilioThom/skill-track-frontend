@@ -10,7 +10,9 @@ const CreateSessionPage = (props) => {
 
       <section className="main panel coloured">
         <h1>Log a Session</h1>
-
+        <p className="display-text">
+          Keep track of each session you spend working on your new skill.
+        </p>
         <CreateSessionFormContainer />
       </section>
     </div>

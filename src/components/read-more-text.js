@@ -24,7 +24,7 @@ class ReadMoreText extends Component {
         return(
           <span>
             { text }
-            <button className="btn-link" onClick={ this.toggleVisibility }> Less</button>
+            <button className="btn btn-link" onClick={ this.toggleVisibility }> Less</button>
           </span>
         )
       }
@@ -32,7 +32,7 @@ class ReadMoreText extends Component {
         return(
           <span>
             { text.substr(0, limit) }
-            <a href onClick={ this.toggleVisibility }> ... More</a>
+            <button className="btn btn-link" onClick={ this.toggleVisibility }> ... More</button>
           </span>
         )
       }

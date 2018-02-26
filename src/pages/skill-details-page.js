@@ -17,6 +17,9 @@ const SkillDetailsPage = (props) => {
             <h2 className="subheading">
               { durationToMoment(props.skill.total_time_spent).format('h') } hours logged since { moment(props.skill.created_date).format('DD/MM/YYYY') }
             </h2>
+            <h3 className="subheading">
+              Current target: { moment(props.skill.weekly_goal).format('h') } hours per week
+            </h3>
           </hgroup>
           <div className="actions-menu">
             <button className="dropdown-toggle btn-lg" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -24,8 +27,8 @@ const SkillDetailsPage = (props) => {
             </button>
             <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
               <NavLink to={"/skills/" + props.skill.id + "/sessions/create"}>Add a Session</NavLink>
-              <NavLink to={"/skills/" + props.skill.id + "/sessions/create"}>Change Weekly Goal</NavLink>
-              <a href className="danger">Delete Skill</a>
+              <NavLink to={"/skills/" + props.skill.id + "/edit"}>Edit Skill</NavLink>
+              <a href="" className="danger">Delete Skill</a>
             </div>
           </div>
         </header>
@@ -52,9 +55,9 @@ const SkillDetailsPage = (props) => {
           <h3>Logged Sessions</h3>
           <div className="col entries">
             { (props.entries.length > 0)
-              ? props.entries.map((entry) => {
+              ? props.entries.map((entry, index) => {
                 return(
-                  <article className="entry">
+                  <article className="entry" key={index}>
                     <div className="text">
                       <h4>{ moment(entry.created_date).format('dddd, MMMM Do') }</h4>
                       <p>{ <ReadMoreText text={entry.comment} limit="200" /> }</p>

@@ -1,12 +1,12 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-const CreateSkillForm = (props) => {
+const UpdateSkillForm = (props) => {
   return (
     <div>
-      <form onSubmit={props.onSubmit} id="add-skill">
+      <form onSubmit={props.onSubmit} id="update-skill">
         <div className="form-group">
-          <label htmlFor="add-skill-name" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Skill Name:</label>
+          <label htmlFor="skill-name">Skill Name:</label>
           <input type="text" name="name" onChange={props.onChange} />
           <label htmlFor="weekly_goal">Weekly Goal:</label>
           <input type="time" name="weekly_goal" onChange={props.onChange} />
@@ -17,4 +17,4 @@ const CreateSkillForm = (props) => {
   )
 }
 
-export default withRouter(CreateSkillForm);
+export default withRouter(UpdateSkillForm);

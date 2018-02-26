@@ -1,6 +1,6 @@
 import React from 'react';
 import NavSidebar from '../components/nav-sidebar';
-import CreateSkillFormContainer from '../containers/create-skill-form';
+import CreateSkillFormContainer from '../containers/skill-form';
 
 const CreateSkillPage = (props) => {
     return(
