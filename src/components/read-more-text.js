@@ -43,7 +43,7 @@ class ReadMoreText extends Component {
 
   render() {
     return(
-      <span class="read-more-text">{ this.getText() }</span>
+      <span className="read-more-text">{ this.getText() }</span>
     )
   }
 }

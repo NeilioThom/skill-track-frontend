@@ -3,8 +3,8 @@ import React from 'react';
 
 const ProgressBar = props => {
   return(
-    <div class="progress lg text-center">
-      <div class="progress-bar" role="progressbar" style={{width: props.percentage + "%"}}>
+    <div className="progress lg text-center">
+      <div className="progress-bar" role="progressbar" style={{width: props.percentage + "%"}}>
         { (props.percentage > 0) ? props.text : '' }
       </div>
     </div>
