@@ -6381,29 +6381,19 @@ header {
   display: flex;
   justify-content: space-between; }
 
-hgroup.horizontal {
-  align-items: center;
-  display: flex;
-  justify-content: space-between; }
-  hgroup.horizontal .subheading {
-    margin-left: 0.5em;
-    font-size: 1em; }
-    hgroup.horizontal .subheading h1, hgroup.horizontal .subheading h2, hgroup.horizontal .subheading h3, hgroup.horizontal .subheading h4, hgroup.horizontal .subheading h5, hgroup.horizontal .subheading h6 {
-      display: inline; }
-
 .progress {
-  border-radius: 10px;
+  border-radius: 5px;
   font-size: 0.9em;
   height: 20px;
   margin: 1.5em 0; }
   .progress .progress-bar {
-    background: #41bab2; }
+    background: #ffa600; }
 
 .badge {
   font-weight: 300; }
 
 .badge.badge-progress {
-  background: #41bab2;
+  background: #ffa600;
   color: #FFF; }
 
 .badge.lg {
@@ -6411,7 +6401,17 @@ hgroup.horizontal {
   padding: 0.4em 0.6em; }
 
 body {
-  font-size: 1em; }
+  font-size: 1em;
+  line-height: 1.8; }
+
+.display-text {
+  color: #777;
+  font-size: 1.1em;
+  margin: 1.5em 0; }
+
+.subheading {
+  color: #AFAFAF;
+  font-size: 1.25em; }
 
 h1 {
   font-size: 2em;
@@ -6427,22 +6427,18 @@ h3 {
 
 h4 {
   font-size: 1.2em;
-  margin: 1.1em 0; }
+  margin: 0.8em 0; }
 
 p {
   margin-bottom: 0.5em; }
-
-.subheading {
-  color: #AFAFAF;
-  font-size: 1.25em; }
 
 .entry {
   align-items: stretch;
   display: flex;
   justify-content: space-between;
   margin: 0.2em 0; }
-  .entry h3 {
-    color: #7e5f8e;
+  .entry h4 {
+    color: #ffa600;
     font-size: 1.2em; }
   .entry .text {
     text-align: justify;
@@ -6453,17 +6449,17 @@ p {
     text-align: center;
     width: 20%; }
     .entry .time h5 {
-      color: #7e5f8e;
+      color: #ffa600;
       font-size: 1.2em; }
 
 a {
-  color: #7e5f8e; }
+  color: #dd7027; }
   a:visited {
-    color: #7e5f8e; }
+    color: #dd7027; }
   a:hover {
-    color: #af99ba; }
+    color: #ebaa7f; }
   a:active, a:focus {
-    color: #7e5f8e; }
+    color: #dd7027; }
 
 a.danger {
   color: #FF0000; }
@@ -6500,14 +6496,14 @@ hgroup.date-changer-group {
     display: flex;
     margin-left: 0.5em; }
   hgroup.date-changer-group button {
-    color: #7e5f8e;
+    color: #ffa600;
     font-size: 1.5em; }
 
 .btn-outline {
-  color: #7e5f8e;
-  border-color: #7e5f8e; }
+  color: #ffa600;
+  border-color: #ffa600; }
   .btn-outline:hover {
-    background: #7e5f8e;
+    background: #ffa600;
     border-color: #DDD; }
 
 .nav-sidebar ul li {
@@ -6516,7 +6512,7 @@ hgroup.date-changer-group {
     margin-right: 1em; }
 
 #layout-root > header {
-  background: #7e5f8e;
+  background: #ffa600;
   padding: 0.1em 1em;
   width: 100%; }
   #layout-root > header h1 {

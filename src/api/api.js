@@ -24,7 +24,7 @@ export const getSkill = (skillID) => {
 }
 
 export const getEntries = (skillID, pageNum) => {
-  return APIRequest('skills/' + skillID + '/entries/page/' + pageNum, {
+  return APIRequest('entries/?skill_id=' + skillID + '&page=' + pageNum, {
     method: "GET"
   });
 }

@@ -8,6 +8,7 @@ const CreateSkillPage = (props) => {
         <NavSidebar />
         <section className="main panel coloured">
           <h1>Create a Skill</h1>
+          <p className="display-text">By creating a skill, you can track your progress on the road to mastery. For now, let's give your skill a name and a weekly goal that you're aiming to hit.</p>
           <CreateSkillFormContainer />
         </section>
       </div>

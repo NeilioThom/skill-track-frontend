@@ -33,7 +33,7 @@ const SkillDetailsPage = (props) => {
         <hgroup className="date-changer-group">
           <h2>Progress by Week</h2>
           <div className="date-changer">
-            <button className="btn-date-change" onClick={(e) => props.changePage(props.currentPage + 1)}>&#171;</button>
+            <button onClick={(e) => props.changePage(props.currentPage + 1)}>&#171;</button>
             <h3 className="subheading">
               Week { props.currentPageDate.format('w, YYYY') }
             </h3>
@@ -64,7 +64,7 @@ const SkillDetailsPage = (props) => {
                     </div>
                   </article>
                 )})
-              : <p>No Entries</p>
+              : <p className="display-text">You haven't logged any sessions on this week.</p>
             }
           </div>
         </div>
