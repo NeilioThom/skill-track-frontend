@@ -1,4 +1,4 @@
-import APIRequest, { getSkill, getEntries } from '../api/api';
+import { getSkill, getEntries } from '../api/api';
 import { Component } from 'react';
 import React from 'react';
 import SkillDetailsPage from '../pages/skill-details-page';
@@ -14,7 +14,7 @@ class SkillDetailsPageContainer extends Component {
     this.state = {
       skill: {},
       entries: [],
-      currentPage: parseInt(queryString.parse(props.location.search).page) || 1,
+      currentPage: parseInt(queryString.parse(props.location.search).page, 10) || 1,
       currentPageDate: moment(),
       skillId: props.match.params.id,
       weeklyPercentage: 0
@@ -33,7 +33,7 @@ class SkillDetailsPageContainer extends Component {
   }
 
   changePage(pageNum) {
-    let newPage = clamp(parseInt(pageNum), 1, 100);
+    let newPage = clamp(parseInt(pageNum, 10), 1, 100);
 
     if(this.state.currentPage !== newPage) {
       this.setState({ currentPage: newPage }, () => {

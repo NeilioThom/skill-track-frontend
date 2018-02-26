@@ -1,8 +1,6 @@
 import React from 'react';
-import Cookies from 'js-cookie';
 import { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-
 import LoginForm from '../components/login-form';
 import formStateChange from '../util/form-state';
 import APIRequest from '../api/api';
@@ -31,13 +29,13 @@ class LoginFormContainer extends Component {
       data: self.state
     })
     .then((response) => {
-      if(response.status == 200) {
+      if(response.status === 200) {
         window.store.dispatch(login({ username: response.data.username }));
         self.props.history.push('/');
       }
     })
     .catch((error) => {
-      if(error.status == 403)
+      if(error.status === 403)
       {
         self.setState({ formErrors: error.response.data });
       }

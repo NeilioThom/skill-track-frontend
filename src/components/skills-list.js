@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import moment from 'moment';
 import APIRequest from '../api/api';
-import { getWeeklyPercentage, durationToMoment } from '../util/formatting';
 import { NavLink } from 'react-router-dom';
-import ProgressBar from './progress-bar';
 
 class SkillsList extends Component {
   constructor(props) {
@@ -20,9 +18,9 @@ class SkillsList extends Component {
       .catch((response) => console.log(response))
   }
 
-  skillCard(item, key) {
+  skillCard(item, index) {
     return(
-      <article>
+      <article key={index}>
         <header>
           <h3 className="col-8">
             <NavLink to={"/skills/" + item.id}>

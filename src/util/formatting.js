@@ -8,7 +8,7 @@ export const durationToMoment = (duration) => {
 }
 
 // Takes a duration and converts it to a number of seconds. Returns seconds as string
-export const durationToSeconds = (duration) => {
+export const covertTimeToSeconds = (duration) => {
   return durationToMoment(duration).format('ss').replace(',', '');
 }
 

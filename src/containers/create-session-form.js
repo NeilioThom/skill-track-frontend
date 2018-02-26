@@ -1,14 +1,9 @@
 import React from 'react';
-import moment from 'moment';
 import { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-
 import APIRequest from '../api/api';
 import formStateChange from '../util/form-state';
-
-import momentDurationFormatSetup from 'moment-duration-format';
-import { durationToSeconds } from '../util/formatting';
-
+import { covertTimeToSeconds } from '../util/formatting';
 import CreateSessionForm from '../components/create-session-form';
 
 class CreateSessionFormContainer extends Component {
@@ -33,7 +28,7 @@ class CreateSessionFormContainer extends Component {
       method: 'POST',
       data: {
         'created_date': this.state.created_date,
-        'time_spent': durationToSeconds(this.state.time_spent),
+        'time_spent': covertTimeToSeconds(this.state.time_spent),
         'comment': this.state.comment
       }
     })

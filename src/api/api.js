@@ -7,8 +7,8 @@ axios.defaults.withCredentials = true;
 
 const APIRequest = (endPoint, params) => {
   // Check if there are any parameters so far. Create them if there isn't.
-  if(params.headers == undefined)
-    params["headers"] = new Object();
+  if(params.headers === undefined)
+    params["headers"] = { };
 
   // Always add CSRF Header
   params['url'] = APIUrl + endPoint;

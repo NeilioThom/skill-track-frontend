@@ -18,7 +18,7 @@ const NavSidebar = (props) => {
           </NavLink>
         </li>
         <li>
-          <a href="#">
+          <a href="">
             <i className="fas fa-chart-line"></i> Statistics
           </a>
         </li>

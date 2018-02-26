@@ -1,6 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import Layout from './pages/layout';
@@ -30,7 +30,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <div class="app">
+        <div className="app">
           <Layout>
             <Routing />
           </Layout>

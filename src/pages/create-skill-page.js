@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import NavSidebar from '../components/nav-sidebar';
 import CreateSkillFormContainer from '../containers/create-skill-form';
 

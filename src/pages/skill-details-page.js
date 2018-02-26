@@ -1,14 +1,9 @@
 import React from 'react';
 import moment from 'moment';
-
-import { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-
-import CreateSkillForm from '../components/create-skill-form';
 import NavSidebar from '../components/nav-sidebar';
 import ReadMoreText from '../components/read-more-text';
 import ProgressBar from '../components/progress-bar';
-
 import { durationToMoment } from '../util/formatting';
 
 const SkillDetailsPage = (props) => {
@@ -30,7 +25,7 @@ const SkillDetailsPage = (props) => {
             <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
               <NavLink to={"/skills/" + props.skill.id + "/sessions/create"}>Add a Session</NavLink>
               <NavLink to={"/skills/" + props.skill.id + "/sessions/create"}>Change Weekly Goal</NavLink>
-              <a href="#" className="danger">Delete Skill</a>
+              <a href className="danger">Delete Skill</a>
             </div>
           </div>
         </header>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
 import SkillsList from '../components/skills-list';
 import NavSidebar from '../components/nav-sidebar';
 

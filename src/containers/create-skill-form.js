@@ -2,6 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 import APIRequest from '../api/api';
 import CreateSkillForm from '../components/create-skill-form';
+import { covertTimeToSeconds } from '../util/formatting';
 
 class CreateSkillFormContainer extends Component {
     constructor(props) {
@@ -13,24 +14,23 @@ class CreateSkillFormContainer extends Component {
 
         this.state = {
             name: '',
-            weeklyGoal: 0
+            weekly_goal: 0
         }
     }
 
     // POST to skills endpoint with form data
     onSubmit(e) {
         e.preventDefault();
-        var request = this.state;
         var self = this;
 
         APIRequest('skills/', {
             method: 'POST',
             data: {
                 name: this.state.name,
-                weeklyGoal: this.state.weekly_goal
+                weekly_goal: covertTimeToSeconds(this.state.weekly_goal)
             }
         }).then(function (response) {
-            if (response.status == 200) {
+            if (response.status === 200) {
                 self.props.history.push('/');
             }
         });
@@ -47,7 +47,7 @@ class CreateSkillFormContainer extends Component {
                 onChange={this.onChange}
                 onSubmit={this.onSubmit}
                 name={this.state.name}
-                weekly_goal={this.state.weeklyGoal}
+                weekly_goal={this.state.weekly_goal}
             />
         )
     }
