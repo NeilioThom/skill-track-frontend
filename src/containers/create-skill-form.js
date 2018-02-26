@@ -3,6 +3,7 @@ import { Component } from 'react';
 import APIRequest from '../api/api';
 import CreateSkillForm from '../components/create-skill-form';
 import { covertTimeToSeconds } from '../util/formatting';
+import { withRouter } from 'react-router-dom';
 
 class CreateSkillFormContainer extends Component {
     constructor(props) {
@@ -30,6 +31,7 @@ class CreateSkillFormContainer extends Component {
                 weekly_goal: covertTimeToSeconds(this.state.weekly_goal)
             }
         }).then(function (response) {
+            console.log(self);
             if (response.status === 200) {
                 self.props.history.push('/');
             }
@@ -53,4 +55,4 @@ class CreateSkillFormContainer extends Component {
     }
 }
 
-export default CreateSkillFormContainer;
+export default withRouter(CreateSkillFormContainer);

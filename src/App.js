@@ -1,6 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import Layout from './pages/layout';
@@ -17,12 +17,14 @@ window.store = store;
 
 const Routing = () => (
   <div id="routing">
-    <Route exact path="/" component={HomePage} />
-    <Route path="/login" component={LoginPage} />
-    <Route path="/skills/create" component={CreateSkillPage} />
-    <Route exact path="/skills/:id/sessions/create/" component={CreateSessionPage} />
-    <Route exact path="/skills/:id/" component={SkillDetailsPageContainer} />
-    <Route exact path="/skills/:id/page/:page" component={SkillDetailsPageContainer} />
+    <Switch>
+      <Route exact path="/" component={HomePage} />
+      <Route path="/login" component={LoginPage} />
+      <Route exact path="/skills/:subpath(create)/" component={CreateSkillPage} />
+      <Route exact path="/skills/:id/sessions/create/" component={CreateSessionPage} />
+      <Route exact path="/skills/:id/" component={SkillDetailsPageContainer} />
+      <Route exact path="/skills/:id/page/:page" component={SkillDetailsPageContainer} />
+    </Switch>
   </div>
 );
 

@@ -11,8 +11,6 @@ class HomePage extends Component {
           <h1>Your Progress This Week</h1>
           <h2>Skills</h2>
           <SkillsList />
-          <h2>Habits</h2>
-          <SkillsList />
         </section>
       </div>
     )
