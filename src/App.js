@@ -31,14 +31,8 @@ const Routing = () => (
 );
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { isLoaded: false }
-  }
-
   componentWillMount() {
-    this.setState({ isLoaded: true });
+    document.getElementById('loading-screen').style.display = 'none';
   }
 
   render() {
@@ -48,9 +42,6 @@ class App extends Component {
           <Layout>
             <Routing />
           </Layout>
-          { !this.state.isLoaded &&
-            <div id="loading-screen"></div>
-          }
         </div>
       </Provider>
     );
