@@ -6385,6 +6385,26 @@ body {
 .container-fluid, .page {
   max-width: 1280px; }
 
+.calendar {
+  margin: 2em auto; }
+  .calendar ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none; }
+    .calendar ul li {
+      flex-basis: 14%;
+      text-align: center; }
+  .calendar .days {
+    background: #30d3b8;
+    color: #FFF;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.2em 0; }
+  .calendar .dates {
+    padding: 0; }
+    .calendar .dates li {
+      margin: 1em 0; }
+
 p.alert {
   font-size: 0.9em;
   margin: 1em 0;
@@ -6401,13 +6421,13 @@ header {
   height: 20px;
   margin: 1.5em 0; }
   .progress .progress-bar {
-    background: #ffa600; }
+    background: #30d3b8; }
 
 .badge {
   font-weight: 300; }
 
 .badge.badge-progress {
-  background: #ffa600;
+  background: #30d3b8;
   color: #FFF; }
 
 .badge.lg {
@@ -6432,11 +6452,11 @@ h1 {
   margin: 1em 0 0.5em 0; }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.6em;
   margin: 0.7em 0; }
 
 h3 {
-  font-size: 1.4em;
+  font-size: 1.5em;
   margin: 0.6em 0; }
 
 h4 {
@@ -6452,7 +6472,7 @@ p {
   justify-content: space-between;
   margin: 0.2em 0; }
   .entry h4 {
-    color: #d62e52;
+    color: #30d3b8;
     font-size: 1.2em; }
   .entry .text {
     text-align: justify;
@@ -6463,17 +6483,17 @@ p {
     text-align: center;
     width: 20%; }
     .entry .time h5 {
-      color: #d62e52;
+      color: #30d3b8;
       font-size: 1.2em; }
 
 a {
-  color: #cc2e7d; }
+  color: #30d3b8; }
   a:visited {
-    color: #cc2e7d; }
+    color: #30d3b8; }
   a:hover {
-    color: #e27eb0; }
+    color: #84e5d5; }
   a:active, a:focus {
-    color: #cc2e7d; }
+    color: #30d3b8; }
 
 a.danger {
   color: #FF0000; }
@@ -6513,14 +6533,14 @@ hgroup.date-changer-group {
     display: flex;
     margin-left: 0.5em; }
   hgroup.date-changer-group button {
-    color: #d62e52;
+    color: #30d3b8;
     font-size: 1.5em; }
 
 .btn-outline {
-  color: #d62e52;
-  border-color: #d62e52; }
+  color: #30d3b8;
+  border-color: #30d3b8; }
   .btn-outline:hover {
-    background: #d62e52;
+    background: #30d3b8;
     border-color: #DDD; }
 
 .page {
@@ -6535,7 +6555,7 @@ hgroup.date-changer-group {
       margin-right: 1em; }
 
 #layout-root > header {
-  background: #d62e52;
+  background: #30d3b8;
   padding: 0.1em 1em;
   width: 100%; }
   #layout-root > header h1 {

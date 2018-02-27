@@ -4,12 +4,12 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,600");
 
 // VARIABLES
-$primary-color: #d62e52;
+$primary-color: #30d3b8;
 $secondary-color: #777;
 
 //$primary-color: #7e5f8e;
-$progress-color: #ffa600;
-$link-color: rgb(204, 46, 125);
+$progress-color: #30d3b8;
+$link-color: #30d3b8;
 
 // ------ 100% Height Fix
 html, body, #root, .app, #layout-root, .main-content, #routing {
@@ -83,6 +83,37 @@ ul.list-inline {
     max-width: 1280px;
 }
 
+// ------ CALENDAR
+.calendar {
+    margin: 2em auto;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+
+        li {
+            flex-basis: 14%;
+            text-align: center;
+        }
+    }
+
+    .days {
+        background: $progress-color;
+        color: #FFF;
+        font-weight: bold;
+        margin: 0;
+        padding: 0.2em 0;
+    }
+
+    .dates {
+        padding: 0;
+        li {
+            margin: 1em 0;
+        }
+    }
+}
+
 // ------ ALERTS
 p.alert {
     font-size: 0.9em;
@@ -147,12 +178,12 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.6em;
     margin: 0.7em 0;
 }
 
 h3 {
-    font-size: 1.4em;
+    font-size: 1.5em;
     margin: 0.6em 0;
 }
 

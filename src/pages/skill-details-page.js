@@ -71,6 +71,50 @@ const SkillDetailsPage = (props) => {
             }
           </div>
         </div>
+        <div className="panel-section">
+          <h3>Progress by Month</h3>
+          <div className="calendar">
+            <ul className="days">
+              <li>Mon</li>
+              <li>Tue</li>
+              <li>Wed</li>
+              <li>Thur</li>
+              <li>Fri</li>
+              <li>Sat</li>
+              <li>Sun</li>
+            </ul>
+            <ul className="dates">
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+              <li>7</li>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+              <li>7</li>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+              <li>7</li>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+              <li>7</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   )
