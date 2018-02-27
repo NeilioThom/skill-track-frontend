@@ -35,6 +35,17 @@ body {
     font-family: 'Open Sans';
 }
 
+// ------ LOADING SCREEN
+#loading-screen {
+    background: $primary-color;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;    
+    width: 100%;
+    z-index: 2;
+}
+
 // ------ LISTS
 ul.list-inline {
     li {
