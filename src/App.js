@@ -31,7 +31,7 @@ const Routing = () => (
 );
 
 class App extends Component {
-  componentWillMount() {
+  componentDidMount() {
     document.getElementById('loading-screen').style.display = 'none';
   }
 
