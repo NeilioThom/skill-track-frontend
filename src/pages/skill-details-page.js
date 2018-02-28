@@ -51,6 +51,7 @@ const SkillDetailsPage = (props) => {
             text={ props.weeklyPercentage + "%" }
           />
         </div>
+        
         <div className="panel-section">
           <h3>Logged Sessions</h3>
           <div className="col entries">

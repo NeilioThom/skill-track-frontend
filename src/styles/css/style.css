@@ -6586,43 +6586,6 @@ hgroup.date-changer-group {
         #layout-root > header ul.pills li a:active, #layout-root > header ul.pills li a:focus, #layout-root > header ul.pills li .active:active, #layout-root > header ul.pills li .active:focus {
           color: #FFF; }
 
-@media (max-width: 800px) {
-  html {
-    font-size: 1em; }
-  .nav-sidebar {
-    display: none; }
-  .panel.main {
-    flex-direction: column;
-    background: #FFF;
-    margin: 0 !important; }
-    .panel.main header {
-      display: block; }
-  .actions-menu {
-    width: 100%; }
-    .actions-menu * {
-      position: static !important;
-      transform: none !important;
-      width: 100%; }
-    .actions-menu .dropdown-menu {
-      margin-bottom: 2em; }
-  .page {
-    padding-left: 0 !important;
-    padding-right: 0 !important; }
-  .entry {
-    display: block; }
-    .entry .text {
-      display: block;
-      min-width: 100%; }
-    .entry .time {
-      display: block;
-      min-width: 100%; }
-  #layout-root > header {
-    font-size: 0.8em; }
-    #layout-root > header h1 {
-      text-align: center; }
-    #layout-root > header ul.pills {
-      display: none; } }
-
 .sidebar-menu-mobile {
   background: #333;
   color: #FFF;
@@ -6638,11 +6601,50 @@ hgroup.date-changer-group {
     margin: 0;
     padding: 0; }
     .sidebar-menu-mobile ul li {
-      border-bottom: 1px solid #E0E0E0;
+      border-bottom: 1px solid #A0A0A0;
       font-size: 1.4em;
-      padding: 0.5em 1em; }
+      padding: 0.8em 1em; }
+    .sidebar-menu-mobile ul a {
+      color: #FFF; }
   .sidebar-menu-mobile button.close {
     color: #FFF;
     position: relative;
     right: 0.5em;
     top: 0.2em; }
+
+@media (max-width: 800px) {
+  html {
+    font-size: 1em; }
+  .page {
+    padding-left: 0 !important;
+    padding-right: 0 !important; }
+  .panel.main {
+    flex-direction: column;
+    background: #FFF;
+    margin: 0 !important; }
+    .panel.main header {
+      display: block; }
+  .actions-menu {
+    width: 100%; }
+    .actions-menu * {
+      position: static !important;
+      transform: none !important;
+      width: 100%; }
+    .actions-menu .dropdown-menu {
+      margin-bottom: 2em; }
+  .entry {
+    display: block; }
+    .entry .text {
+      display: block;
+      min-width: 100%; }
+    .entry .time {
+      display: block;
+      min-width: 100%; }
+  .nav-sidebar {
+    display: none; }
+  #layout-root > header {
+    font-size: 0.8em; }
+    #layout-root > header h1 {
+      text-align: center; }
+    #layout-root > header ul.pills {
+      display: none; } }

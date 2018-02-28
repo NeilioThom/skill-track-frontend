@@ -8,8 +8,9 @@ const SidebarMenuMobile = (props) => {
     <nav className="sidebar-menu-mobile">
       <button className="close">x</button>
       <ul>
-        <li>Hello</li>
-        <li>World</li>
+        <NavLink to="/"><li>Home</li></NavLink>
+        <NavLink to="/"><li>Register</li></NavLink>
+        <NavLink to="/"><li>Log In</li></NavLink>
       </ul>
     </nav>
   )
@@ -21,18 +22,10 @@ const PillsBasedOnAuth = (props) => {
       <div>
         <SidebarMenuMobile />
         <ul className="pills">
-          <li>
-            <a className="nav-link" href="">Home</a>
-          </li>
-          <li>
-            <a className="nav-link" href="">About</a>
-          </li>
-          <li>
-            <a className="nav-link" href="">Register</a>
-          </li>
-          <li>
-            <NavLink to="/login/" className="nav-link">Log In</NavLink>
-          </li>
+          <li><a className="nav-link" href="">Home</a></li>
+          <li><a className="nav-link" href="">About</a></li>
+          <li><a className="nav-link" href="">Register</a></li>
+          <li><NavLink to="/login/" className="nav-link">Log In</NavLink></li>
         </ul>
       </div>
     )
