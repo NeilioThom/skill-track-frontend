@@ -31,10 +31,6 @@ const Routing = () => (
 );
 
 class App extends Component {
-  componentDidMount() {
-    document.getElementById('loading-screen').style.display = 'none';
-  }
-
   render() {
     return (
       <Provider store={store}>

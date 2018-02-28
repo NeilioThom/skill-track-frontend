@@ -4,12 +4,12 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,600");
 
 // VARIABLES
-$primary-color: #30d3b8;
+$primary-color: #d33066;
 $secondary-color: #777;
 
 //$primary-color: #7e5f8e;
-$progress-color: #30d3b8;
-$link-color: #30d3b8;
+$progress-color: #d33066;
+$link-color: #d33066;
 
 // ------ 100% Height Fix
 html, body, #root, .app, #layout-root, .main-content, #routing {
@@ -35,22 +35,16 @@ body {
     font-family: 'Open Sans';
 }
 
-// ------ LOADING SCREEN
-#loading-screen {
-    background: $primary-color;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;    
-    width: 100%;
-    z-index: 2;
-}
-
 // ------ LISTS
 ul.list-inline {
     li {
         @extend .list-inline-item;
     }
+}
+
+// ------ HAMBURGER MENU
+nav.hamburger {
+    display: none;
 }
 
 // ------- LAYOUT
@@ -97,6 +91,7 @@ ul.list-inline {
 // ------ CALENDAR
 .calendar {
     margin: 2em auto;
+    width: 50%;
 
     ul {
         display: flex;
@@ -356,6 +351,10 @@ hgroup.date-changer-group {
 // ------ NAV SIDEBAR COMPONENT
 .nav-sidebar {
     flex-basis: 18%;
+    
+    h1 {
+        font-size: calc(1.2em + 0.8vw);
+    }
 
     ul {
         @extend .flex-column;
@@ -406,7 +405,7 @@ hgroup.date-changer-group {
         margin: 0.2em 0;
     }
 
-    ul {
+    ul.pills {
         @extend .nav;
 
         @extend .nav-pills;
@@ -443,12 +442,6 @@ hgroup.date-changer-group {
 
     .nav-sidebar {
         display: none;
-    }
-
-    #layout-root > header {
-        ul {
-            display: none;
-        }
     }
 
     .panel.main {
@@ -494,7 +487,47 @@ hgroup.date-changer-group {
         }
     }
 
+    // ------ MAIN HEADER RESPONSIVENESS
     #layout-root > header {
         font-size: 0.8em;
+
+        h1 {
+            text-align: center;
+        }
+
+        ul.pills {
+            display: none;
+        }
+    }
+}
+
+.sidebar-menu-mobile {
+    background: #333;
+    color: #FFF;
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    max-width: 400px;
+    width: 80%;
+    z-index: 2;
+
+    ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+            border-bottom: 1px solid #E0E0E0;
+            font-size: 1.4em;
+            padding: 0.5em 1em;
+        }
+    }
+
+    button.close {
+        color: #FFF;        
+        position: relative;
+        right: 0.5em;
+        top: 0.2em;
     }
 }
