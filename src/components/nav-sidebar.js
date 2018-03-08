@@ -9,18 +9,8 @@ const NavSidebar = (props) => {
       <ul className="nav-sidebar">
         <li>
           <NavLink to="/skills/create/">
-            <i className="fas fa-paint-brush"></i> Add a Skill
+            <i className="fas fa-plus"></i> Add a Skill
           </NavLink>
-        </li>
-        <li>
-          <NavLink to="/skills/create/">
-            <i className="fas fa-calendar"></i> Add a Habit
-          </NavLink>
-        </li>
-        <li>
-          <a href="">
-            <i className="fas fa-chart-line"></i> Statistics
-          </a>
         </li>
       </ul>
     </section>

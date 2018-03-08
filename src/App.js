@@ -12,9 +12,11 @@ import CreateSessionPage from './pages/create-session-page';
 import SkillDetailsPageContainer from './containers/skill-details-page';
 import rootReducer from './reducers/reducers';
 import './styles/css/style.css';
+import ParseDateString from './util/date-parser';
 
 const store = createStore(rootReducer)
 window.store = store;
+
 
 const Routing = () => (
   <div id="routing">

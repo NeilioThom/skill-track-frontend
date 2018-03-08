@@ -11,12 +11,18 @@ class SkillDetailsPageContainer extends Component {
   constructor(props) {
     super(props);
 
+    let today = moment();
+
     this.state = {
       skill: {},
       entries: [],
       currentPage: parseInt(queryString.parse(props.location.search).page, 10) || 1,
       currentPageDate: moment(),
       skillId: props.match.params.id,
+      calendar: {
+        firstDayOffset: parseInt(today.startOf('month').format('d')) - 1,
+        daysInMonth: parseInt(today.daysInMonth())
+      },
       weeklyPercentage: 0
     }
 
@@ -59,7 +65,7 @@ class SkillDetailsPageContainer extends Component {
   }
 
   componentWillMount() {
-    // Get skill data
+    // Get skill data   
     getSkill(this.state.skillId)
       .then((response) => {
         this.setState({ skill: response.data },
@@ -81,6 +87,7 @@ class SkillDetailsPageContainer extends Component {
         currentPageDate={ this.state.currentPageDate }
         changePage={ this.changePage }
         weeklyPercentage={ this.state.weeklyPercentage }
+        calendar={ this.state.calendar }
       />
     )
   }

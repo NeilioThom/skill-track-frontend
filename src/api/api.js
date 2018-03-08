@@ -1,7 +1,7 @@
 import axios from 'axios';
 import Cookies from 'js-cookie';
 
-const APIUrl = 'http://localhost:8000/';
+const APIUrl = 'http://api.10k-hours.io/';
 
 axios.defaults.withCredentials = true;
 
@@ -19,13 +19,13 @@ const APIRequest = (endPoint, params) => {
 
 export const getSkill = (skillID) => {
   return APIRequest('skills/' + skillID, {
-    method: "GET"
+    method: 'GET'
   });
 }
 
 export const getEntries = (skillID, pageNum) => {
   return APIRequest('entries/?skill_id=' + skillID + '&page=' + pageNum, {
-    method: "GET"
+    method: 'GET'
   });
 }
 

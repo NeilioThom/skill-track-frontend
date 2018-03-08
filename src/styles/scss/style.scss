@@ -1,15 +1,14 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "mixins.scss";
-
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,600");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600");
 
 // VARIABLES
-$primary-color: #d33066;
+$primary-color: #ef5739;
 $secondary-color: #777;
 
 //$primary-color: #7e5f8e;
-$progress-color: #d33066;
-$link-color: #d33066;
+$progress-color: #ef5739;
+$link-color: #ef5739;
 
 // ------ 100% Height Fix
 html, body, #root, .app, #layout-root, .main-content, #routing {
@@ -60,10 +59,6 @@ nav.hamburger {
 .panel {
     padding: 0 1em;
 
-    .panel-section {
-        margin: 0em 0 2em 0;
-    }
-
     &.coloured {
         background: #FFF;
 
@@ -90,17 +85,19 @@ nav.hamburger {
 
 // ------ CALENDAR
 .calendar {
-    margin: 2em auto;
-    width: 50%;
+    margin: 2em 0;
+    width: 100%;
 
     ul {
         display: flex;
         flex-wrap: wrap;
         list-style: none;
+        padding: 0;
 
         li {
             flex-basis: 14%;
             text-align: center;
+            padding: 1em 0.2em;
         }
     }
 
@@ -109,14 +106,14 @@ nav.hamburger {
         color: #FFF;
         font-weight: bold;
         margin: 0;
-        padding: 0.2em 0;
+        
+        li {
+            padding: 0.5em 0.2em;
+        }
     }
 
     .dates {
-        padding: 0;
-        li {
-            margin: 1em 0;
-        }
+        padding: 0 1em;
     }
 }
 
@@ -138,8 +135,8 @@ header {
 .progress {
     border-radius: 5px;
     font-size: 0.9em;
-    height: 20px;
-    margin: 1.5em 0;
+    height: 25px;
+    margin: 1em 0 2em 0;
 
     .progress-bar {
         background: $progress-color;
@@ -180,21 +177,29 @@ body {
 
 h1 {
     font-size: 2em;
+    color: #777;
+    font-weight: 400;
     margin: 1em 0 0.5em 0;
 }
 
 h2 {
-    font-size: 1.6em;
+    font-size: 1.75em;
+    color: #777;
+    font-weight: 400;
     margin: 0.7em 0;
 }
 
 h3 {
+    color: #777;    
     font-size: 1.5em;
+    font-weight: 400;
     margin: 0.6em 0;
 }
 
 h4 {
-    font-size: 1.2em;
+    color: #666;    
+    font-size: 1.4em;
+    font-weight: 400;    
     margin: 0.8em 0;
 }
 
@@ -207,17 +212,18 @@ p {
     align-items: stretch;
     display: flex;
     justify-content: space-between;
-    margin: 0.2em 0;
+    margin: 0.4em 0;
 
     h4 {
         color: $primary-color;
         font-size: 1.2em;
+        margin: 0.5em 0;
     }
 
     .text {
         text-align: justify;
-        padding-right: 2em;
-        width: 80%;
+        padding-right: 2%;
+        width: 75%;
     }
 
     .time {
@@ -300,13 +306,13 @@ form {
 }
 
 // ------ DATE CHANGER
-hgroup.date-changer-group {
+.date-changer {
     align-items: center;
     display: flex;
     justify-content: space-between;
     width: 100%;
 
-    .date-changer {
+    .date-changer-controls {
         align-items: center;
         display: flex;
         margin-left: 0.5em;
@@ -388,6 +394,7 @@ hgroup.date-changer-group {
 #layout-root > header {
     @extend .d-flex;
 
+    align-items: center;
     background: $primary-color;
     padding: 0.1em 1em;
     width: 100%;
@@ -439,7 +446,7 @@ hgroup.date-changer-group {
     background: #333;
     color: #FFF;
     position: fixed;
-    display: block;
+    display: none;
     top: 0;
     left: 0;
     height: 100%;
@@ -468,6 +475,10 @@ hgroup.date-changer-group {
         right: 0.5em;
         top: 0.2em;
     }
+}
+
+.panel-section {
+    margin: 1em 0 2em 0;
 }
 
 // ------ RESPONSIVENESS
@@ -511,15 +522,12 @@ hgroup.date-changer-group {
     // ------ ENTRY LIST RESPONSIVENESS
     .entry {
         display: block;
+        margin: 2em 0;
 
-        .text {
-            display: block;
-            min-width: 100%;
-        }
+        h5 { display: block; width: 100%; }
 
         .time {
-            display: block;
-            min-width: 100%;
+            text-align: left;
         }
     }
 

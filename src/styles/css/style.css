@@ -4,7 +4,7 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,600");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -1323,24 +1323,24 @@ select.form-control:focus::-ms-value {
   .input-group-sm > .input-group-prepend > .form-control-plaintext.btn,
   .input-group-sm > .input-group-prepend > .form-control-plaintext.dropdown-toggle, form
   .input-group-sm > .input-group-prepend > input.form-control-plaintext[type=submit], form
-  .input-group-sm > .input-group-prepend > button.form-control-plaintext, hgroup.date-changer-group
+  .input-group-sm > .input-group-prepend > button.form-control-plaintext, .date-changer
   .input-group-sm > .input-group-prepend > button.form-control-plaintext,
   .input-group-sm > .input-group-append > .form-control-plaintext.btn,
   .input-group-sm > .input-group-append > .form-control-plaintext.dropdown-toggle, form
   .input-group-sm > .input-group-append > input.form-control-plaintext[type=submit], form
-  .input-group-sm > .input-group-append > button.form-control-plaintext, hgroup.date-changer-group
+  .input-group-sm > .input-group-append > button.form-control-plaintext, .date-changer
   .input-group-sm > .input-group-append > button.form-control-plaintext, .form-control-plaintext.form-control-lg, .input-group-lg > .form-control-plaintext.form-control, form .input-group-lg > input.form-control-plaintext, form .input-group-lg > textarea.form-control-plaintext,
   .input-group-lg > .input-group-prepend > .form-control-plaintext.input-group-text,
   .input-group-lg > .input-group-append > .form-control-plaintext.input-group-text,
   .input-group-lg > .input-group-prepend > .form-control-plaintext.btn,
   .input-group-lg > .input-group-prepend > .form-control-plaintext.dropdown-toggle, form
   .input-group-lg > .input-group-prepend > input.form-control-plaintext[type=submit], form
-  .input-group-lg > .input-group-prepend > button.form-control-plaintext, hgroup.date-changer-group
+  .input-group-lg > .input-group-prepend > button.form-control-plaintext, .date-changer
   .input-group-lg > .input-group-prepend > button.form-control-plaintext,
   .input-group-lg > .input-group-append > .form-control-plaintext.btn,
   .input-group-lg > .input-group-append > .form-control-plaintext.dropdown-toggle, form
   .input-group-lg > .input-group-append > input.form-control-plaintext[type=submit], form
-  .input-group-lg > .input-group-append > button.form-control-plaintext, hgroup.date-changer-group
+  .input-group-lg > .input-group-append > button.form-control-plaintext, .date-changer
   .input-group-lg > .input-group-append > button.form-control-plaintext {
     padding-right: 0;
     padding-left: 0; }
@@ -1351,12 +1351,12 @@ select.form-control:focus::-ms-value {
 .input-group-sm > .input-group-prepend > .btn,
 .input-group-sm > .input-group-prepend > .dropdown-toggle, form
 .input-group-sm > .input-group-prepend > input[type=submit], form
-.input-group-sm > .input-group-prepend > button, hgroup.date-changer-group
+.input-group-sm > .input-group-prepend > button, .date-changer
 .input-group-sm > .input-group-prepend > button,
 .input-group-sm > .input-group-append > .btn,
 .input-group-sm > .input-group-append > .dropdown-toggle, form
 .input-group-sm > .input-group-append > input[type=submit], form
-.input-group-sm > .input-group-append > button, hgroup.date-changer-group
+.input-group-sm > .input-group-append > button, .date-changer
 .input-group-sm > .input-group-append > button {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
@@ -1378,12 +1378,12 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .input-group-lg > .input-group-prepend > .btn,
 .input-group-lg > .input-group-prepend > .dropdown-toggle, form
 .input-group-lg > .input-group-prepend > input[type=submit], form
-.input-group-lg > .input-group-prepend > button, hgroup.date-changer-group
+.input-group-lg > .input-group-prepend > button, .date-changer
 .input-group-lg > .input-group-prepend > button,
 .input-group-lg > .input-group-append > .btn,
 .input-group-lg > .input-group-append > .dropdown-toggle, form
 .input-group-lg > .input-group-append > input[type=submit], form
-.input-group-lg > .input-group-append > button, hgroup.date-changer-group
+.input-group-lg > .input-group-append > button, .date-changer
 .input-group-lg > .input-group-append > button {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
@@ -1647,7 +1647,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     .form-inline .custom-control-label {
       margin-bottom: 0; } }
 
-.btn, .dropdown-toggle, form input[type=submit], form button, hgroup.date-changer-group button {
+.btn, .dropdown-toggle, form input[type=submit], form button, .date-changer button {
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -1660,16 +1660,16 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   line-height: 1.5;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
-  .btn:hover, .dropdown-toggle:hover, form input[type=submit]:hover, form button:hover, hgroup.date-changer-group button:hover, .btn:focus, .dropdown-toggle:focus, form input[type=submit]:focus, form button:focus, hgroup.date-changer-group button:focus {
+  .btn:hover, .dropdown-toggle:hover, form input[type=submit]:hover, form button:hover, .date-changer button:hover, .btn:focus, .dropdown-toggle:focus, form input[type=submit]:focus, form button:focus, .date-changer button:focus {
     text-decoration: none; }
-  .btn:focus, .dropdown-toggle:focus, form input[type=submit]:focus, form button:focus, hgroup.date-changer-group button:focus, .btn.focus, .focus.dropdown-toggle, form input.focus[type=submit], form button.focus, hgroup.date-changer-group button.focus {
+  .btn:focus, .dropdown-toggle:focus, form input[type=submit]:focus, form button:focus, .date-changer button:focus, .btn.focus, .focus.dropdown-toggle, form input.focus[type=submit], form button.focus, .date-changer button.focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-  .btn.disabled, .disabled.dropdown-toggle, form input.disabled[type=submit], form button.disabled, hgroup.date-changer-group button.disabled, .btn:disabled, .dropdown-toggle:disabled, form input[type=submit]:disabled, form button:disabled, hgroup.date-changer-group button:disabled {
+  .btn.disabled, .disabled.dropdown-toggle, form input.disabled[type=submit], form button.disabled, .date-changer button.disabled, .btn:disabled, .dropdown-toggle:disabled, form input[type=submit]:disabled, form button:disabled, .date-changer button:disabled {
     opacity: 0.65; }
-  .btn:not(:disabled):not(.disabled), .dropdown-toggle:not(:disabled):not(.disabled), form input[type=submit]:not(:disabled):not(.disabled), form button:not(:disabled):not(.disabled), hgroup.date-changer-group button:not(:disabled):not(.disabled) {
+  .btn:not(:disabled):not(.disabled), .dropdown-toggle:not(:disabled):not(.disabled), form input[type=submit]:not(:disabled):not(.disabled), form button:not(:disabled):not(.disabled), .date-changer button:not(:disabled):not(.disabled) {
     cursor: pointer; }
-  .btn:not(:disabled):not(.disabled):active, .dropdown-toggle:not(:disabled):not(.disabled):active, form input[type=submit]:not(:disabled):not(.disabled):active, form button:not(:disabled):not(.disabled):active, hgroup.date-changer-group button:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active, .dropdown-toggle:not(:disabled):not(.disabled).active, form input[type=submit]:not(:disabled):not(.disabled).active, form button:not(:disabled):not(.disabled).active, hgroup.date-changer-group button:not(:disabled):not(.disabled).active {
+  .btn:not(:disabled):not(.disabled):active, .dropdown-toggle:not(:disabled):not(.disabled):active, form input[type=submit]:not(:disabled):not(.disabled):active, form button:not(:disabled):not(.disabled):active, .date-changer button:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active, .dropdown-toggle:not(:disabled):not(.disabled).active, form input[type=submit]:not(:disabled):not(.disabled).active, form button:not(:disabled):not(.disabled).active, .date-changer button:not(:disabled):not(.disabled).active {
     background-image: none; }
 
 a.btn.disabled, a.disabled.dropdown-toggle,
@@ -2053,29 +2053,29 @@ fieldset:disabled a.dropdown-toggle {
     .show > .btn-outline-dark.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5); }
 
-.btn-link, hgroup.date-changer-group button {
+.btn-link, .date-changer button {
   font-weight: 400;
   color: #007bff;
   background-color: transparent; }
-  .btn-link:hover, hgroup.date-changer-group button:hover {
+  .btn-link:hover, .date-changer button:hover {
     color: #0056b3;
     text-decoration: underline;
     background-color: transparent;
     border-color: transparent; }
-  .btn-link:focus, hgroup.date-changer-group button:focus, .btn-link.focus, hgroup.date-changer-group button.focus {
+  .btn-link:focus, .date-changer button:focus, .btn-link.focus, .date-changer button.focus {
     text-decoration: underline;
     border-color: transparent;
     box-shadow: none; }
-  .btn-link:disabled, hgroup.date-changer-group button:disabled, .btn-link.disabled, hgroup.date-changer-group button.disabled {
+  .btn-link:disabled, .date-changer button:disabled, .btn-link.disabled, .date-changer button.disabled {
     color: #6c757d; }
 
-.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .dropdown-toggle, form .btn-group-lg > input[type=submit], form .btn-group-lg > button, hgroup.date-changer-group .btn-group-lg > button {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .dropdown-toggle, form .btn-group-lg > input[type=submit], form .btn-group-lg > button, .date-changer .btn-group-lg > button {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .dropdown-toggle, form .btn-group-sm > input[type=submit], form .btn-group-sm > button, hgroup.date-changer-group .btn-group-sm > button {
+.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .dropdown-toggle, form .btn-group-sm > input[type=submit], form .btn-group-sm > button, .date-changer .btn-group-sm > button {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2270,46 +2270,46 @@ tbody.collapse.show {
   position: relative;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn, .btn-group > .dropdown-toggle, form .btn-group > input[type=submit], form .btn-group > button, hgroup.date-changer-group .btn-group > button,
+  .btn-group > .btn, .btn-group > .dropdown-toggle, form .btn-group > input[type=submit], form .btn-group > button, .date-changer .btn-group > button,
   .btn-group-vertical > .btn,
   .btn-group-vertical > .dropdown-toggle, form
   .btn-group-vertical > input[type=submit], form
-  .btn-group-vertical > button, hgroup.date-changer-group
+  .btn-group-vertical > button, .date-changer
   .btn-group-vertical > button {
     position: relative;
     flex: 0 1 auto; }
-    .btn-group > .btn:hover, .btn-group > .dropdown-toggle:hover, form .btn-group > input[type=submit]:hover, form .btn-group > button:hover, hgroup.date-changer-group .btn-group > button:hover,
+    .btn-group > .btn:hover, .btn-group > .dropdown-toggle:hover, form .btn-group > input[type=submit]:hover, form .btn-group > button:hover, .date-changer .btn-group > button:hover,
     .btn-group-vertical > .btn:hover,
     .btn-group-vertical > .dropdown-toggle:hover, form
     .btn-group-vertical > input[type=submit]:hover, form
-    .btn-group-vertical > button:hover, hgroup.date-changer-group
+    .btn-group-vertical > button:hover, .date-changer
     .btn-group-vertical > button:hover {
       z-index: 1; }
-    .btn-group > .btn:focus, .btn-group > .dropdown-toggle:focus, form .btn-group > input[type=submit]:focus, form .btn-group > button:focus, hgroup.date-changer-group .btn-group > button:focus, .btn-group > .btn:active, .btn-group > .dropdown-toggle:active, form .btn-group > input[type=submit]:active, form .btn-group > button:active, hgroup.date-changer-group .btn-group > button:active, .btn-group > .btn.active, .btn-group > .active.dropdown-toggle, form .btn-group > input.active[type=submit], form .btn-group > button.active, hgroup.date-changer-group .btn-group > button.active,
+    .btn-group > .btn:focus, .btn-group > .dropdown-toggle:focus, form .btn-group > input[type=submit]:focus, form .btn-group > button:focus, .date-changer .btn-group > button:focus, .btn-group > .btn:active, .btn-group > .dropdown-toggle:active, form .btn-group > input[type=submit]:active, form .btn-group > button:active, .date-changer .btn-group > button:active, .btn-group > .btn.active, .btn-group > .active.dropdown-toggle, form .btn-group > input.active[type=submit], form .btn-group > button.active, .date-changer .btn-group > button.active,
     .btn-group-vertical > .btn:focus,
     .btn-group-vertical > .dropdown-toggle:focus, form
     .btn-group-vertical > input[type=submit]:focus, form
-    .btn-group-vertical > button:focus, hgroup.date-changer-group
+    .btn-group-vertical > button:focus, .date-changer
     .btn-group-vertical > button:focus,
     .btn-group-vertical > .btn:active,
     .btn-group-vertical > .dropdown-toggle:active, form
     .btn-group-vertical > input[type=submit]:active, form
-    .btn-group-vertical > button:active, hgroup.date-changer-group
+    .btn-group-vertical > button:active, .date-changer
     .btn-group-vertical > button:active,
     .btn-group-vertical > .btn.active,
     .btn-group-vertical > .active.dropdown-toggle, form
     .btn-group-vertical > input.active[type=submit], form
-    .btn-group-vertical > button.active, hgroup.date-changer-group
+    .btn-group-vertical > button.active, .date-changer
     .btn-group-vertical > button.active {
       z-index: 1; }
-  .btn-group .btn + .btn, .btn-group .dropdown-toggle + .btn, .btn-group form input[type=submit] + .btn, form .btn-group input[type=submit] + .btn, .btn-group form button + .btn, form .btn-group button + .btn, .btn-group hgroup.date-changer-group button + .btn, hgroup.date-changer-group .btn-group button + .btn, .btn-group .btn + .dropdown-toggle, .btn-group .dropdown-toggle + .dropdown-toggle, .btn-group form input[type=submit] + .dropdown-toggle, form .btn-group input[type=submit] + .dropdown-toggle, .btn-group form button + .dropdown-toggle, form .btn-group button + .dropdown-toggle, .btn-group hgroup.date-changer-group button + .dropdown-toggle, hgroup.date-changer-group .btn-group button + .dropdown-toggle, .btn-group form .btn + input[type=submit], form .btn-group .btn + input[type=submit], .btn-group form .dropdown-toggle + input[type=submit], form .btn-group .dropdown-toggle + input[type=submit], .btn-group form input[type=submit] + input[type=submit], form .btn-group input[type=submit] + input[type=submit], .btn-group form button + input[type=submit], form .btn-group button + input[type=submit], .btn-group hgroup.date-changer-group form button + input[type=submit], form .btn-group hgroup.date-changer-group button + input[type=submit], hgroup.date-changer-group .btn-group form button + input[type=submit], form hgroup.date-changer-group .btn-group button + input[type=submit], .btn-group form .btn + button, form .btn-group .btn + button, .btn-group form .dropdown-toggle + button, form .btn-group .dropdown-toggle + button, .btn-group form input[type=submit] + button, form .btn-group input[type=submit] + button, .btn-group form button + button, form .btn-group button + button, .btn-group hgroup.date-changer-group form button + button, form .btn-group hgroup.date-changer-group button + button, hgroup.date-changer-group .btn-group form button + button, form hgroup.date-changer-group .btn-group button + button, .btn-group hgroup.date-changer-group .btn + button, hgroup.date-changer-group .btn-group .btn + button, .btn-group hgroup.date-changer-group .dropdown-toggle + button, hgroup.date-changer-group .btn-group .dropdown-toggle + button, .btn-group form hgroup.date-changer-group input[type=submit] + button, hgroup.date-changer-group .btn-group form input[type=submit] + button, form .btn-group hgroup.date-changer-group input[type=submit] + button, hgroup.date-changer-group form .btn-group input[type=submit] + button, .btn-group form hgroup.date-changer-group button + button, hgroup.date-changer-group .btn-group form button + button, form .btn-group hgroup.date-changer-group button + button, hgroup.date-changer-group form .btn-group button + button, .btn-group hgroup.date-changer-group button + button, hgroup.date-changer-group .btn-group button + button,
+  .btn-group .btn + .btn, .btn-group .dropdown-toggle + .btn, .btn-group form input[type=submit] + .btn, form .btn-group input[type=submit] + .btn, .btn-group form button + .btn, form .btn-group button + .btn, .btn-group .date-changer button + .btn, .date-changer .btn-group button + .btn, .btn-group .btn + .dropdown-toggle, .btn-group .dropdown-toggle + .dropdown-toggle, .btn-group form input[type=submit] + .dropdown-toggle, form .btn-group input[type=submit] + .dropdown-toggle, .btn-group form button + .dropdown-toggle, form .btn-group button + .dropdown-toggle, .btn-group .date-changer button + .dropdown-toggle, .date-changer .btn-group button + .dropdown-toggle, .btn-group form .btn + input[type=submit], form .btn-group .btn + input[type=submit], .btn-group form .dropdown-toggle + input[type=submit], form .btn-group .dropdown-toggle + input[type=submit], .btn-group form input[type=submit] + input[type=submit], form .btn-group input[type=submit] + input[type=submit], .btn-group form button + input[type=submit], form .btn-group button + input[type=submit], .btn-group .date-changer form button + input[type=submit], form .btn-group .date-changer button + input[type=submit], .date-changer .btn-group form button + input[type=submit], form .date-changer .btn-group button + input[type=submit], .btn-group form .btn + button, form .btn-group .btn + button, .btn-group form .dropdown-toggle + button, form .btn-group .dropdown-toggle + button, .btn-group form input[type=submit] + button, form .btn-group input[type=submit] + button, .btn-group form button + button, form .btn-group button + button, .btn-group .date-changer form button + button, form .btn-group .date-changer button + button, .date-changer .btn-group form button + button, form .date-changer .btn-group button + button, .btn-group .date-changer .btn + button, .date-changer .btn-group .btn + button, .btn-group .date-changer .dropdown-toggle + button, .date-changer .btn-group .dropdown-toggle + button, .btn-group form .date-changer input[type=submit] + button, .date-changer .btn-group form input[type=submit] + button, form .btn-group .date-changer input[type=submit] + button, .date-changer form .btn-group input[type=submit] + button, .btn-group form .date-changer button + button, .date-changer .btn-group form button + button, form .btn-group .date-changer button + button, .date-changer form .btn-group button + button, .btn-group .date-changer button + button, .date-changer .btn-group button + button,
   .btn-group .btn + .btn-group,
   .btn-group .dropdown-toggle + .btn-group,
   .btn-group form input[type=submit] + .btn-group, form
   .btn-group input[type=submit] + .btn-group,
   .btn-group form button + .btn-group, form
   .btn-group button + .btn-group,
-  .btn-group hgroup.date-changer-group button + .btn-group, hgroup.date-changer-group
+  .btn-group .date-changer button + .btn-group, .date-changer
   .btn-group button + .btn-group,
   .btn-group .btn-group + .btn,
   .btn-group .btn-group + .dropdown-toggle,
@@ -2317,7 +2317,7 @@ tbody.collapse.show {
   .btn-group .btn-group + input[type=submit],
   .btn-group form .btn-group + button, form
   .btn-group .btn-group + button,
-  .btn-group hgroup.date-changer-group .btn-group + button, hgroup.date-changer-group
+  .btn-group .date-changer .btn-group + button, .date-changer
   .btn-group .btn-group + button,
   .btn-group .btn-group + .btn-group,
   .btn-group-vertical .btn + .btn,
@@ -2326,7 +2326,7 @@ tbody.collapse.show {
   .btn-group-vertical input[type=submit] + .btn,
   .btn-group-vertical form button + .btn, form
   .btn-group-vertical button + .btn,
-  .btn-group-vertical hgroup.date-changer-group button + .btn, hgroup.date-changer-group
+  .btn-group-vertical .date-changer button + .btn, .date-changer
   .btn-group-vertical button + .btn,
   .btn-group-vertical .btn + .dropdown-toggle,
   .btn-group-vertical .dropdown-toggle + .dropdown-toggle,
@@ -2334,7 +2334,7 @@ tbody.collapse.show {
   .btn-group-vertical input[type=submit] + .dropdown-toggle,
   .btn-group-vertical form button + .dropdown-toggle, form
   .btn-group-vertical button + .dropdown-toggle,
-  .btn-group-vertical hgroup.date-changer-group button + .dropdown-toggle, hgroup.date-changer-group
+  .btn-group-vertical .date-changer button + .dropdown-toggle, .date-changer
   .btn-group-vertical button + .dropdown-toggle,
   .btn-group-vertical form .btn + input[type=submit], form
   .btn-group-vertical .btn + input[type=submit],
@@ -2344,9 +2344,9 @@ tbody.collapse.show {
   .btn-group-vertical input[type=submit] + input[type=submit],
   .btn-group-vertical form button + input[type=submit], form
   .btn-group-vertical button + input[type=submit],
-  .btn-group-vertical hgroup.date-changer-group form button + input[type=submit], form
-  .btn-group-vertical hgroup.date-changer-group button + input[type=submit], hgroup.date-changer-group
-  .btn-group-vertical form button + input[type=submit], form hgroup.date-changer-group
+  .btn-group-vertical .date-changer form button + input[type=submit], form
+  .btn-group-vertical .date-changer button + input[type=submit], .date-changer
+  .btn-group-vertical form button + input[type=submit], form .date-changer
   .btn-group-vertical button + input[type=submit],
   .btn-group-vertical form .btn + button, form
   .btn-group-vertical .btn + button,
@@ -2356,23 +2356,23 @@ tbody.collapse.show {
   .btn-group-vertical input[type=submit] + button,
   .btn-group-vertical form button + button, form
   .btn-group-vertical button + button,
-  .btn-group-vertical hgroup.date-changer-group form button + button, form
-  .btn-group-vertical hgroup.date-changer-group button + button, hgroup.date-changer-group
-  .btn-group-vertical form button + button, form hgroup.date-changer-group
+  .btn-group-vertical .date-changer form button + button, form
+  .btn-group-vertical .date-changer button + button, .date-changer
+  .btn-group-vertical form button + button, form .date-changer
   .btn-group-vertical button + button,
-  .btn-group-vertical hgroup.date-changer-group .btn + button, hgroup.date-changer-group
+  .btn-group-vertical .date-changer .btn + button, .date-changer
   .btn-group-vertical .btn + button,
-  .btn-group-vertical hgroup.date-changer-group .dropdown-toggle + button, hgroup.date-changer-group
+  .btn-group-vertical .date-changer .dropdown-toggle + button, .date-changer
   .btn-group-vertical .dropdown-toggle + button,
-  .btn-group-vertical form hgroup.date-changer-group input[type=submit] + button, hgroup.date-changer-group
+  .btn-group-vertical form .date-changer input[type=submit] + button, .date-changer
   .btn-group-vertical form input[type=submit] + button, form
-  .btn-group-vertical hgroup.date-changer-group input[type=submit] + button, hgroup.date-changer-group form
+  .btn-group-vertical .date-changer input[type=submit] + button, .date-changer form
   .btn-group-vertical input[type=submit] + button,
-  .btn-group-vertical form hgroup.date-changer-group button + button, hgroup.date-changer-group
+  .btn-group-vertical form .date-changer button + button, .date-changer
   .btn-group-vertical form button + button, form
-  .btn-group-vertical hgroup.date-changer-group button + button, hgroup.date-changer-group form
+  .btn-group-vertical .date-changer button + button, .date-changer form
   .btn-group-vertical button + button,
-  .btn-group-vertical hgroup.date-changer-group button + button, hgroup.date-changer-group
+  .btn-group-vertical .date-changer button + button, .date-changer
   .btn-group-vertical button + button,
   .btn-group-vertical .btn + .btn-group,
   .btn-group-vertical .dropdown-toggle + .btn-group,
@@ -2380,7 +2380,7 @@ tbody.collapse.show {
   .btn-group-vertical input[type=submit] + .btn-group,
   .btn-group-vertical form button + .btn-group, form
   .btn-group-vertical button + .btn-group,
-  .btn-group-vertical hgroup.date-changer-group button + .btn-group, hgroup.date-changer-group
+  .btn-group-vertical .date-changer button + .btn-group, .date-changer
   .btn-group-vertical button + .btn-group,
   .btn-group-vertical .btn-group + .btn,
   .btn-group-vertical .btn-group + .dropdown-toggle,
@@ -2388,7 +2388,7 @@ tbody.collapse.show {
   .btn-group-vertical .btn-group + input[type=submit],
   .btn-group-vertical form .btn-group + button, form
   .btn-group-vertical .btn-group + button,
-  .btn-group-vertical hgroup.date-changer-group .btn-group + button, hgroup.date-changer-group
+  .btn-group-vertical .date-changer .btn-group + button, .date-changer
   .btn-group-vertical .btn-group + button,
   .btn-group-vertical .btn-group + .btn-group {
     margin-left: -1px; }
@@ -2400,23 +2400,23 @@ tbody.collapse.show {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:first-child, .btn-group > .dropdown-toggle:first-child, form .btn-group > input[type=submit]:first-child, form .btn-group > button:first-child, hgroup.date-changer-group .btn-group > button:first-child {
+.btn-group > .btn:first-child, .btn-group > .dropdown-toggle:first-child, form .btn-group > input[type=submit]:first-child, form .btn-group > button:first-child, .date-changer .btn-group > button:first-child {
   margin-left: 0; }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .dropdown-toggle:not(:last-child):not(.dropdown-toggle), form .btn-group > input[type=submit]:not(:last-child):not(.dropdown-toggle), form .btn-group > button:not(:last-child):not(.dropdown-toggle), hgroup.date-changer-group .btn-group > button:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .dropdown-toggle:not(:last-child):not(.dropdown-toggle), form .btn-group > input[type=submit]:not(:last-child):not(.dropdown-toggle), form .btn-group > button:not(:last-child):not(.dropdown-toggle), .date-changer .btn-group > button:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
 .btn-group > .btn-group:not(:last-child) > .dropdown-toggle, form
 .btn-group > .btn-group:not(:last-child) > input[type=submit], form
-.btn-group > .btn-group:not(:last-child) > button, hgroup.date-changer-group
+.btn-group > .btn-group:not(:last-child) > button, .date-changer
 .btn-group > .btn-group:not(:last-child) > button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child), form .btn-group > input[type=submit]:not(:first-child), form .btn-group > button:not(:first-child), hgroup.date-changer-group .btn-group > button:not(:first-child),
+.btn-group > .btn:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child), form .btn-group > input[type=submit]:not(:first-child), form .btn-group > button:not(:first-child), .date-changer .btn-group > button:not(:first-child),
 .btn-group > .btn-group:not(:first-child) > .btn,
 .btn-group > .btn-group:not(:first-child) > .dropdown-toggle, form
 .btn-group > .btn-group:not(:first-child) > input[type=submit], form
-.btn-group > .btn-group:not(:first-child) > button, hgroup.date-changer-group
+.btn-group > .btn-group:not(:first-child) > button, .date-changer
 .btn-group > .btn-group:not(:first-child) > button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -2427,11 +2427,11 @@ tbody.collapse.show {
   .dropdown-toggle-split::after {
     margin-left: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .dropdown-toggle + .dropdown-toggle-split, form .btn-group-sm > input[type=submit] + .dropdown-toggle-split, form .btn-group-sm > button + .dropdown-toggle-split, hgroup.date-changer-group .btn-group-sm > button + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .dropdown-toggle + .dropdown-toggle-split, form .btn-group-sm > input[type=submit] + .dropdown-toggle-split, form .btn-group-sm > button + .dropdown-toggle-split, .date-changer .btn-group-sm > button + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .dropdown-toggle + .dropdown-toggle-split, form .btn-group-lg > input[type=submit] + .dropdown-toggle-split, form .btn-group-lg > button + .dropdown-toggle-split, hgroup.date-changer-group .btn-group-lg > button + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .dropdown-toggle + .dropdown-toggle-split, form .btn-group-lg > input[type=submit] + .dropdown-toggle-split, form .btn-group-lg > button + .dropdown-toggle-split, .date-changer .btn-group-lg > button + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -2439,62 +2439,62 @@ tbody.collapse.show {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center; }
-  .btn-group-vertical .btn, .btn-group-vertical .dropdown-toggle, .btn-group-vertical form input[type=submit], form .btn-group-vertical input[type=submit], .btn-group-vertical form button, form .btn-group-vertical button, .btn-group-vertical hgroup.date-changer-group button, hgroup.date-changer-group .btn-group-vertical button,
+  .btn-group-vertical .btn, .btn-group-vertical .dropdown-toggle, .btn-group-vertical form input[type=submit], form .btn-group-vertical input[type=submit], .btn-group-vertical form button, form .btn-group-vertical button, .btn-group-vertical .date-changer button, .date-changer .btn-group-vertical button,
   .btn-group-vertical .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn + .btn, .btn-group-vertical > .dropdown-toggle + .btn, form .btn-group-vertical > input[type=submit] + .btn, form .btn-group-vertical > button + .btn, hgroup.date-changer-group .btn-group-vertical > button + .btn, .btn-group-vertical > .btn + .dropdown-toggle, .btn-group-vertical > .dropdown-toggle + .dropdown-toggle, form .btn-group-vertical > input[type=submit] + .dropdown-toggle, form .btn-group-vertical > button + .dropdown-toggle, hgroup.date-changer-group .btn-group-vertical > button + .dropdown-toggle, form .btn-group-vertical > .btn + input[type=submit], form .btn-group-vertical > .dropdown-toggle + input[type=submit], form .btn-group-vertical > input[type=submit] + input[type=submit], form .btn-group-vertical > button + input[type=submit], hgroup.date-changer-group form .btn-group-vertical > button + input[type=submit], form hgroup.date-changer-group .btn-group-vertical > button + input[type=submit], form .btn-group-vertical > .btn + button, form .btn-group-vertical > .dropdown-toggle + button, form .btn-group-vertical > input[type=submit] + button, form .btn-group-vertical > button + button, hgroup.date-changer-group form .btn-group-vertical > button + button, form hgroup.date-changer-group .btn-group-vertical > button + button, hgroup.date-changer-group .btn-group-vertical > .btn + button, hgroup.date-changer-group .btn-group-vertical > .dropdown-toggle + button, form hgroup.date-changer-group .btn-group-vertical > input[type=submit] + button, hgroup.date-changer-group form .btn-group-vertical > input[type=submit] + button, form hgroup.date-changer-group .btn-group-vertical > button + button, hgroup.date-changer-group form .btn-group-vertical > button + button, hgroup.date-changer-group .btn-group-vertical > button + button,
+  .btn-group-vertical > .btn + .btn, .btn-group-vertical > .dropdown-toggle + .btn, form .btn-group-vertical > input[type=submit] + .btn, form .btn-group-vertical > button + .btn, .date-changer .btn-group-vertical > button + .btn, .btn-group-vertical > .btn + .dropdown-toggle, .btn-group-vertical > .dropdown-toggle + .dropdown-toggle, form .btn-group-vertical > input[type=submit] + .dropdown-toggle, form .btn-group-vertical > button + .dropdown-toggle, .date-changer .btn-group-vertical > button + .dropdown-toggle, form .btn-group-vertical > .btn + input[type=submit], form .btn-group-vertical > .dropdown-toggle + input[type=submit], form .btn-group-vertical > input[type=submit] + input[type=submit], form .btn-group-vertical > button + input[type=submit], .date-changer form .btn-group-vertical > button + input[type=submit], form .date-changer .btn-group-vertical > button + input[type=submit], form .btn-group-vertical > .btn + button, form .btn-group-vertical > .dropdown-toggle + button, form .btn-group-vertical > input[type=submit] + button, form .btn-group-vertical > button + button, .date-changer form .btn-group-vertical > button + button, form .date-changer .btn-group-vertical > button + button, .date-changer .btn-group-vertical > .btn + button, .date-changer .btn-group-vertical > .dropdown-toggle + button, form .date-changer .btn-group-vertical > input[type=submit] + button, .date-changer form .btn-group-vertical > input[type=submit] + button, form .date-changer .btn-group-vertical > button + button, .date-changer form .btn-group-vertical > button + button, .date-changer .btn-group-vertical > button + button,
   .btn-group-vertical > .btn + .btn-group,
   .btn-group-vertical > .dropdown-toggle + .btn-group, form
   .btn-group-vertical > input[type=submit] + .btn-group, form
-  .btn-group-vertical > button + .btn-group, hgroup.date-changer-group
+  .btn-group-vertical > button + .btn-group, .date-changer
   .btn-group-vertical > button + .btn-group,
   .btn-group-vertical > .btn-group + .btn,
   .btn-group-vertical > .btn-group + .dropdown-toggle, form
   .btn-group-vertical > .btn-group + input[type=submit], form
-  .btn-group-vertical > .btn-group + button, hgroup.date-changer-group
+  .btn-group-vertical > .btn-group + button, .date-changer
   .btn-group-vertical > .btn-group + button,
   .btn-group-vertical > .btn-group + .btn-group {
     margin-top: -1px;
     margin-left: 0; }
-  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .dropdown-toggle:not(:last-child):not(.dropdown-toggle), form .btn-group-vertical > input[type=submit]:not(:last-child):not(.dropdown-toggle), form .btn-group-vertical > button:not(:last-child):not(.dropdown-toggle), hgroup.date-changer-group .btn-group-vertical > button:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .dropdown-toggle:not(:last-child):not(.dropdown-toggle), form .btn-group-vertical > input[type=submit]:not(:last-child):not(.dropdown-toggle), form .btn-group-vertical > button:not(:last-child):not(.dropdown-toggle), .date-changer .btn-group-vertical > button:not(:last-child):not(.dropdown-toggle),
   .btn-group-vertical > .btn-group:not(:last-child) > .btn,
   .btn-group-vertical > .btn-group:not(:last-child) > .dropdown-toggle, form
   .btn-group-vertical > .btn-group:not(:last-child) > input[type=submit], form
-  .btn-group-vertical > .btn-group:not(:last-child) > button, hgroup.date-changer-group
+  .btn-group-vertical > .btn-group:not(:last-child) > button, .date-changer
   .btn-group-vertical > .btn-group:not(:last-child) > button {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .dropdown-toggle:not(:first-child), form .btn-group-vertical > input[type=submit]:not(:first-child), form .btn-group-vertical > button:not(:first-child), hgroup.date-changer-group .btn-group-vertical > button:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .dropdown-toggle:not(:first-child), form .btn-group-vertical > input[type=submit]:not(:first-child), form .btn-group-vertical > button:not(:first-child), .date-changer .btn-group-vertical > button:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) > .btn,
   .btn-group-vertical > .btn-group:not(:first-child) > .dropdown-toggle, form
   .btn-group-vertical > .btn-group:not(:first-child) > input[type=submit], form
-  .btn-group-vertical > .btn-group:not(:first-child) > button, hgroup.date-changer-group
+  .btn-group-vertical > .btn-group:not(:first-child) > button, .date-changer
   .btn-group-vertical > .btn-group:not(:first-child) > button {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group-toggle > .btn, .btn-group-toggle > .dropdown-toggle, form .btn-group-toggle > input[type=submit], form .btn-group-toggle > button, hgroup.date-changer-group .btn-group-toggle > button,
+.btn-group-toggle > .btn, .btn-group-toggle > .dropdown-toggle, form .btn-group-toggle > input[type=submit], form .btn-group-toggle > button, .date-changer .btn-group-toggle > button,
 .btn-group-toggle > .btn-group > .btn,
 .btn-group-toggle > .btn-group > .dropdown-toggle, form
 .btn-group-toggle > .btn-group > input[type=submit], form
-.btn-group-toggle > .btn-group > button, hgroup.date-changer-group
+.btn-group-toggle > .btn-group > button, .date-changer
 .btn-group-toggle > .btn-group > button {
   margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"], .btn-group-toggle > .dropdown-toggle input[type="radio"], form .btn-group-toggle > input[type=submit] input[type="radio"], form .btn-group-toggle > button input[type="radio"], hgroup.date-changer-group .btn-group-toggle > button input[type="radio"],
+  .btn-group-toggle > .btn input[type="radio"], .btn-group-toggle > .dropdown-toggle input[type="radio"], form .btn-group-toggle > input[type=submit] input[type="radio"], form .btn-group-toggle > button input[type="radio"], .date-changer .btn-group-toggle > button input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"],
   .btn-group-toggle > .dropdown-toggle input[type="checkbox"], form
   .btn-group-toggle > input[type=submit] input[type="checkbox"], form
-  .btn-group-toggle > button input[type="checkbox"], hgroup.date-changer-group
+  .btn-group-toggle > button input[type="checkbox"], .date-changer
   .btn-group-toggle > button input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"],
   .btn-group-toggle > .btn-group > .dropdown-toggle input[type="radio"], form
   .btn-group-toggle > .btn-group > input[type=submit] input[type="radio"], form
-  .btn-group-toggle > .btn-group > button input[type="radio"], hgroup.date-changer-group
+  .btn-group-toggle > .btn-group > button input[type="radio"], .date-changer
   .btn-group-toggle > .btn-group > button input[type="radio"],
   .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
   .btn-group-toggle > .btn-group > .dropdown-toggle input[type="checkbox"], form
   .btn-group-toggle > .btn-group > input[type=submit] input[type="checkbox"], form
-  .btn-group-toggle > .btn-group > button input[type="checkbox"], hgroup.date-changer-group
+  .btn-group-toggle > .btn-group > button input[type="checkbox"], .date-changer
   .btn-group-toggle > .btn-group > button input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
@@ -2558,25 +2558,25 @@ tbody.collapse.show {
 .input-group-prepend,
 .input-group-append {
   display: flex; }
-  .input-group-prepend .btn, .input-group-prepend .dropdown-toggle, .input-group-prepend form input[type=submit], form .input-group-prepend input[type=submit], .input-group-prepend form button, form .input-group-prepend button, .input-group-prepend hgroup.date-changer-group button, hgroup.date-changer-group .input-group-prepend button,
+  .input-group-prepend .btn, .input-group-prepend .dropdown-toggle, .input-group-prepend form input[type=submit], form .input-group-prepend input[type=submit], .input-group-prepend form button, form .input-group-prepend button, .input-group-prepend .date-changer button, .date-changer .input-group-prepend button,
   .input-group-append .btn,
   .input-group-append .dropdown-toggle,
   .input-group-append form input[type=submit], form
   .input-group-append input[type=submit],
   .input-group-append form button, form
   .input-group-append button,
-  .input-group-append hgroup.date-changer-group button, hgroup.date-changer-group
+  .input-group-append .date-changer button, .date-changer
   .input-group-append button {
     position: relative;
     z-index: 2; }
-  .input-group-prepend .btn + .btn, .input-group-prepend .dropdown-toggle + .btn, .input-group-prepend form input[type=submit] + .btn, form .input-group-prepend input[type=submit] + .btn, .input-group-prepend form button + .btn, form .input-group-prepend button + .btn, .input-group-prepend hgroup.date-changer-group button + .btn, hgroup.date-changer-group .input-group-prepend button + .btn, .input-group-prepend .btn + .dropdown-toggle, .input-group-prepend .dropdown-toggle + .dropdown-toggle, .input-group-prepend form input[type=submit] + .dropdown-toggle, form .input-group-prepend input[type=submit] + .dropdown-toggle, .input-group-prepend form button + .dropdown-toggle, form .input-group-prepend button + .dropdown-toggle, .input-group-prepend hgroup.date-changer-group button + .dropdown-toggle, hgroup.date-changer-group .input-group-prepend button + .dropdown-toggle, .input-group-prepend form .btn + input[type=submit], form .input-group-prepend .btn + input[type=submit], .input-group-prepend form .dropdown-toggle + input[type=submit], form .input-group-prepend .dropdown-toggle + input[type=submit], .input-group-prepend form input[type=submit] + input[type=submit], form .input-group-prepend input[type=submit] + input[type=submit], .input-group-prepend form button + input[type=submit], form .input-group-prepend button + input[type=submit], .input-group-prepend hgroup.date-changer-group form button + input[type=submit], form .input-group-prepend hgroup.date-changer-group button + input[type=submit], hgroup.date-changer-group .input-group-prepend form button + input[type=submit], form hgroup.date-changer-group .input-group-prepend button + input[type=submit], .input-group-prepend form .btn + button, form .input-group-prepend .btn + button, .input-group-prepend form .dropdown-toggle + button, form .input-group-prepend .dropdown-toggle + button, .input-group-prepend form input[type=submit] + button, form .input-group-prepend input[type=submit] + button, .input-group-prepend form button + button, form .input-group-prepend button + button, .input-group-prepend hgroup.date-changer-group form button + button, form .input-group-prepend hgroup.date-changer-group button + button, hgroup.date-changer-group .input-group-prepend form button + button, form hgroup.date-changer-group .input-group-prepend button + button, .input-group-prepend hgroup.date-changer-group .btn + button, hgroup.date-changer-group .input-group-prepend .btn + button, .input-group-prepend hgroup.date-changer-group .dropdown-toggle + button, hgroup.date-changer-group .input-group-prepend .dropdown-toggle + button, .input-group-prepend form hgroup.date-changer-group input[type=submit] + button, hgroup.date-changer-group .input-group-prepend form input[type=submit] + button, form .input-group-prepend hgroup.date-changer-group input[type=submit] + button, hgroup.date-changer-group form .input-group-prepend input[type=submit] + button, .input-group-prepend form hgroup.date-changer-group button + button, hgroup.date-changer-group .input-group-prepend form button + button, form .input-group-prepend hgroup.date-changer-group button + button, hgroup.date-changer-group form .input-group-prepend button + button, .input-group-prepend hgroup.date-changer-group button + button, hgroup.date-changer-group .input-group-prepend button + button,
+  .input-group-prepend .btn + .btn, .input-group-prepend .dropdown-toggle + .btn, .input-group-prepend form input[type=submit] + .btn, form .input-group-prepend input[type=submit] + .btn, .input-group-prepend form button + .btn, form .input-group-prepend button + .btn, .input-group-prepend .date-changer button + .btn, .date-changer .input-group-prepend button + .btn, .input-group-prepend .btn + .dropdown-toggle, .input-group-prepend .dropdown-toggle + .dropdown-toggle, .input-group-prepend form input[type=submit] + .dropdown-toggle, form .input-group-prepend input[type=submit] + .dropdown-toggle, .input-group-prepend form button + .dropdown-toggle, form .input-group-prepend button + .dropdown-toggle, .input-group-prepend .date-changer button + .dropdown-toggle, .date-changer .input-group-prepend button + .dropdown-toggle, .input-group-prepend form .btn + input[type=submit], form .input-group-prepend .btn + input[type=submit], .input-group-prepend form .dropdown-toggle + input[type=submit], form .input-group-prepend .dropdown-toggle + input[type=submit], .input-group-prepend form input[type=submit] + input[type=submit], form .input-group-prepend input[type=submit] + input[type=submit], .input-group-prepend form button + input[type=submit], form .input-group-prepend button + input[type=submit], .input-group-prepend .date-changer form button + input[type=submit], form .input-group-prepend .date-changer button + input[type=submit], .date-changer .input-group-prepend form button + input[type=submit], form .date-changer .input-group-prepend button + input[type=submit], .input-group-prepend form .btn + button, form .input-group-prepend .btn + button, .input-group-prepend form .dropdown-toggle + button, form .input-group-prepend .dropdown-toggle + button, .input-group-prepend form input[type=submit] + button, form .input-group-prepend input[type=submit] + button, .input-group-prepend form button + button, form .input-group-prepend button + button, .input-group-prepend .date-changer form button + button, form .input-group-prepend .date-changer button + button, .date-changer .input-group-prepend form button + button, form .date-changer .input-group-prepend button + button, .input-group-prepend .date-changer .btn + button, .date-changer .input-group-prepend .btn + button, .input-group-prepend .date-changer .dropdown-toggle + button, .date-changer .input-group-prepend .dropdown-toggle + button, .input-group-prepend form .date-changer input[type=submit] + button, .date-changer .input-group-prepend form input[type=submit] + button, form .input-group-prepend .date-changer input[type=submit] + button, .date-changer form .input-group-prepend input[type=submit] + button, .input-group-prepend form .date-changer button + button, .date-changer .input-group-prepend form button + button, form .input-group-prepend .date-changer button + button, .date-changer form .input-group-prepend button + button, .input-group-prepend .date-changer button + button, .date-changer .input-group-prepend button + button,
   .input-group-prepend .btn + .input-group-text,
   .input-group-prepend .dropdown-toggle + .input-group-text,
   .input-group-prepend form input[type=submit] + .input-group-text, form
   .input-group-prepend input[type=submit] + .input-group-text,
   .input-group-prepend form button + .input-group-text, form
   .input-group-prepend button + .input-group-text,
-  .input-group-prepend hgroup.date-changer-group button + .input-group-text, hgroup.date-changer-group
+  .input-group-prepend .date-changer button + .input-group-text, .date-changer
   .input-group-prepend button + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
@@ -2585,7 +2585,7 @@ tbody.collapse.show {
   .input-group-prepend .input-group-text + input[type=submit],
   .input-group-prepend form .input-group-text + button, form
   .input-group-prepend .input-group-text + button,
-  .input-group-prepend hgroup.date-changer-group .input-group-text + button, hgroup.date-changer-group
+  .input-group-prepend .date-changer .input-group-text + button, .date-changer
   .input-group-prepend .input-group-text + button,
   .input-group-append .btn + .btn,
   .input-group-append .dropdown-toggle + .btn,
@@ -2593,7 +2593,7 @@ tbody.collapse.show {
   .input-group-append input[type=submit] + .btn,
   .input-group-append form button + .btn, form
   .input-group-append button + .btn,
-  .input-group-append hgroup.date-changer-group button + .btn, hgroup.date-changer-group
+  .input-group-append .date-changer button + .btn, .date-changer
   .input-group-append button + .btn,
   .input-group-append .btn + .dropdown-toggle,
   .input-group-append .dropdown-toggle + .dropdown-toggle,
@@ -2601,7 +2601,7 @@ tbody.collapse.show {
   .input-group-append input[type=submit] + .dropdown-toggle,
   .input-group-append form button + .dropdown-toggle, form
   .input-group-append button + .dropdown-toggle,
-  .input-group-append hgroup.date-changer-group button + .dropdown-toggle, hgroup.date-changer-group
+  .input-group-append .date-changer button + .dropdown-toggle, .date-changer
   .input-group-append button + .dropdown-toggle,
   .input-group-append form .btn + input[type=submit], form
   .input-group-append .btn + input[type=submit],
@@ -2611,9 +2611,9 @@ tbody.collapse.show {
   .input-group-append input[type=submit] + input[type=submit],
   .input-group-append form button + input[type=submit], form
   .input-group-append button + input[type=submit],
-  .input-group-append hgroup.date-changer-group form button + input[type=submit], form
-  .input-group-append hgroup.date-changer-group button + input[type=submit], hgroup.date-changer-group
-  .input-group-append form button + input[type=submit], form hgroup.date-changer-group
+  .input-group-append .date-changer form button + input[type=submit], form
+  .input-group-append .date-changer button + input[type=submit], .date-changer
+  .input-group-append form button + input[type=submit], form .date-changer
   .input-group-append button + input[type=submit],
   .input-group-append form .btn + button, form
   .input-group-append .btn + button,
@@ -2623,23 +2623,23 @@ tbody.collapse.show {
   .input-group-append input[type=submit] + button,
   .input-group-append form button + button, form
   .input-group-append button + button,
-  .input-group-append hgroup.date-changer-group form button + button, form
-  .input-group-append hgroup.date-changer-group button + button, hgroup.date-changer-group
-  .input-group-append form button + button, form hgroup.date-changer-group
+  .input-group-append .date-changer form button + button, form
+  .input-group-append .date-changer button + button, .date-changer
+  .input-group-append form button + button, form .date-changer
   .input-group-append button + button,
-  .input-group-append hgroup.date-changer-group .btn + button, hgroup.date-changer-group
+  .input-group-append .date-changer .btn + button, .date-changer
   .input-group-append .btn + button,
-  .input-group-append hgroup.date-changer-group .dropdown-toggle + button, hgroup.date-changer-group
+  .input-group-append .date-changer .dropdown-toggle + button, .date-changer
   .input-group-append .dropdown-toggle + button,
-  .input-group-append form hgroup.date-changer-group input[type=submit] + button, hgroup.date-changer-group
+  .input-group-append form .date-changer input[type=submit] + button, .date-changer
   .input-group-append form input[type=submit] + button, form
-  .input-group-append hgroup.date-changer-group input[type=submit] + button, hgroup.date-changer-group form
+  .input-group-append .date-changer input[type=submit] + button, .date-changer form
   .input-group-append input[type=submit] + button,
-  .input-group-append form hgroup.date-changer-group button + button, hgroup.date-changer-group
+  .input-group-append form .date-changer button + button, .date-changer
   .input-group-append form button + button, form
-  .input-group-append hgroup.date-changer-group button + button, hgroup.date-changer-group form
+  .input-group-append .date-changer button + button, .date-changer form
   .input-group-append button + button,
-  .input-group-append hgroup.date-changer-group button + button, hgroup.date-changer-group
+  .input-group-append .date-changer button + button, .date-changer
   .input-group-append button + button,
   .input-group-append .btn + .input-group-text,
   .input-group-append .dropdown-toggle + .input-group-text,
@@ -2647,7 +2647,7 @@ tbody.collapse.show {
   .input-group-append input[type=submit] + .input-group-text,
   .input-group-append form button + .input-group-text, form
   .input-group-append button + .input-group-text,
-  .input-group-append hgroup.date-changer-group button + .input-group-text, hgroup.date-changer-group
+  .input-group-append .date-changer button + .input-group-text, .date-changer
   .input-group-append button + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
   .input-group-append .input-group-text + .btn,
@@ -2656,7 +2656,7 @@ tbody.collapse.show {
   .input-group-append .input-group-text + input[type=submit],
   .input-group-append form .input-group-text + button, form
   .input-group-append .input-group-text + button,
-  .input-group-append hgroup.date-changer-group .input-group-text + button, hgroup.date-changer-group
+  .input-group-append .date-changer .input-group-text + button, .date-changer
   .input-group-append .input-group-text + button {
     margin-left: -1px; }
 
@@ -2684,35 +2684,35 @@ tbody.collapse.show {
   .input-group-text input[type="checkbox"] {
     margin-top: 0; }
 
-.input-group > .input-group-prepend > .btn, .input-group > .input-group-prepend > .dropdown-toggle, form .input-group > .input-group-prepend > input[type=submit], form .input-group > .input-group-prepend > button, hgroup.date-changer-group .input-group > .input-group-prepend > button,
+.input-group > .input-group-prepend > .btn, .input-group > .input-group-prepend > .dropdown-toggle, form .input-group > .input-group-prepend > input[type=submit], form .input-group > .input-group-prepend > button, .date-changer .input-group > .input-group-prepend > button,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
 .input-group > .input-group-append:not(:last-child) > .dropdown-toggle, form
 .input-group > .input-group-append:not(:last-child) > input[type=submit], form
-.input-group > .input-group-append:not(:last-child) > button, hgroup.date-changer-group
+.input-group > .input-group-append:not(:last-child) > button, .date-changer
 .input-group > .input-group-append:not(:last-child) > button,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .dropdown-toggle:not(:last-child):not(.dropdown-toggle), form
 .input-group > .input-group-append:last-child > input[type=submit]:not(:last-child):not(.dropdown-toggle), form
-.input-group > .input-group-append:last-child > button:not(:last-child):not(.dropdown-toggle), hgroup.date-changer-group
+.input-group > .input-group-append:last-child > button:not(:last-child):not(.dropdown-toggle), .date-changer
 .input-group > .input-group-append:last-child > button:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.input-group > .input-group-append > .btn, .input-group > .input-group-append > .dropdown-toggle, form .input-group > .input-group-append > input[type=submit], form .input-group > .input-group-append > button, hgroup.date-changer-group .input-group > .input-group-append > button,
+.input-group > .input-group-append > .btn, .input-group > .input-group-append > .dropdown-toggle, form .input-group > .input-group-append > input[type=submit], form .input-group > .input-group-append > button, .date-changer .input-group > .input-group-append > button,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
 .input-group > .input-group-prepend:not(:first-child) > .dropdown-toggle, form
 .input-group > .input-group-prepend:not(:first-child) > input[type=submit], form
-.input-group > .input-group-prepend:not(:first-child) > button, hgroup.date-changer-group
+.input-group > .input-group-prepend:not(:first-child) > button, .date-changer
 .input-group > .input-group-prepend:not(:first-child) > button,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
 .input-group > .input-group-prepend:first-child > .dropdown-toggle:not(:first-child), form
 .input-group > .input-group-prepend:first-child > input[type=submit]:not(:first-child), form
-.input-group > .input-group-prepend:first-child > button:not(:first-child), hgroup.date-changer-group
+.input-group > .input-group-prepend:first-child > button:not(:first-child), .date-changer
 .input-group > .input-group-prepend:first-child > button:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
@@ -3544,7 +3544,7 @@ tbody.collapse.show {
   .badge:empty {
     display: none; }
 
-.btn .badge, .dropdown-toggle .badge, form input[type=submit] .badge, form button .badge, hgroup.date-changer-group button .badge {
+.btn .badge, .dropdown-toggle .badge, form input[type=submit] .badge, form button .badge, .date-changer button .badge {
   position: relative;
   top: -1px; }
 
@@ -6306,7 +6306,7 @@ a.text-dark:hover, a.text-dark:focus {
   *::after {
     text-shadow: none !important;
     box-shadow: none !important; }
-  a:not(.btn):not(.dropdown-toggle):not(form input[type=submit]):not(form button):not(hgroup.date-changer-group button) {
+  a:not(.btn):not(.dropdown-toggle):not(form input[type=submit]):not(form button):not(.date-changer button) {
     text-decoration: underline; }
   abbr[title]::after {
     content: " (" attr(title) ")"; }
@@ -6371,8 +6371,6 @@ nav.hamburger {
 
 .panel {
   padding: 0 1em; }
-  .panel .panel-section {
-    margin: 0em 0 2em 0; }
   .panel.coloured {
     background: #FFF; }
     .panel.coloured .standout {
@@ -6389,25 +6387,26 @@ nav.hamburger {
   max-width: 1280px; }
 
 .calendar {
-  margin: 2em auto;
-  width: 50%; }
+  margin: 2em 0;
+  width: 100%; }
   .calendar ul {
     display: flex;
     flex-wrap: wrap;
-    list-style: none; }
+    list-style: none;
+    padding: 0; }
     .calendar ul li {
       flex-basis: 14%;
-      text-align: center; }
+      text-align: center;
+      padding: 1em 0.2em; }
   .calendar .days {
-    background: #d33066;
+    background: #ef5739;
     color: #FFF;
     font-weight: bold;
-    margin: 0;
-    padding: 0.2em 0; }
+    margin: 0; }
+    .calendar .days li {
+      padding: 0.5em 0.2em; }
   .calendar .dates {
-    padding: 0; }
-    .calendar .dates li {
-      margin: 1em 0; }
+    padding: 0 1em; }
 
 p.alert {
   font-size: 0.9em;
@@ -6422,16 +6421,16 @@ header {
 .progress {
   border-radius: 5px;
   font-size: 0.9em;
-  height: 20px;
-  margin: 1.5em 0; }
+  height: 25px;
+  margin: 1em 0 2em 0; }
   .progress .progress-bar {
-    background: #d33066; }
+    background: #ef5739; }
 
 .badge {
   font-weight: 300; }
 
 .badge.badge-progress {
-  background: #d33066;
+  background: #ef5739;
   color: #FFF; }
 
 .badge.lg {
@@ -6453,18 +6452,26 @@ body {
 
 h1 {
   font-size: 2em;
+  color: #777;
+  font-weight: 400;
   margin: 1em 0 0.5em 0; }
 
 h2 {
-  font-size: 1.6em;
+  font-size: 1.75em;
+  color: #777;
+  font-weight: 400;
   margin: 0.7em 0; }
 
 h3 {
+  color: #777;
   font-size: 1.5em;
+  font-weight: 400;
   margin: 0.6em 0; }
 
 h4 {
-  font-size: 1.2em;
+  color: #666;
+  font-size: 1.4em;
+  font-weight: 400;
   margin: 0.8em 0; }
 
 p {
@@ -6474,30 +6481,31 @@ p {
   align-items: stretch;
   display: flex;
   justify-content: space-between;
-  margin: 0.2em 0; }
+  margin: 0.4em 0; }
   .entry h4 {
-    color: #d33066;
-    font-size: 1.2em; }
+    color: #ef5739;
+    font-size: 1.2em;
+    margin: 0.5em 0; }
   .entry .text {
     text-align: justify;
-    padding-right: 2em;
-    width: 80%; }
+    padding-right: 2%;
+    width: 75%; }
   .entry .time {
     border-left: 1px solid #F0F0F0;
     text-align: center;
     width: 20%; }
     .entry .time h5 {
-      color: #d33066;
+      color: #ef5739;
       font-size: 1.2em; }
 
 a {
-  color: #d33066; }
+  color: #ef5739; }
   a:visited {
-    color: #d33066; }
+    color: #ef5739; }
   a:hover {
-    color: #e584a4; }
+    color: #f7a797; }
   a:active, a:focus {
-    color: #d33066; }
+    color: #ef5739; }
 
 a.danger {
   color: #FF0000; }
@@ -6521,30 +6529,30 @@ form {
     padding: 0.5em 2em;
     width: auto; }
 
-.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .dropdown-toggle, form .btn-group-lg > input[type=submit], form .btn-group-lg > button, hgroup.date-changer-group .btn-group-lg > button {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .dropdown-toggle, form .btn-group-lg > input[type=submit], form .btn-group-lg > button, .date-changer .btn-group-lg > button {
   font-size: 1.1em; }
 
-.btn-link, hgroup.date-changer-group button {
+.btn-link, .date-changer button {
   padding: 0 0.5em; }
 
-hgroup.date-changer-group {
+.date-changer {
   align-items: center;
   display: flex;
   justify-content: space-between;
   width: 100%; }
-  hgroup.date-changer-group .date-changer {
+  .date-changer .date-changer-controls {
     align-items: center;
     display: flex;
     margin-left: 0.5em; }
-  hgroup.date-changer-group button {
-    color: #d33066;
+  .date-changer button {
+    color: #ef5739;
     font-size: 1.5em; }
 
 .btn-outline {
-  color: #d33066;
-  border-color: #d33066; }
+  color: #ef5739;
+  border-color: #ef5739; }
   .btn-outline:hover {
-    background: #d33066;
+    background: #ef5739;
     border-color: #DDD; }
 
 .page {
@@ -6561,7 +6569,8 @@ hgroup.date-changer-group {
       margin-right: 1em; }
 
 #layout-root > header {
-  background: #d33066;
+  align-items: center;
+  background: #ef5739;
   padding: 0.1em 1em;
   width: 100%; }
   #layout-root > header h1 {
@@ -6590,7 +6599,7 @@ hgroup.date-changer-group {
   background: #333;
   color: #FFF;
   position: fixed;
-  display: block;
+  display: none;
   top: 0;
   left: 0;
   height: 100%;
@@ -6611,6 +6620,9 @@ hgroup.date-changer-group {
     position: relative;
     right: 0.5em;
     top: 0.2em; }
+
+.panel-section {
+  margin: 1em 0 2em 0; }
 
 @media (max-width: 800px) {
   html {
@@ -6633,13 +6645,13 @@ hgroup.date-changer-group {
     .actions-menu .dropdown-menu {
       margin-bottom: 2em; }
   .entry {
-    display: block; }
-    .entry .text {
+    display: block;
+    margin: 2em 0; }
+    .entry h5 {
       display: block;
-      min-width: 100%; }
+      width: 100%; }
     .entry .time {
-      display: block;
-      min-width: 100%; }
+      text-align: left; }
   .nav-sidebar {
     display: none; }
   #layout-root > header {
