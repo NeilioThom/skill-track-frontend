@@ -4,7 +4,7 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,600");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -477,7 +477,7 @@ pre {
   margin-right: auto;
   margin-left: auto; }
 
-.row, .container-row, .page, .skills-list header {
+.row, .container-row, .page {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
@@ -491,10 +491,10 @@ pre {
     padding-right: 0;
     padding-left: 0; }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .skills-list article, .col, .panel.main, #layout-root > header h1, #layout-root > header ul.pills,
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .panel.main, #layout-root > header h1, #layout-root > header ul.pills,
 .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
 .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
-.col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .page.login, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
+.col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
 .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
 .col-xl-auto {
   position: relative;
@@ -557,7 +557,7 @@ pre {
   flex: 0 0 91.66667%;
   max-width: 91.66667%; }
 
-.col-12, .skills-list article {
+.col-12 {
   flex: 0 0 100%;
   max-width: 100%; }
 
@@ -863,7 +863,7 @@ pre {
   .col-lg-5 {
     flex: 0 0 41.66667%;
     max-width: 41.66667%; }
-  .col-lg-6, .page.login {
+  .col-lg-6 {
     flex: 0 0 50%;
     max-width: 50%; }
   .col-lg-7 {
@@ -6358,9 +6358,17 @@ html, body, #root, .app, #layout-root, .main-content, #routing {
   margin-top: -50px;
   padding-top: 50px; }
 
+html {
+  font-size: 0.9em; }
+
 body {
   background: #EFEFEF;
-  font-family: 'Open Sans'; }
+  font-family: 'Roboto'; }
+
+ul.list-inline {
+  margin-bottom: 0; }
+  ul.list-inline li {
+    margin-right: 4em; }
 
 nav.hamburger {
   display: none; }
@@ -6384,7 +6392,7 @@ nav.hamburger {
     padding-right: 2em; }
 
 .container-fluid, .page {
-  max-width: 1280px; }
+  max-width: 980px; }
 
 .calendar {
   margin: 2em 0;
@@ -6399,7 +6407,7 @@ nav.hamburger {
       text-align: center;
       padding: 1em 0.2em; }
   .calendar .days {
-    background: #ef5739;
+    background: #f44280;
     color: #FFF;
     font-weight: bold;
     margin: 0; }
@@ -6424,13 +6432,13 @@ header {
   height: 25px;
   margin: 1em 0 2em 0; }
   .progress .progress-bar {
-    background: #ef5739; }
+    background: #f44280; }
 
 .badge {
   font-weight: 300; }
 
 .badge.badge-progress {
-  background: #ef5739;
+  background: #f44280;
   color: #FFF; }
 
 .badge.lg {
@@ -6446,66 +6454,59 @@ body {
   font-size: 1.1em;
   margin: 1.5em 0; }
 
+h1 + .subheading,
+h2 + .subheading,
+h3 + .subheading,
+h4 + .subheading {
+  margin: 0; }
+
 .subheading {
-  color: #AFAFAF;
+  color: #777777;
   font-size: 1.2em; }
 
 h1 {
   font-size: 2em;
-  color: #777;
+  color: #000;
   font-weight: 400;
   margin: 1em 0 0.5em 0; }
 
 h2 {
   font-size: 1.75em;
-  color: #777;
+  color: #000;
   font-weight: 400;
-  margin: 0.7em 0; }
+  margin: 0 0 1em 0; }
 
 h3 {
-  color: #777;
+  color: #000;
   font-size: 1.5em;
   font-weight: 400;
-  margin: 0.6em 0; }
+  margin: 0 0 1em 0; }
 
 h4 {
-  color: #666;
+  color: #000;
   font-size: 1.4em;
   font-weight: 400;
-  margin: 0.8em 0; }
+  margin: 0 0 0.4em 0; }
 
 p {
   margin-bottom: 0.5em; }
 
 .entry {
-  align-items: stretch;
-  display: flex;
-  justify-content: space-between;
-  margin: 0.4em 0; }
-  .entry h4 {
-    color: #ef5739;
-    font-size: 1.2em;
-    margin: 0.5em 0; }
-  .entry .text {
-    text-align: justify;
-    padding-right: 2%;
-    width: 75%; }
-  .entry .time {
-    border-left: 1px solid #F0F0F0;
-    text-align: center;
-    width: 20%; }
-    .entry .time h5 {
-      color: #ef5739;
-      font-size: 1.2em; }
+  border-left: 10px solid #f44280;
+  border-bottom: 1px solid #E0E0E0;
+  border-top: 1px solid #E0E0E0;
+  margin: 1em 0;
+  padding: 1em;
+  padding-left: 2em; }
 
 a {
-  color: #ef5739; }
+  color: #f44280; }
   a:visited {
-    color: #ef5739; }
+    color: #f44280; }
   a:hover {
-    color: #f7a797; }
+    color: #faa2c1; }
   a:active, a:focus {
-    color: #ef5739; }
+    color: #f44280; }
 
 a.danger {
   color: #FF0000; }
@@ -6541,26 +6542,29 @@ form {
   justify-content: space-between;
   width: 100%; }
   .date-changer .date-changer-controls {
-    align-items: center;
+    align-items: baseline;
     display: flex;
     margin-left: 0.5em; }
   .date-changer button {
-    color: #ef5739;
+    color: #f44280;
     font-size: 1.5em; }
 
 .btn-outline {
-  color: #ef5739;
-  border-color: #ef5739; }
+  color: #f44280;
+  border-color: #f44280; }
   .btn-outline:hover {
-    background: #ef5739;
+    background: #f44280;
     border-color: #DDD; }
 
 .page {
   margin-left: auto;
   margin-right: auto; }
 
+.page.login {
+  max-width: 800px; }
+
 .nav-sidebar {
-  flex-basis: 18%; }
+  flex-basis: 20%; }
   .nav-sidebar h1 {
     font-size: calc(1.2em + 0.8vw); }
   .nav-sidebar ul li {
@@ -6568,9 +6572,14 @@ form {
     .nav-sidebar ul li .fas {
       margin-right: 1em; }
 
+.skills-list article {
+  border: 1px solid #f44280;
+  margin: 1em 0;
+  padding: 1em 1.5em; }
+
 #layout-root > header {
   align-items: center;
-  background: #ef5739;
+  background: #f44280;
   padding: 0.1em 1em;
   width: 100%; }
   #layout-root > header h1 {
@@ -6621,8 +6630,8 @@ form {
     right: 0.5em;
     top: 0.2em; }
 
-.panel-section {
-  margin: 1em 0 2em 0; }
+.wrapper {
+  margin-bottom: 1em; }
 
 @media (max-width: 800px) {
   html {

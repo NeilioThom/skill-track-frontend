@@ -9,7 +9,9 @@ class HomePage extends Component {
         <NavSidebar />
         <section className="main panel coloured">
           <h1>Your Progress This Week</h1>
-          <h2>Skills</h2>
+          <p className="display-text">
+            Here's a list of the skills you've been working on recently.
+          </p>
           <SkillsList />
         </section>
       </div>

@@ -26,7 +26,7 @@ class SkillFormContainer extends Component {
     // Checks if we are creating or editing and makes some adjustments
     componentWillMount() {
         if(this.props.match.params.id !== undefined) {
-            let skillID = parseInt(this.props.match.params.id, 10);
+            let skillID = this.props.match.params.id;
             
             getSkill(skillID, { method: 'GET' })
                 .then((response) => {

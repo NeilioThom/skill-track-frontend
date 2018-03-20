@@ -1,7 +1,7 @@
 import axios from 'axios';
 import Cookies from 'js-cookie';
 
-const APIUrl = 'http://api.10k-hours.io/';
+const APIUrl = 'http://localhost:8000/';
 
 axios.defaults.withCredentials = true;
 

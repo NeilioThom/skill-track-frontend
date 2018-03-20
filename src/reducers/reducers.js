@@ -9,7 +9,7 @@ const initialState = () => {
   }};
 
   APIRequest('auth/identify/', { method: "GET" })
-    .then((response) => window.store.dispatch(login({ username: response.data.username })))
+    .then((response) => window.store.dispatch(login({ username: response.data.user.username })))
     .catch();
 
   return userData;

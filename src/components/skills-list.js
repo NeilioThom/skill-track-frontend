@@ -21,16 +21,14 @@ class SkillsList extends Component {
   skillCard(item, index) {
     return(
       <article key={index}>
-        <header>
-          <h3 className="col-8">
-            <NavLink to={"/skills/" + item.id}>
-              { item.name }
-            </NavLink>
-          </h3>
-          <p className="col-4 text-right">
-            { moment(item.created_date).format("DD/MM/YYYY") }
-          </p>
-        </header>
+        <h3>
+          <NavLink to={"/skills/" + item.id}>
+            { item.name }
+          </NavLink>
+        </h3>
+        <p>
+          { moment(item.created_date).format("DD/MM/YYYY") }
+        </p>
       </article>
     );
   }

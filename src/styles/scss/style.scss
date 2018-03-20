@@ -1,14 +1,14 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "mixins.scss";
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,600");
 
 // VARIABLES
-$primary-color: #ef5739;
+$primary-color: #f44280;
 $secondary-color: #777;
 
 //$primary-color: #7e5f8e;
-$progress-color: #ef5739;
-$link-color: #ef5739;
+$progress-color: #f44280;
+$link-color: #f44280;
 
 // ------ 100% Height Fix
 html, body, #root, .app, #layout-root, .main-content, #routing {
@@ -29,15 +29,22 @@ html, body, #root, .app, #layout-root, .main-content, #routing {
 }
 
 // ------ BODY
+html { 
+    font-size: 0.9em;
+}
+
 body {
     background: #EFEFEF;
-    font-family: 'Open Sans';
+    font-family: 'Roboto';
 }
 
 // ------ LISTS
 ul.list-inline {
+    margin-bottom: 0;
+
     li {
         @extend .list-inline-item;
+        margin-right: 4em;
     }
 }
 
@@ -80,7 +87,7 @@ nav.hamburger {
 }
 
 .container-fluid {
-    max-width: 1280px;
+    max-width: 980px;
 }
 
 // ------ CALENDAR
@@ -170,37 +177,44 @@ body {
     margin: 1.5em 0;
 }
 
+h1 + .subheading,
+h2 + .subheading,
+h3 + .subheading,
+h4 + .subheading {
+    margin: 0;
+}
+
 .subheading {
-    color: #AFAFAF;
+    color: rgb(119, 119, 119);
     font-size: 1.2em;
 }
 
 h1 {
     font-size: 2em;
-    color: #777;
+    color: #000;
     font-weight: 400;
     margin: 1em 0 0.5em 0;
 }
 
 h2 {
     font-size: 1.75em;
-    color: #777;
+    color: #000;
     font-weight: 400;
-    margin: 0.7em 0;
+    margin: 0 0 1em 0;
 }
 
 h3 {
-    color: #777;    
+    color: #000;    
     font-size: 1.5em;
     font-weight: 400;
-    margin: 0.6em 0;
+    margin: 0 0 1em 0;
 }
 
 h4 {
-    color: #666;    
+    color: #000;    
     font-size: 1.4em;
     font-weight: 400;    
-    margin: 0.8em 0;
+    margin: 0 0 0.4em 0;
 }
 
 p {
@@ -209,33 +223,12 @@ p {
 
 // Entries list
 .entry {
-    align-items: stretch;
-    display: flex;
-    justify-content: space-between;
-    margin: 0.4em 0;
-
-    h4 {
-        color: $primary-color;
-        font-size: 1.2em;
-        margin: 0.5em 0;
-    }
-
-    .text {
-        text-align: justify;
-        padding-right: 2%;
-        width: 75%;
-    }
-
-    .time {
-        border-left: 1px solid #F0F0F0;
-        text-align: center;
-        width: 20%;
-
-        h5 {
-            color: $primary-color;
-            font-size: 1.2em;
-        }
-    }
+    border-left: 10px solid $primary-color;
+    border-bottom: 1px solid #E0E0E0;
+    border-top: 1px solid #E0E0E0;
+    margin: 1em 0;
+    padding: 1em;
+    padding-left: 2em;
 }
 
 // ------ LINKS
@@ -313,7 +306,7 @@ form {
     width: 100%;
 
     .date-changer-controls {
-        align-items: center;
+        align-items: baseline;
         display: flex;
         margin-left: 0.5em;
     }
@@ -351,12 +344,12 @@ form {
 }
 
 .page.login {
-    @extend .col-lg-6;
+    max-width: 800px;
 }
 
 // ------ NAV SIDEBAR COMPONENT
 .nav-sidebar {
-    flex-basis: 18%;
+    flex-basis: 20%;
     
     h1 {
         font-size: calc(1.2em + 0.8vw);
@@ -381,12 +374,14 @@ form {
 
 // ------ SKILLS LIST COMPONENT
 .skills-list {
-    article {
-        @extend .col-12;
-    }
+    //display: flex;
+    //justify-content: space-between;
 
-    header {
-        @extend .row;
+    article {
+        border: 1px solid $primary-color;
+        margin: 1em 0;
+        padding: 1em 1.5em;
+        //width: 30%;
     }
 }
 
@@ -477,8 +472,8 @@ form {
     }
 }
 
-.panel-section {
-    margin: 1em 0 2em 0;
+.wrapper {
+    margin-bottom: 1em;
 }
 
 // ------ RESPONSIVENESS
